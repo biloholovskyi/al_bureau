@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+ padding: 0;
+}
+
+body > * {
+  font-family: Pragmatica, sans-serif!important;
+  font-style: normal!important;
+  font-weight: normal!important;
+}

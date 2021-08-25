@@ -1,0 +1,52 @@
+/*Pragmatica*/
+
+@font-face {
+  font-family: Pragmatica;
+  src: url('./fonts/pragmatica/Pragmatica-Regular.ttf');
+  src: url('./fonts/pragmatica/Pragmatica-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Pragmatica;
+  src: url('./fonts/pragmatica/Pragmatica-Medium.ttf');
+  src: url('./fonts/pragmatica/Pragmatica-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Pragmatica;
+  src: url('./fonts/pragmatica/Pragmatica-Bold.ttf');
+  src: url('./fonts/pragmatica/Pragmatica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*Pragmatica extended*/
+
+@font-face {
+  font-family: Pragmatica;
+  src: url('./fonts/pragmatica-extended/PragmaticaExtended-Regular.ttf');
+  src: url('./fonts/pragmatica/Pragmatica-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Pragmatica;
+  src: url('./fonts/pragmatica-extended/PragmaticaExtended-Medium.ttf');
+  src: url('./fonts/pragmatica/Pragmatica-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Pragmatica;
+  src: url('./fonts/pragmatica-extended/PragmaticaExtended-Bold.ttf');
+  src: url('./fonts/pragmatica/Pragmatica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+

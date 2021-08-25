@@ -1,0 +1,62 @@
+// Override default variables before the import
+$body-bg: #000;
+$body-color: #fff;
+
+$primary: #36B37E;
+$light: rgba(255, 255, 255, 0.1);
+$btn-border-radius: 8px;
+$btn-padding-y: 14px;
+$btn-padding-x: 24px;
+
+$input-padding-y: 11px;
+$input-padding-x: 15px;
+$input-bg: rgba(255, 255, 255, 0.2);
+$input-border-color: $input-bg;
+$input-focus-bg: none;
+$input-focus-border-color: none;
+$input-border-radius: 8px;
+
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+.container-fluid {
+  margin-right: 120px;
+  margin-left: 120px;
+}
+
+.main_btn {
+  backdrop-filter: blur(16px);
+  font-family: 'Pragmatica Extended', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+}
+
+.form-floating > label {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-select ~ label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.form-floating > .form-control {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+  &:focus {
+    box-shadow: none;
+  }
+}
