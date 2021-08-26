@@ -100,7 +100,7 @@ const QuoteBlockWrap = styled.div`
   display: flex;
   padding: 150px 0 150px;
   position: relative;
-
+  background: #000;
   .bg {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 27.69%);
     width: 100%;
@@ -145,6 +145,7 @@ const QuoteBlockWrap = styled.div`
       object-fit: cover;
       border-radius: 50%;
       margin-right: 20px;
+      margin-bottom: 20px;
     }
 
     .info {
@@ -215,7 +216,7 @@ const AboutWrap = styled.div`
   width: 100%;
   display: flex;
   padding-top: 80px;
-
+  padding-bottom: 80px;
   .block_image {
     width: 100%;
     max-height: 675px;
@@ -260,7 +261,6 @@ const BlockImage = styled.img`
   width: 100%;
   max-height: 675px;
   object-fit: cover;
-  margin-top: 80px;
 `
 
 const SimpleBlockWrap = styled.div`

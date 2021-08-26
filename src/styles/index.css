@@ -8,3 +8,24 @@ body > * {
   font-style: normal!important;
   font-weight: normal!important;
 }
+
+{/*noise bg style*/}
+#section {
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+  background: repeating-linear-gradient(#111,#fff 50%,#fff 80%,#fff);
+  background-size: 2px 4px;
+  filter: url(#noise);
+  z-index: -1;
+  opacity: .03;
+}
+#svg {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
