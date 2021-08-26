@@ -13,6 +13,7 @@ const ProjectsWrap = styled.div`
   background-size: cover;
   padding-top: 60px;
   background-repeat: no-repeat;
+  overflow: hidden;
   h1 {
     font-family: Pragmatica Extended, sans-serif;
     font-style: normal;

@@ -35,6 +35,7 @@ const Slider = () => {
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         centeredSlides={true}
+        className={'swiper-container4'}
         >
         {
           test.map((item, key)=> {
