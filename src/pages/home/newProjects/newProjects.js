@@ -1,6 +1,7 @@
 import React from 'react';
 
 import * as Style from '../styled';
+import {NavLink} from "react-router-dom";
 
 const projects = [
   {name: 'Набережная о. Кабан' , city: 'Казань' , date: 2020},
@@ -33,7 +34,7 @@ const NewProjects = () => {
                 })
               }
              <div className="btn-block d-flex align-items-center">
-               <button>Смотреть Все</button>
+               <NavLink to={'projects'}>Смотреть Все</NavLink>
                <button>Проекты</button>
                <span>({projects.length})</span>
              </div>

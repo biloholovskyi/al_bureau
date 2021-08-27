@@ -60,3 +60,36 @@ $input-border-radius: 8px;
     box-shadow: none;
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > * {
+  font-family: Pragmatica, sans-serif!important;
+  font-style: normal!important;
+  font-weight: normal!important;
+  box-sizing: border-box;
+}
+
+//noise bg style
+#section {
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+  background: repeating-linear-gradient(#111,#fff 50%,#fff 80%,#fff);
+  background-size: 2px 4px;
+  filter: url(#noise);
+  z-index: -1;
+  opacity: .08;
+}
+#svg {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

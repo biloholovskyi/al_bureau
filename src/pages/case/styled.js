@@ -9,7 +9,7 @@ const CaseWrap = styled.div`
 
 const MainScreenWrap = styled.div`
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh + 240px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +27,8 @@ const MainScreenWrap = styled.div`
     letter-spacing: -0.02em;
     color: #FFFFFF;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 3;
   }
 
   .small_desc {
@@ -37,6 +39,8 @@ const MainScreenWrap = styled.div`
     line-height: 24px;
     color: #FFFFFF;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 3;
   }
 
   .main_btn {
@@ -66,7 +70,7 @@ const MainScreenWrap = styled.div`
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 0;
+    bottom: 130px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -93,12 +97,23 @@ const MainScreenWrap = styled.div`
       position: absolute;
     }
   }
+  
+  &:after {
+    content: '';
+    background-color:  rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
 `
 
 const QuoteBlockWrap = styled.div`
   width: 100%;
   display: flex;
-  padding: 150px 0 150px;
+  padding: 40px 0 150px;
   position: relative;
   background: #000;
   .bg {
@@ -107,7 +122,7 @@ const QuoteBlockWrap = styled.div`
     position: absolute;
     height: 100%;
     left: 0;
-    top: -153px;
+    top: -185px;
     z-index: 8;
   }
 
@@ -138,6 +153,7 @@ const QuoteBlockWrap = styled.div`
   .author {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 
     .photo {
       width: 48px;
@@ -145,7 +161,6 @@ const QuoteBlockWrap = styled.div`
       object-fit: cover;
       border-radius: 50%;
       margin-right: 20px;
-      margin-bottom: 20px;
     }
 
     .info {
@@ -217,6 +232,7 @@ const AboutWrap = styled.div`
   display: flex;
   padding-top: 80px;
   padding-bottom: 80px;
+  background-color: #000;
   .block_image {
     width: 100%;
     max-height: 675px;
@@ -245,6 +261,7 @@ const AboutWrap = styled.div`
     line-height: 24px;
     letter-spacing: -0.01em;
     color: #FFFFFF;
+    max-width: 348px;
   }
 
   .text {
@@ -254,6 +271,7 @@ const AboutWrap = styled.div`
     font-size: 14px;
     line-height: 22px;
     color: rgba(255, 255, 255, 0.8);
+    max-width: 348px;
   }
 `
 
@@ -261,17 +279,20 @@ const BlockImage = styled.img`
   width: 100%;
   max-height: 675px;
   object-fit: cover;
+  margin-bottom: 80px;
 `
 
 const SimpleBlockWrap = styled.div`
   width: 100%;
   display: flex;
-  padding: 150px 0 80px;
+  padding: 80px 0 80px;
 
-  img {
+  .simple_image {
     width: 100%;
     max-width: 560px;
     object-fit: cover;
+    height: fit-content;
+    max-height: 740px;
   }
 
   .text {
@@ -281,7 +302,8 @@ const SimpleBlockWrap = styled.div`
     font-size: 18px;
     line-height: 26px;
     color: #FFFFFF;
-    max-width: 560px;
+    max-width: 555px;
+    margin-left: auto;
   }
 
   .title {
@@ -293,19 +315,23 @@ const SimpleBlockWrap = styled.div`
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-bottom: 20px;
-    max-width: 560px;
+    max-width: 555px;
+    margin-left: auto;
+    margin-bottom: 40px;
   }
 
   .container-fluid {
-    & .row:first-child {
-      margin-bottom: 160px;
+    & .row {
+      padding-bottom: 160px;
+    }
+    & .row:last-child {
+      padding-bottom: 0px;
     }
   }
 
   .image_container {
     display: flex;
-
+    max-width: 560px;
     .image_row {
       max-width: 260px;
       display: flex;
@@ -323,6 +349,7 @@ const SimpleBlockWrap = styled.div`
       margin-top: 80px;
     }
   }
+  
 `
 
 const BigBlockWrap = styled.div`
@@ -440,7 +467,7 @@ const SimpleTextWrap = styled.div`
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 0px;
-    max-width: 560px;
+    max-width: 555px;
   }
 
   p {
@@ -450,7 +477,7 @@ const SimpleTextWrap = styled.div`
     font-size: 18px;
     line-height: 26px;
     color: #FFFFFF;
-    max-width: 560px;
+    max-width: 555px;
     margin-left: auto;
   }
 `
@@ -490,7 +517,7 @@ const TextCenterBlockWrap = styled.div`
 const ImageSliderWrap = styled.div`
     width: 100%;
   display: flex;
-  padding: 80px 0;
+  padding: 160px 0;
   overflow: hidden!important;
   position: relative;
 `
@@ -518,6 +545,8 @@ const SingleEquipmentSliderWrap = styled.div`
   width: 100%;
   display: flex;
   padding: 80px 0;
+  align-items: center;
+  justify-content: center;
 `
 
 const EquipmentCardsBlockWrap = styled.div`
@@ -539,6 +568,7 @@ const EquipmentCardsBlockWrap = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: space-between;
     .card {
       background-color: #111!important;
       padding: 20px;
@@ -546,7 +576,6 @@ const EquipmentCardsBlockWrap = styled.div`
       align-items: center;
       max-width: 270px;
       margin-bottom: 40px;
-      margin-right: 40px;
       .image {
         width: 128px;
         object-fit: cover;
@@ -682,6 +711,7 @@ const PrevNextCaseBlockWrap = styled.div`
         letter-spacing: -0.02em;
         text-transform: uppercase;
         color: #FFFFFF;
+        transition: all .4s;
       }
     }
     .blur {
@@ -690,23 +720,137 @@ const PrevNextCaseBlockWrap = styled.div`
       z-index: 3;
       width: 100%;
       height: 100%;
-      transition: .3s;
+      transition: background .4s;
     }
+
     &:hover {
       .blur {
         background: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(32px);
-        transition: .3s;
+        transition:background .4s;
       }
       .text {
         .name {
           color: transparent;
           -webkit-text-stroke: 1px #fff;
-         
+         transition: all .4s;
         }
       }
     }
   }
+`
+
+const GalleryTextBlockWrap = styled.div`
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  .title {
+    font-family: Pragmatica Extended, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    max-width: 450px;
+    margin-top: 160px;
+  }
+  
+  .text {
+    font-family: Pragmatica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    max-width: 450px;
+  }
+  .image_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 646px;
+    margin-left: auto;
+    .image_row {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      img {
+        width: fit-content;
+        margin-bottom: 40px;
+      }
+      & img:nth-child(2n){
+        margin-right: 40px;
+      }
+    }
+  }
+  .row2 {
+    h2,p {
+      margin-left: auto;
+    }
+    .image_container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 646px;
+      margin-left: unset;
+      margin-right: auto;
+      .image_row {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        img {
+          width: fit-content;
+          margin-bottom: 40px;
+        }
+        & img:nth-child(2n){
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+  .list {
+    &_item {
+      font-family: Pragmatica, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 18px;
+      &.active {
+        color: #fff;
+        position: relative;
+        padding-left: 40px;
+        &:before {
+          content: '';
+          width: 24px;
+          height: 1px;
+          background-color: #fff;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    & .list_item:last-child {
+      margin-bottom: 0;
+    }
+  }
+`
+
+const SingleQuoteSliderWrap = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding: 80px 0;
 `
 
 export {
@@ -725,5 +869,7 @@ export {
   SingleEquipmentSliderWrap,
   EquipmentCardsBlockWrap,
   SingleQuoteWrap,
-  PrevNextCaseBlockWrap
+  PrevNextCaseBlockWrap,
+  GalleryTextBlockWrap,
+  SingleQuoteSliderWrap
 }

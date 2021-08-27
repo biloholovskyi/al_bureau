@@ -22,7 +22,7 @@ const MainScreenWrap = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url(${bg});
+  //background-image: url(${bg});
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -355,7 +355,7 @@ const NewProjectsWrap = styled.div`
     }
 
     .btn-block {
-      button {
+      button, a {
         background: transparent;
         border: none;
         font-family: Pragmatica Extended, sans-serif;
@@ -368,11 +368,12 @@ const NewProjectsWrap = styled.div`
         color: rgba(255, 255, 255, 1);
       }
 
-      & button:first-child {
+      & a {
         color: rgba(255, 255, 255, 0.6);
+        text-decoration: navajowhite;
       }
 
-      & button:nth-child(2) {
+      & button{
         text-decoration: underline;
       }
 
@@ -393,6 +394,39 @@ const NewProjectsWrap = styled.div`
   }
 `
 
+const Image = styled.label`
+  
+  .preview {
+    width: 180px;
+    min-width: 180px;
+    height: 80px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .download {
+    font-family: 'TTInterfaces-Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #36B37E;
+    padding: 12px 24px;
+    border: 2px solid #36B37E;
+    border-radius: 12px;
+    @media(max-width: 325px) {
+      font-size: 16px;
+    }
+  }
+  
+  .hidden-input {
+    display: none;
+  }
+`
+
 export {
   HomeWrap,
   MainScreenWrap,
@@ -400,5 +434,6 @@ export {
   ThirdBlockWrap,
   ProcessCreateBlockWrap,
   MainFormWrap,
-  NewProjectsWrap
+  NewProjectsWrap,
+  Image
 }

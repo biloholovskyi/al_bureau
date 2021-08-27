@@ -1,11 +1,10 @@
 import React from 'react'
 
-import Header from "../../compoments/header/header";
 import MainScreen from "./mainScreen/mainScreen";
 import DescBlock from "./descBlock/descBlock";
 import ThirdBlock from "./ThirdBlock/ThirdBlock";
 import ProcessCreateBlock from "./processCreateBlock/processCreateBlock";
-import Footer from "../../compoments/footer/footer";
+import Footer from "../../components/footer/footer";
 import MainForm from "./MainForm/MainForm";
 import NewProjects from "./newProjects/newProjects";
 
