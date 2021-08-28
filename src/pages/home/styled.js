@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import bg from '../../media/image/bg.png';
+import t from '../../media/image/gradient.svg';
 
 const HomeWrap = styled.div`
   .small_title {
@@ -48,6 +49,8 @@ const MainScreenWrap = styled.div`
   }
 
   .main_btn {
+    z-index: 11;
+    position: relative;
     img {
       width: 18px;
       height: 18px;
@@ -100,6 +103,92 @@ const MainScreenWrap = styled.div`
       position: absolute;
     }
   }
+  
+  .gradient {
+    box-shadow: rgb(0 188 212 / 50%) 0px 0px 35px 49px;
+    background-color: rgba(0, 188, 212, 0.5);
+    position: absolute;
+    width: 400px;
+    height: 400px; 
+    border-radius: 50%;
+    animation: test infinite 20s;
+    filter: blur(4px);
+    z-index: -1;
+    //background: radial-gradient(circle farthest-side at 30px 20px, rgba(255, 255, 0, 0.4) 2%, rgba(0, 188, 212, 0.7) 52%, rgba(238, 130, 238, 0.4) 99%);
+  }
+  @keyframes test {
+    0% {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      transform: scale(1.1);
+    }
+    25% {
+      width: 500px;
+      height: 450px;
+      border-radius: 700px;
+      transform: rotate(20deg);
+    }
+    50% {
+      width: 450px;
+      height: 600px;
+      border-radius: 600px;
+      transform: rotate(20deg);
+    }
+    75% {
+      width: 500px;
+      height: 550px;
+      border-radius: 900px;
+      transform: rotate(20deg);
+    }
+    100% {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      transform: rotate(20deg) scale(1.1);
+    }
+  }
+  
+  #mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    z-index: -1;
+    width: 100%;
+    min-height: 100vh;
+    //animation: infinite 10s animGradient;
+  }
+
+  //@keyframes animGradient {
+  //  0% {
+  //    transform: scale(1);
+  //    transition: transform 5s;
+  //  }
+  //  25% {
+  //    transform: scale(1.1);
+  //    transition: transform 5s;
+  //  }
+  //  50% {
+  //    transform: scale(1);
+  //    transition: transform 5s;
+  //  }
+  //  65%{
+  //    transform: scale(1.1);
+  //    transition: transform 5s;
+  //  }
+  //  80% {
+  //    transform: scale(1.2);
+  //    transition: transform 5s;
+  //  }
+  //  100% {
+  //    transform: scale(1);
+  //  }
+  //}
 `
 
 const DeskBlockWrap = styled.div`

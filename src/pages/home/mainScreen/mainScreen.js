@@ -3,18 +3,13 @@ import { Link } from "react-scroll";
 
 import * as Style from '../styled';
 import arrow from './../../../media/icon/btn_arrow.svg';
+import bgg from '../../../media/image/gradient.svg';
 
 const MainScreen = () => {
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
 
-  const onMouseMove = (e) => {
-    setX( e.nativeEvent.offsetX );
-    setY( e.nativeEvent.offsetY );
-  }
 
   return (
-    <Style.MainScreenWrap onMouseMove={onMouseMove}>
+    <Style.MainScreenWrap >
       <div className="container-fluid">
         <div className="row">
           <div className="col-6">
@@ -35,8 +30,7 @@ const MainScreen = () => {
           </div>
         </div>
       </div>
-      <Link className="scrollIndicator" to='down'   offset={100} duration={1000} activeClass={'active'}>Листай вниз</Link>
-      {/*<p style={{position: "absolute",top: 0, left: 0, fontSize: 12 }}>mouse coordinates: { x } { y }</p>*/}
+      <Link className="scrollIndicator" to='down'   offset={200} duration={1000} activeClass={'active'}>Листай вниз</Link>
     </Style.MainScreenWrap>
   )
 }

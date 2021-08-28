@@ -88,7 +88,8 @@ const Menu = styled.div`
      display: block;
      width: fit-content;
      z-index: 10;
-     transition: color 1s;
+     transition: all .7s;
+     -webkit-text-stroke: 1px #fff;
      &:hover {
        color: transparent;
        -webkit-text-stroke: 1px #fff;
