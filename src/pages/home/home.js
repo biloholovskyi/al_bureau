@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import MainScreen from "./mainScreen/mainScreen";
 import DescBlock from "./descBlock/descBlock";
@@ -17,26 +17,26 @@ const Home = () => {
 
   const onMouseMove = (e) => {
     const gradient = document.getElementById('mask')
-    setX( e.clientX);
-    setY( e.clientY);
+    setX(e.clientX);
+    setY(e.clientY);
 
-    gradient.style.webkitMaskImage = `radial-gradient(380px 410px at ${x + 'px'} ${y + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`
-
+    gradient.style.webkitMaskImage = `radial-gradient(${280 + (x / 5) + 'px'} ${310 + (y / 5) + 'px'} at ${x + 'px'} ${y + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`
   }
-  return (
-   <>
-     <Style.HomeWrap onMouseMove={onMouseMove}>
-       <MainScreen/>
-       <DescBlock/>
-       <ThirdBlock/>
-       <ProcessCreateBlock/>
-       <NewProjects/>
-       <MainForm/>
-     </Style.HomeWrap>
 
-     <BgGradient/>
-     <Footer/>
-   </>
+  return (
+    <>
+      <Style.HomeWrap onMouseMove={onMouseMove}>
+        <MainScreen/>
+        <DescBlock/>
+        <ThirdBlock/>
+        <ProcessCreateBlock/>
+        <NewProjects/>
+        <MainForm/>
+      </Style.HomeWrap>
+
+      <BgGradient/>
+      <Footer/>
+    </>
   )
 }
 
