@@ -15,6 +15,7 @@ const ImageBg = styled.img`
     position: fixed;
     left: 0;
     top: 0;
+    mask-image: radial-gradient(380px 410px at 400px 400px, #000000 0%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-size: 100%;
     mask-size: 100%;
     -webkit-mask-repeat: no-repeat;
