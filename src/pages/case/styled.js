@@ -712,6 +712,7 @@ const PrevNextCaseBlockWrap = styled.div`
         text-transform: uppercase;
         color: #FFFFFF;
         transition: all .4s;
+        -webkit-text-stroke: 1px #fff;
       }
     }
     .blur {

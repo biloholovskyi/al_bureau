@@ -36,6 +36,9 @@ const MainScreenWrap = styled.div`
     letter-spacing: -0.02em;
     color: #FFFFFF;
     margin-bottom: 40px;
+    @media(max-height: 722px){
+      margin-bottom: 20px;
+    }
   }
 
   .small_desc {
