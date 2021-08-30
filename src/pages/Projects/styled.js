@@ -9,7 +9,7 @@ const ProjectsWrap = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url(${bg});
+  //background-image: url(${bg});
   background-size: cover;
   padding-top: 60px;
   background-repeat: no-repeat;

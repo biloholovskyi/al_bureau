@@ -1,11 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import * as Style from './styled'
 import Slider from "./Slider/slider";
+import BgGradient from "../../components/bgGradient/bgGradient";
 
 const Projects = () => {
+  const [x, setX] = useState(20);
+  const [y, setY] = useState(20);
+
+  const onMouseMove = (e) => {
+    const gradient = document.getElementById('mask')
+    setX( e.clientX);
+    setY( e.clientY);
+
+    gradient.style.webkitMaskImage = `radial-gradient(380px 410px at ${x + 'px'} ${y + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`
+
+  }
+
   return (
-    <Style.ProjectsWrap>
+    <Style.ProjectsWrap onMouseMove={onMouseMove}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12"><h1>Наши проекты</h1></div>
@@ -19,6 +32,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
+      <BgGradient/>
     </Style.ProjectsWrap>
   )
 }
