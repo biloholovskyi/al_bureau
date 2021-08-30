@@ -27,7 +27,8 @@ const test = [
 ]
 
 const Slider = () => {
-  let ref = useRef()
+  let ref = useRef();
+
   useEffect(()=> {
     const el = ref.current;
     if(el){
