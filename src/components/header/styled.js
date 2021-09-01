@@ -13,7 +13,7 @@ const HeaderWrap = styled.div`
   background-color: transparent;
   top: 42px;
   left: 0;
-  z-index: 50;
+  z-index: ${props => props.fixed ? '50' : 'none'};
   .logo {
     width: 166px;
     height: 32px;
@@ -21,6 +21,7 @@ const HeaderWrap = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 50;
     img {
       width: 100%;
       height: 100%;
@@ -36,6 +37,7 @@ const HeaderWrap = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 50;
     img {
       width: 100%;
       height: 100%;
@@ -53,6 +55,7 @@ const HeaderWrap = styled.div`
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(16px);
+    z-index: 50;
     img {
      width: 28px;
       height: 28px;

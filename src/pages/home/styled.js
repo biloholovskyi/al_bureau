@@ -423,7 +423,7 @@ const NewProjectsWrap = styled.div`
       padding-bottom: 40px;
       border-bottom: 1px solid #fff;
       margin-bottom: 40px;
-
+      cursor: pointer;
       .name {
         font-family: Pragmatica Extended, sans-serif;
         font-style: normal;
@@ -434,6 +434,8 @@ const NewProjectsWrap = styled.div`
         text-transform: uppercase;
         color: #FFFFFF;
         margin-bottom: 24px;
+        -webkit-text-stroke: 1px #fff;
+        transition: all .7s;
       }
 
       .info > * {
@@ -444,6 +446,32 @@ const NewProjectsWrap = styled.div`
         line-height: 24px;
         color: #FFFFFF;
       }
+      .hover_image {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        min-height: 100vh;
+        z-index: -1;
+        object-fit: cover;
+       
+        opacity:  0;
+        transition:opacity .3s;
+      }
+      
+
+      &:hover .name {
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        transition: all .5s;
+        z-index: 10;
+      }
+      &:hover .hover_image {
+      
+        opacity: 1;
+        transition: opacity .3s;
+      }
+
     }
 
     .btn-block {
@@ -461,12 +489,12 @@ const NewProjectsWrap = styled.div`
       }
 
       & a {
-        color: rgba(255, 255, 255, 0.6);
-        text-decoration: navajowhite;
+        text-decoration: underline;
       }
 
       & button{
-        text-decoration: underline;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
       }
 
       span {

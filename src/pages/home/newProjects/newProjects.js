@@ -1,14 +1,17 @@
 import React from 'react';
-
-import * as Style from '../styled';
 import {NavLink} from "react-router-dom";
 
+import * as Style from '../styled';
+import image from '../../../media/image/slide.png';
+import image2 from '../../../media/image/slide2.png'
+import image3 from '../../../media/image/slide3.png'
+
 const projects = [
-  {name: 'Набережная о. Кабан' , city: 'Казань' , date: 2020},
-  {name: 'Таиф' , city: 'Казань' , date: 2019},
-  {name: 'НКЦ' , city: 'Казань' , date: 2019},
-  {name: 'ПЕТРОПАВЛОВСКИЙ СОБОР' , city: 'Казань' , date: 2018},
-  {name: 'мечеть «кул-шариф»' , city: 'г. Казань, Казанский кремль' , date: 2016},
+  {name: 'Набережная о. Кабан' , city: 'Казань' , date: 2020, hoverImage: image},
+  {name: 'Таиф' , city: 'Казань' , date: 2019, hoverImage: image2},
+  {name: 'НКЦ' , city: 'Казань' , date: 2019, hoverImage: image3},
+  {name: 'ПЕТРОПАВЛОВСКИЙ СОБОР' , city: 'Казань' , date: 2018, hoverImage: image2},
+  {name: 'мечеть «кул-шариф»' , city: 'г. Казань, Казанский кремль' , date: 2016, hoverImage: image},
 ]
 
 const NewProjects = () => {
@@ -29,13 +32,14 @@ const NewProjects = () => {
                         <div className={'ms-2 me-2'}>/</div>
                         <div className="date">{item.date}</div>
                       </div>
+                      <img className={'hover_image'} src={item.hoverImage} alt="image"/>
                     </div>
                   )
                 })
               }
              <div className="btn-block d-flex align-items-center">
-               <NavLink to={'projects'}>Смотреть Все</NavLink>
-               <button>Проекты</button>
+               <button>Смотреть Все</button>
+               <NavLink to={'projects'}>Проекты</NavLink>
                <span>({projects.length})</span>
              </div>
             </div>
