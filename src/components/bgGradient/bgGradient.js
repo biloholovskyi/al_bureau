@@ -1,10 +1,10 @@
 import React from 'react';
-import bgg from "../../media/image/gradient.svg";
+import bg from "../../media/image/gradient2.svg";
 import styled from 'styled-components'
 
 const BgGradient = () => {
   return (
-    <ImageBg id={'mask'} src={bgg} alt="image"/>
+    <ImageBg id={'mask'} src={bg} alt="image"/>
   )
 }
 
