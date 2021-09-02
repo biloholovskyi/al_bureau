@@ -11,20 +11,21 @@ const BgGradient = () => {
 export default BgGradient;
 
 const ImageBg = styled.img`
- 
-    position: fixed;
-    left: 0;
-    top: 0;
-    mask-image: radial-gradient(380px 410px at 400px 400px, #000000 0%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-size: 100%;
-    mask-size: 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    z-index: -1;
-    width: 100%;
-    min-height: 100vh;
-    //animation: infinite 10s animGradient;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  mask-image: radial-gradient(380px 410px at 400px 400px, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  z-index: -1;
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  //animation: infinite 10s animGradient;
   //@keyframes animGradient {
   //  0% {
   //    transform: scale(1);

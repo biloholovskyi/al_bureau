@@ -27,6 +27,10 @@ const HeaderWrap = styled.div`
       height: 100%;
       object-fit: contain;
     }
+    @media(max-width: 575px) {
+      width: 115px;
+      height: 24px;
+    }
   }
   .menuBtn {
     width: 64px;
@@ -42,6 +46,10 @@ const HeaderWrap = styled.div`
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+    @media(max-width: 575px) {
+      width: 48px;
+      height: 48px;
     }
   }
   .closeMenu {
@@ -61,6 +69,17 @@ const HeaderWrap = styled.div`
       height: 28px;
       object-fit: contain;
     }
+    @media(max-width: 575px) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  @media(max-width: 991px) {
+    padding: 0 24px;
+  }
+  @media(max-width: 767px) {
+    top: 20px;
+    padding: 0 20px;
   }
 `
 
@@ -98,6 +117,11 @@ const Menu = styled.div`
        -webkit-text-stroke: 1px #fff;
        transition: all .5s;
        z-index: 10;
+     }
+     @media(max-width: 575px){
+       font-size: 28px;
+       line-height: 36px;
+       margin-bottom: 40px;
      }
    }
    }

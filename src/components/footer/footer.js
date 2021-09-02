@@ -30,7 +30,9 @@ const Footer = () => {
           <a href="#" className={'social_link'}><img src={fb} alt="icon"/></a>
           <a href="#" className={'social_link'}><img src={tw} alt="icon"/></a>
         </div>
+        <p className={'mobile_block'}>© 2018  SV-GROUP</p>
       </div>
+
     </Style.FooterWrap>
   )
 }

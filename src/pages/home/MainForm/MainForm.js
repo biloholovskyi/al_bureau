@@ -61,8 +61,8 @@ const [inputLength, setInputLength] = useState('');
     <Style.MainFormWrap>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-3"><h3 className={'small_title'}>начать проект</h3></div>
-          <div className="col-9">
+          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>начать проект</h3></div>
+          <div className="col-lg-9 col-md-9 col-sm-12 col-12">
             <h2>Опишите ваш проект</h2>
             <form>
               <div className="double">
@@ -86,7 +86,7 @@ const [inputLength, setInputLength] = useState('');
                </div>
                <div className="counter text-end">{inputLength.length} / 200</div>
              </div>
-              <div className="d-flex w-100 justify-content-between align-items-center">
+              <div className="btn_section d-flex w-100 justify-content-between align-items-center">
 
                 {renderPreview}
 

@@ -15,8 +15,8 @@ const ThirdBlock = () => {
     <Style.ThirdBlockWrap>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-3"><h3 className={'small_title'}>Что мы учитываем при<br/>создании концепции:</h3></div>
-          <div className="col-9">
+          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>Что мы учитываем при<br/>создании концепции:</h3></div>
+          <div className="col-lg-9 col-md-9 col-sm-12 col-12">
             <div className="blocks">
               {
                 block.map((item, key) => {

@@ -12,14 +12,14 @@ const MainScreen = () => {
     <Style.MainScreenWrap >
       <div className="container-fluid">
         <div className="row">
-          <div className="col-6">
+          <div className="col-lg-6 col-md-12 col-sm-12">
             <h1 className={'title text-uppercase'}>Architecture & Light Bureau</h1>
           </div>
-          <div className="col-6"/>
+          <div className="col-lg-6 d-none d-lg-block"/>
         </div>
         <div className="row">
-          <div className="col-6"/>
-          <div className="col-6">
+          <div className="col-lg-6 d-lg-block"/>
+          <div className="col-lg-6 col-md-12 col-sm-12">
             <p className={'small_desc'}>Создаем проекты любой сложности и решаем самые смелые задачи в области
               архитектурно-художественного, ландшафтного и интерьерного освещения.</p>
             <button type="button"
@@ -30,7 +30,7 @@ const MainScreen = () => {
           </div>
         </div>
       </div>
-      <Link className="scrollIndicator" to='down'   offset={200} duration={1000} activeClass={'active'}>Листай вниз</Link>
+      <Link className="scrollIndicator" to='down'   offset={200} duration={1000} activeClass={'active'}>Листай<br/>вниз</Link>
     </Style.MainScreenWrap>
   )
 }
