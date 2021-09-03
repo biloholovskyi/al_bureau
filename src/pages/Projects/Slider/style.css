@@ -52,11 +52,11 @@
   -webkit-text-stroke: 1px #fff;
   transition: all .5s;
   margin-bottom: 6px;
+  max-width: 380px;
 }
 
 @media(max-height: 735px) {
   .projects-container .projects-wrapper .project-slide .info .name {
-    font-size: 30px;
     margin-bottom: 2px;
   }
 }

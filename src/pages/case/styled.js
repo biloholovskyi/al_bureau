@@ -76,7 +76,8 @@ const MainScreenWrap = styled.div`
     cursor: pointer;
     z-index: 11;
     text-decoration: none;
-
+    text-align: center;
+    
     &:after {
       content: '';
       width: 256px;
@@ -97,10 +98,10 @@ const MainScreenWrap = styled.div`
       position: absolute;
     }
   }
-  
+
   &:after {
     content: '';
-    background-color:  rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     left: 0;
     top: 0;
@@ -116,6 +117,7 @@ const QuoteBlockWrap = styled.div`
   padding: 40px 0 150px;
   position: relative;
   background: #000;
+
   .bg {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 27.69%);
     width: 100%;
@@ -233,6 +235,7 @@ const AboutWrap = styled.div`
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #000;
+
   .block_image {
     width: 100%;
     max-height: 675px;
@@ -324,6 +327,7 @@ const SimpleBlockWrap = styled.div`
     & .row {
       padding-bottom: 160px;
     }
+
     & .row:last-child {
       padding-bottom: 0px;
     }
@@ -332,6 +336,7 @@ const SimpleBlockWrap = styled.div`
   .image_container {
     display: flex;
     max-width: 560px;
+
     .image_row {
       max-width: 260px;
       display: flex;
@@ -349,7 +354,7 @@ const SimpleBlockWrap = styled.div`
       margin-top: 80px;
     }
   }
-  
+
 `
 
 const BigBlockWrap = styled.div`
@@ -515,19 +520,20 @@ const TextCenterBlockWrap = styled.div`
 `
 
 const ImageSliderWrap = styled.div`
-    width: 100%;
+  width: 100%;
   display: flex;
   padding: 160px 0;
-  overflow: hidden!important;
+  overflow: hidden !important;
   position: relative;
 `
 
 const EquipmentSliderWrap = styled.div`
   display: flex;
   width: 100%;
-  overflow: hidden!important;
+  overflow: hidden !important;
   position: relative;
   padding: 80px 0;
+
   h2 {
     font-family: Pragmatica Extended, sans-serif;
     margin-bottom: 60px;
@@ -553,6 +559,7 @@ const EquipmentCardsBlockWrap = styled.div`
   width: 100%;
   display: flex;
   padding: 80px 0;
+
   h2 {
     font-family: Pragmatica Extended, sans-serif;
     font-style: normal;
@@ -564,24 +571,28 @@ const EquipmentCardsBlockWrap = styled.div`
     color: #FFFFFF;
     margin-bottom: 60px;
   }
+
   .cardsBlock {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+
     .card {
-      background-color: #111!important;
+      background-color: #111 !important;
       padding: 20px;
       flex-direction: column;
       align-items: center;
       max-width: 270px;
       margin-bottom: 40px;
+
       .image {
         width: 128px;
         object-fit: cover;
         height: 128px;
         margin-bottom: 30px;
       }
+
       .text2 {
         font-family: Pragmatica, sans-serif;
         font-style: normal;
@@ -590,6 +601,7 @@ const EquipmentCardsBlockWrap = styled.div`
         line-height: 22px;
         color: rgba(255, 255, 255, 0.8);
       }
+
       .name2 {
         font-family: Pragmatica, sans-serif;
         font-style: normal;
@@ -607,10 +619,12 @@ const SingleQuoteWrap = styled.div`
   width: 100%;
   display: flex;
   padding: 80px 0;
+
   .quoteText {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .title {
       font-family: Pragmatica Extended, sans-serif;
       font-style: normal;
@@ -624,6 +638,7 @@ const SingleQuoteWrap = styled.div`
       max-width: 800px;
       margin: 0 auto 40px;
       position: relative;
+
       &:before {
         content: '';
         position: absolute;
@@ -634,16 +649,19 @@ const SingleQuoteWrap = styled.div`
         height: 90px;
       }
     }
+
     .author {
       display: flex;
       align-items: center;
       flex-direction: column;
+
       .photo {
         width: 60px;
         height: 60px;
         margin-bottom: 20px;
         object-fit: cover;
       }
+
       .name {
         font-family: Pragmatica, sans-serif;
         font-style: normal;
@@ -653,6 +671,7 @@ const SingleQuoteWrap = styled.div`
         letter-spacing: -0.01em;
         color: #FFFFFF;
       }
+
       .position {
         font-family: Pragmatica, sans-serif;
         font-style: normal;
@@ -671,6 +690,7 @@ const PrevNextCaseBlockWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
   .caseItem {
     flex: 50%;
     display: flex;
@@ -679,6 +699,7 @@ const PrevNextCaseBlockWrap = styled.div`
     padding: 150px 0;
     position: relative;
     cursor: pointer;
+
     img {
       position: absolute;
       left: 0;
@@ -688,11 +709,13 @@ const PrevNextCaseBlockWrap = styled.div`
       object-fit: cover;
       z-index: 1;
     }
+
     .text {
       z-index: 4;
       display: flex;
       flex-direction: column;
       align-items: center;
+
       .title {
         font-family: Pragmatica, sans-serif;
         font-style: normal;
@@ -702,6 +725,7 @@ const PrevNextCaseBlockWrap = styled.div`
         color: #FFFFFF;
         transition: .3s;
       }
+
       .name {
         font-family: Pragmatica Extended, sans-serif;
         font-style: normal;
@@ -715,8 +739,9 @@ const PrevNextCaseBlockWrap = styled.div`
         -webkit-text-stroke: 1px #fff;
       }
     }
+
     .blur {
-     background: transparent;
+      background: transparent;
       position: absolute;
       z-index: 3;
       width: 100%;
@@ -728,13 +753,14 @@ const PrevNextCaseBlockWrap = styled.div`
       .blur {
         background: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(32px);
-        transition:background .4s;
+        transition: background .4s;
       }
+
       .text {
         .name {
           color: transparent;
           -webkit-text-stroke: 1px #fff;
-         transition: all .4s;
+          transition: all .4s;
         }
       }
     }
@@ -746,6 +772,7 @@ const GalleryTextBlockWrap = styled.div`
   display: flex;
   overflow: hidden;
   position: relative;
+
   .title {
     font-family: Pragmatica Extended, sans-serif;
     font-style: normal;
@@ -759,7 +786,7 @@ const GalleryTextBlockWrap = styled.div`
     max-width: 450px;
     margin-top: 160px;
   }
-  
+
   .text {
     font-family: Pragmatica, sans-serif;
     font-style: normal;
@@ -769,30 +796,36 @@ const GalleryTextBlockWrap = styled.div`
     color: #FFFFFF;
     max-width: 450px;
   }
+
   .image_container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     max-width: 646px;
     margin-left: auto;
+
     .image_row {
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
       justify-content: flex-end;
+
       img {
         width: fit-content;
         margin-bottom: 40px;
       }
-      & img:nth-child(2n){
+
+      & img:nth-child(2n) {
         margin-right: 40px;
       }
     }
   }
+
   .row2 {
-    h2,p {
+    h2, p {
       margin-left: auto;
     }
+
     .image_container {
       display: flex;
       flex-direction: column;
@@ -800,21 +833,25 @@ const GalleryTextBlockWrap = styled.div`
       max-width: 646px;
       margin-left: unset;
       margin-right: auto;
+
       .image_row {
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
+
         img {
           width: fit-content;
           margin-bottom: 40px;
         }
-        & img:nth-child(2n){
+
+        & img:nth-child(2n) {
           margin-right: 40px;
         }
       }
     }
   }
+
   .list {
     &_item {
       font-family: Pragmatica, sans-serif;
@@ -824,10 +861,12 @@ const GalleryTextBlockWrap = styled.div`
       line-height: 26px;
       color: rgba(255, 255, 255, 0.7);
       margin-bottom: 18px;
+
       &.active {
         color: #fff;
         position: relative;
         padding-left: 40px;
+
         &:before {
           content: '';
           width: 24px;
@@ -840,6 +879,7 @@ const GalleryTextBlockWrap = styled.div`
         }
       }
     }
+
     & .list_item:last-child {
       margin-bottom: 0;
     }

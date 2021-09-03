@@ -22,7 +22,7 @@ const MainScreen = () => {
           </div>
         </div>
       </div>
-      <Link className="scrollIndicator" to='down'   offset={100} duration={1000} activeClass={'active'}>Листай вниз</Link>
+      <Link className="scrollIndicator" to='down'   offset={100} duration={1000} activeClass={'active'}>Листай<br/>вниз</Link>
     </Style.MainScreenWrap>
   )
 }
