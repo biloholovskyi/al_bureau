@@ -30,7 +30,7 @@ const Case = () => {
     setX( e.clientX);
     setY( e.clientY);
 
-    gradient.style.webkitMaskImage = `radial-gradient(380px 410px at ${x + 'px'} ${y + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`
+    gradient.style.webkitMaskImage = `radial-gradient(${280 + (x / 5) + 'px'} ${310 + (y / 5) + 'px'} at ${x + 'px'} ${y + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`
   }
   return (
    <>
