@@ -79,7 +79,7 @@ const [inputLength, setInputLength] = useState('');
                 <input type="email" className="form-control bg-transparent border-end-0 border-start-0 border-top-0 rounded-0 ps-0" id="floatingInput" placeholder="name@example.com" />
                 <label className={'ps-0'} htmlFor="floatingInput">Название компании (необязательно)</label>
               </div>
-             <div className={' mb-5 w-100'}>
+             <div className={'blockWithCount mb-5 w-100'}>
                <div className="form-floating w-100 mb-0">
                  <input maxLength={'200'} onChange={(e)=> inputCounter(e)} type="email" className="form-control bg-transparent border-end-0 border-start-0 border-top-0 rounded-0 ps-0" id="floatingInput" placeholder="name@example.com" />
                  <label className={'ps-0'} htmlFor="floatingInput">Опишите проект</label>

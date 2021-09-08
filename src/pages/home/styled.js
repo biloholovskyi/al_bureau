@@ -77,6 +77,7 @@ const MainScreenWrap = styled.div`
     @media (max-width: 575px) {
       font-size: 16px;
       line-height: 28px;
+      margin-bottom: 28px;
     }
   }
 
@@ -356,6 +357,7 @@ const ThirdBlockWrap = styled.div`
         height: 150px;
         padding: 16px;
         margin-right: 0;
+        margin-bottom: 20px;
         .number {
           font-size: 18px;
           line-height: 24px;
@@ -374,7 +376,7 @@ const ThirdBlockWrap = styled.div`
   }
 
   @media (max-width: 767px) {
-    padding: 40px 0 40px;
+    padding: 40px 0 60px;
   }
 `
 
@@ -403,6 +405,7 @@ const ProcessCreateBlockWrap = styled.div`
       @media (max-width: 767px) {
         left: 0;
         transform: none;
+        height: 90%;
       }
     }
 
@@ -437,7 +440,7 @@ const ProcessCreateBlockWrap = styled.div`
 
         @media (max-width: 767px) {
           margin-left: -4px;
-          margin-top: 4px;
+          margin-top: 10px;
         }
       }
 
@@ -454,8 +457,8 @@ const ProcessCreateBlockWrap = styled.div`
         color: #FFFFFF;
         @media (max-width: 767px) {
           position: absolute;
-          left: 16px;
-          top: 0;
+          left: 20px;
+          top: 4px;
           font-size: 16px;
           text-align: left;
           line-height: 24px;
@@ -472,7 +475,7 @@ const ProcessCreateBlockWrap = styled.div`
         color: #FFFFFF;
         @media (max-width: 767px) {
           position: absolute;
-          left: 16px;
+          left: 20px;
           bottom: 0;
           font-size: 12px;
           line-height: 20px;
@@ -481,13 +484,16 @@ const ProcessCreateBlockWrap = styled.div`
 
       @media (max-width: 767px) {
         position: relative;
-        min-height: 120px;
+        min-height: 116px;
         margin-bottom: 32px;
       }
     }
 
     @media (max-width: 767px) {
       padding: 40px 0;
+      & .item:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -515,6 +521,7 @@ const MainFormWrap = styled.div`
     @media (max-width: 575px) {
       font-size: 20px;
       line-height: 30px;
+      text-transform: uppercase;
     }
   }
 
@@ -538,6 +545,7 @@ const MainFormWrap = styled.div`
     .form-floating {
       margin-bottom: 32px;
       @media(max-width: 575px){
+        margin-bottom: 28px;
         & label {
             padding-right: 0!important;
           }
@@ -567,6 +575,15 @@ const MainFormWrap = styled.div`
         label {
           margin-bottom: 16px;
         }
+        .btn {
+          padding: 12px 24px;
+        }
+      }
+    }
+    
+    @media(max-width: 575px){
+      .blockWithCount {
+        margin-bottom: 28px!important;
       }
     }
   }
@@ -677,6 +694,7 @@ const NewProjectsWrap = styled.div`
         padding: 28px 20px;
         border-bottom: none;
         position: relative;
+        max-height: 120px;
       }
     }
 
