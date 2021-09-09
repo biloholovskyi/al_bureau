@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import bg from '../../media/image/menu_hover.png';
-import bg2 from '../../media/image/menu_hover2.png';
+import bg from '../../media/image/menu_hover-min.png';
+import bg2 from '../../media/image/menu_hover2-min.png';
 import bg3 from '../../media/image/menu_hover3.svg';
 
 const HeaderWrap = styled.div`
@@ -113,10 +113,12 @@ const Menu = styled.div`
   position: fixed;
   left: 0;
   top: 0;
-  display:  ${props => props.show ? 'flex' : 'none'};
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  transform: ${props => props.show ? 'translateY(0%)' : 'translateY(-100%)'};
+  transition: transform 0.5s;
  .nav {
    a {
      font-family: Pragmatica Extended, sans-serif;

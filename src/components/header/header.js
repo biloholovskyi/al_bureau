@@ -25,6 +25,8 @@ const Header = () => {
 
   const showMenu = () => {
     setMenu(!menu)
+    const body = document.getElementById('body');
+    body.classList.toggle('fixed')
   }
 
   return (
