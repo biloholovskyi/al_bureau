@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import bg from '../../media/image/menu_hover-min.png';
 import bg2 from '../../media/image/menu_hover2-min.png';
-import bg3 from '../../media/image/menu_hover3.svg';
+import bg3 from '../../media/image/menu_hover3-min.png';
 
 const HeaderWrap = styled.div`
   width: 100%;
