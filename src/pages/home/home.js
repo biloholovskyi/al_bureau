@@ -20,7 +20,10 @@ const Home = () => {
     setX(e.clientX);
     setY(e.clientY);
 
-    gradient.style.webkitMaskImage = `radial-gradient(380px 410px at ${x + 'px'} ${y + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`
+    const scaleItems = [1.39479824, 1.237298427097, 1.39479824, 1.237298427097, 0.89479824, 0.937298427097, 1.333333, 0.98797098]
+
+    gradient.style.webkitMaskImage = `radial-gradient(380px 410px at ${x + 'px'} ${y + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`;
+    gradient.style.transform = `scale(${scaleItems[Math.floor(Math.random()*scaleItems.length)]}, ${scaleItems[Math.floor(Math.random()*scaleItems.length)]})`;
   }
 
   return (
