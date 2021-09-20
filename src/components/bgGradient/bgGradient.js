@@ -11,7 +11,7 @@ const BgGradient = () => {
 export default BgGradient;
 
 const ImageBg = styled.img`
-  transition: all 1s;
+  transition: all .3s;
   position: fixed;
   left: 0;
   top: 0;

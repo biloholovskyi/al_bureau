@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import * as Style from './styled';
 import MainScreen from "./mainScreen/mainScreen";
@@ -19,22 +19,11 @@ import SingleQuote from "./singleQuote/singleQuote";
 import PrevNextCaseBlock from "./prevNextCaseBlock/prevNextCaseBlock";
 import GalleryTextBlock from "./galleryTextBlock/galleryTextBlock";
 import SingleQuoteSlider from "./singleQuoteSlider/singleQuoteSlider";
-import BgGradient from "../../components/bgGradient/bgGradient";
 
 const Case = () => {
-  const [x, setX] = useState(20);
-  const [y, setY] = useState(20);
-
-  const onMouseMove = (e) => {
-    const gradient = document.getElementById('mask')
-    setX( e.clientX);
-    setY( e.clientY);
-
-    gradient.style.webkitMaskImage = `radial-gradient(380px 410px at ${x + 'px'} ${y + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`
-  }
   return (
    <>
-     <Style.CaseWrap onMouseMove={onMouseMove}>
+     <Style.CaseWrap>
        <MainScreen/>
        <QuoteBlock/>
        <About/>
@@ -53,8 +42,6 @@ const Case = () => {
        <SingleQuote/>
        <PrevNextCaseBlock/>
      </Style.CaseWrap>
-
-     <BgGradient/>
      <Footer/>
    </>
   )
