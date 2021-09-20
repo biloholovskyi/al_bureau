@@ -19,7 +19,7 @@ function App() {
         <Route path={'/case'} exact component={Case}/>
       </Switch>
 
-      {/*<Noise/>*/}
+      <Noise/>
     </>
   );
 }
