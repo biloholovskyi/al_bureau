@@ -10,7 +10,7 @@ const About = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12">
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <h2 className={'animText anim_no_hide'}>Lorem ipsum dolor sit amet</h2>
             </div>
           </div>
           <div className="row">

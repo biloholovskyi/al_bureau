@@ -12,7 +12,7 @@ const DescBlock = () => {
           <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>Что мы делаем?</h3></div>
           <div className="col-lg-9 col-md-9 col-sm-12 col-12">
             <div className="name_block">
-              <p>мы специализируемся на предоставлении современных
+              <p className={'animText anim_no_hide'}>мы специализируемся на предоставлении современных
                 и индивидуальных решений в сфере освещения.</p>
               <p className={'blur'}>мы специализируемся на предоставлении современных
                 и индивидуальных решений в сфере освещения.</p>

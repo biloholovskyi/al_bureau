@@ -77,6 +77,17 @@ const DeskBlockWrap = styled.div`
       text-transform: uppercase;
       color: #FFFFFF;
       margin-bottom: 60px;
+      overflow: hidden;
+      background: linear-gradient(to right,#fff,rgba(255,255,255, 1) 50%,rgba(255,255,255, .2) 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 2s ease;
+      &.active {
+        background-position: 0 100%;
+      }
     }
     .blur {
       position: absolute;

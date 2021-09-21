@@ -15,7 +15,7 @@ const SimpleBlocksText = () => {
             <img className={'simple_image'} src={image} alt="image"/>
           </div>
           <div className="col-6 d-flex flex-column align-items-center justify-content-center">
-            <div className="title">Lorem ipsum dolor sit amet, consectetur</div>
+            <div className="title animText anim_no_hide">Lorem ipsum dolor sit amet, consectetur</div>
             <div className="text">
               Nullam blandit cursus justo, eu accumsan purus auctor et. Duis arcu purus, varius fermentum lectus ac,
               convallis convallis ipsum. Duis ut metus at leo lacinia commodo vitae eu eros. Proin id turpis
@@ -25,7 +25,7 @@ const SimpleBlocksText = () => {
         </div>
         <div className="row">
           <div className="col-6 d-flex flex-column justify-content-center">
-            <div className="title ms-0">Lorem ipsum dolor sit amet, consectetur</div>
+            <div className="title ms-0 animText anim_no_hide">Lorem ipsum dolor sit amet, consectetur</div>
             <div className="text ms-0">
               Nullam blandit cursus justo, eu accumsan purus auctor et. Duis arcu purus, varius fermentum lectus ac,
               convallis convallis ipsum. Duis ut metus at leo lacinia commodo vitae eu eros. Proin id turpis
@@ -48,7 +48,7 @@ const SimpleBlocksText = () => {
             </div>
           </div>
           <div className="col-6 d-flex flex-column align-items-center justify-content-center">
-            <div className="title">Lorem ipsum dolor sit amet, consectetur</div>
+            <div className="title animText anim_no_hide">Lorem ipsum dolor sit amet, consectetur</div>
             <div className="text">
               Nullam blandit cursus justo, eu accumsan purus auctor et. Duis arcu purus, varius fermentum lectus ac,
               convallis convallis ipsum. Duis ut metus at leo lacinia commodo vitae eu eros. Proin id turpis

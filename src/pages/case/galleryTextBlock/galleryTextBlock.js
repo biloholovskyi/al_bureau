@@ -11,7 +11,7 @@ const GalleryTextBlock = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-5">
-            <h2 className={'title'}>Lorem ipsum dolor sit amet, consecte</h2>
+            <h2 className={'title animText anim_no_hide'}>Lorem ipsum dolor sit amet, consecte</h2>
             <p className={'text'}>Nullam blandit cursus justo, eu accumsan purus auctor et. Duis arcu purus, varius fermentum lectus ac,
               convallis convallis ipsum. Duis ut metus at leo lacinia commodo vitae eu eros. Proin id turpis
               scelerisque, bibendum arcu quis, aliquam nunc. Fusce fringilla ultrices vehicula.</p>
@@ -41,7 +41,7 @@ const GalleryTextBlock = () => {
             </div>
           </div>
           <div className="col-5">
-            <h2 className={'title'}>Lorem ipsum dolor sit amet, consecte</h2>
+            <h2 className={'title animText anim_no_hide'}>Lorem ipsum dolor sit amet, consecte</h2>
             <p className={'text'}>Nullam blandit cursus justo, eu accumsan purus auctor et. Duis arcu purus, varius fermentum lectus ac,
               convallis convallis ipsum. Duis ut metus at leo lacinia commodo vitae eu eros. Proin id turpis
               scelerisque, bibendum arcu quis, aliquam nunc. Fusce fringilla ultrices vehicula.</p>
@@ -49,7 +49,7 @@ const GalleryTextBlock = () => {
         </div>
         <div className="row">
           <div className="col-5">
-            <h2 className={'title'}>Lorem ipsum dolor sit amet, consecte</h2>
+            <h2 className={'title animText anim_no_hide'}>Lorem ipsum dolor sit amet, consecte</h2>
           <div className="list">
             <div className={'list_item active'}>Item 2 Lorem ipsum</div>
             <div className={'list_item'}>Item 2 Lorem ipsum</div>

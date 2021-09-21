@@ -63,7 +63,7 @@ const [inputLength, setInputLength] = useState('');
         <div className="row">
           <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>начать проект</h3></div>
           <div className="col-lg-9 col-md-9 col-sm-12 col-12">
-            <h2>Опишите ваш проект</h2>
+            <h2 className={'animText anim_no_hide'}>Опишите ваш проект</h2>
             <form>
               <div className="double">
                 <div className="form-floating w-100">

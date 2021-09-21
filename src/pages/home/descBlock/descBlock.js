@@ -12,7 +12,7 @@ const DescBlock = () => {
         <div className="row">
           <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>Кто мы?</h3></div>
           <div className="col-lg-9 col-md-9 col-sm-12 col-12">
-            <p>Мы – творческое бюро светодизайнеров и инженеров, специализирующиеся на разработке и комплексной реализации концепций освещения.</p>
+            <p className={'animText anim_no_hide'}>Мы – творческое бюро светодизайнеров и инженеров, специализирующиеся на разработке и комплексной реализации концепций освещения.</p>
            <div className="photo_block">
              <img src={photo} alt="image"/>
              <img src={photo2} alt="image"/>
@@ -22,7 +22,7 @@ const DescBlock = () => {
         <div className="row">
           <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>наш подход</h3></div>
           <div className="col-lg-9 col-md-9 col-sm-12 col-12">
-            <p>Наделить концепцию смыслом, изменить пространство, подчеркнуть важное, внести характер и идею, придать чувство безопасности и комфорта.</p>
+            <p className={'animText anim_no_hide'}>Наделить концепцию смыслом, изменить пространство, подчеркнуть важное, внести характер и идею, придать чувство безопасности и комфорта.</p>
           </div>
         </div>
       </div>

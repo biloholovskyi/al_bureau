@@ -17,7 +17,7 @@ const [inputLength, setInputLength] = useState('');
         <div className="row">
           <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>Хотите работать у нас?</h3></div>
           <div className="col-lg-9 col-md-9 col-sm-12 col-12">
-            <h2>Оставьте свои контакты<br/>
+            <h2 className={'animText anim_no_hide'}>Оставьте свои контакты<br/>
               и мы свяжемся с вами</h2>
             <form>
               <div className="form-floating w-100">

@@ -7,7 +7,7 @@ const SimpleTextBlock = () => {
     <Style.SimpleTextWrap>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-6"><h2>Lorem ipsum dolor sit amet, consectetur</h2></div>
+          <div className="col-6"><h2 className={'animText anim_no_hide'}>Lorem ipsum dolor sit amet, consectetur</h2></div>
           <div className="col-6">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat, a consectetur lorem
               placerat ac. Sed eros ligula, elementum sed arcu sed, placerat venenatis nisi. Morbi ut purus placerat
