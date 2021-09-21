@@ -7,6 +7,7 @@ import Projects from "./pages/Projects/Projects";
 import Case from "./pages/case/case";
 import Noise from "./components/noise/noise";
 import BgGradient from "./components/bgGradient/bgGradient";
+import About from "./pages/about/about";
 
 function App() {
   const [x, setX] = useState(20);
@@ -32,6 +33,7 @@ function App() {
         <Route path={'/'} exact component={Home}/>
         <Route path={'/projects'} exact component={Projects}/>
         <Route path={'/case'} exact component={Case}/>
+        <Route path={'/about'} exact component={About}/>
       </Switch>
       <BgGradient/>
       <Noise/>
