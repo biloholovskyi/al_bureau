@@ -1,23 +1,31 @@
 import React from 'react'
 
 import * as Style from '../styled';
-import ava from '../../../media/image/ava.svg';
+import ApiService from "../../../services/api";
 
-const QuoteBlock = () => {
+const api = new ApiService();
+
+const QuoteBlock = ({data}) => {
   return (
     <Style.QuoteBlockWrap id={'down'}>
       <div className="bg" />
       <div className="container-fluid" style={{zIndex: 10}}>
         <div className="row">
           <div className="col-8">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis lacinia neque, a luctus eros pellentesque id.</h2>
-            <div className="author">
-              <img className="photo" src={ava} />
-              <div className="info">
-                <div className="nam">Jane Doe</div>
-                <div className="position">Position</div>
-              </div>
-            </div>
+            <h2>{data && data.quote}</h2>
+
+            {
+              data && data.quote_name && data.quote_post && data.quote_photo && (
+                <div className="author">
+                  <img className="photo" alt={'photo'} src={data && data.quote_photo && `${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.quote_photo}`} />
+                  <div className="info">
+                    <div className="nam">{data && data.quote_name && data.quote_name}</div>
+                    <div className="position">{data && data.quote_post && data.quote_post}</div>
+                  </div>
+                </div>
+              )
+            }
+
           </div>
           <div className="col-4">
             <div className="quote_list">

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from "axios";
+import ApiService from "../../services/api";
 
 import * as Style from './styled';
 import MainScreen from "./mainScreen/mainScreen";
@@ -20,12 +22,29 @@ import PrevNextCaseBlock from "./prevNextCaseBlock/prevNextCaseBlock";
 import GalleryTextBlock from "./galleryTextBlock/galleryTextBlock";
 import SingleQuoteSlider from "./singleQuoteSlider/singleQuoteSlider";
 
-const Case = () => {
+const api = new ApiService();
+
+
+const Case = ({id}) => {
+  const [caseData, setCaseData] = useState(null);
+
+  useEffect(() => {
+    const getData = async () => {
+      await axios.get(`${api.getApi()}case/${id}/`)
+        .then(res => {
+          console.log(res.data)
+          setCaseData(res.data);
+        }).catch(error => console.error(error));
+    }
+
+    getData().catch(error => console.error(error))
+  }, [id])
+
   return (
    <>
      <Style.CaseWrap>
-       <MainScreen/>
-       <QuoteBlock/>
+       <MainScreen data={caseData}/>
+       <QuoteBlock data={caseData}/>
        <About/>
        <SimpleBlocksText/>
        <SimpleBlockWithFewPhoto/>

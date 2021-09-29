@@ -14,7 +14,7 @@ const MainScreenWrap = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url(${bg});
+  background-image: ${props => props.bg ? 'url(' + props.bg + ')' : 'none'};
   background-size: cover;
   background-repeat: no-repeat;
 

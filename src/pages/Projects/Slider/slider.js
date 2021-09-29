@@ -28,9 +28,8 @@ const Slider = () => {
 
   useEffect(() => {
     const getCases = async () => {
-      await axios.get(`${api.getApi()}case/`)
+      await axios.get(`${api.getApi()}cases/`)
         .then(res => {
-          console.log(res.data[0])
           setCases(res.data);
         }).catch(error => console.error(error));
     }
@@ -50,7 +49,7 @@ const Slider = () => {
               return (
                 <div
                   className={'project-slide'}>
-                  <NavLink to="/case">
+                  <NavLink to={"/projects/" + item.id}>
                     <img src={item.banner} alt="image"/>
                     <div className="info">
                       <div className="name">{item.title}</div>

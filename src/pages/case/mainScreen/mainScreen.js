@@ -3,22 +3,25 @@ import { Link } from "react-scroll";
 
 import * as Style from '../styled';
 
-const MainScreen = () => {
+import ApiService from "../../../services/api";
+const api = new ApiService();
+
+const MainScreen = ({data}) => {
 
   return (
-    <Style.MainScreenWrap>
+    <Style.MainScreenWrap bg={data && `${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.banner}`}>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12"><p className={'small_desc text-center'}>г. Казань / 2019</p></div>
+          <div className="col-12"><p className={'small_desc text-center'}>{data && data.year}</p></div>
         </div>
         <div className="row">
           <div className="col-12">
-            <h1 className={'title text-uppercase text-center'}>Lorem ipsum dolor</h1>
+            <h1 className={'title text-uppercase text-center'}>{data && data.title}</h1>
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <p className={'small_desc text-center'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className={'small_desc text-center'}>{data && data.sub_title}</p>
           </div>
         </div>
       </div>

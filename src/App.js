@@ -32,6 +32,10 @@ function App() {
         <Route path={'/'} exact component={Home}/>
         <Route path={'/projects'} exact component={Projects}/>
         <Route path={'/case'} exact component={Case}/>
+        <Route path={'/projects/:id'} exact render={({match}) => {
+          const {id} = match.params
+          return <Case id={id}/>
+        }}/>
       </Switch>
       <BgGradient/>
       <Noise/>
