@@ -1,8 +1,8 @@
-import React, {useRef, useEffect} from "react";
-// Import Swiper React components
-import {Swiper, SwiperSlide} from "swiper/react"
+import React, {useRef, useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
+import axios from "axios";
 
+import ApiService from "../../../services/api";
 
 import './style.css'
 import image from '../../../media/image/slide.png';
@@ -10,10 +10,7 @@ import image2 from '../../../media/image/slide1.png';
 import image3 from '../../../media/image/slide2.png';
 import image4 from '../../../media/image/slide3.png';
 
-import SwiperCore, {Mousewheel} from 'swiper';
-
-// install Swiper modules
-SwiperCore.use([Mousewheel]);
+const api = new ApiService();
 
 const test = [
   {name: 'МЕДИЦИНСКИЙ ЦЕНТР', city: 'г. Казань ул. Подлужная', date: 2020, img: image},
@@ -27,44 +24,37 @@ const test = [
 ]
 
 const Slider = () => {
-  let ref = useRef();
+  const [cases, setCases] = useState([]);
 
-  // useEffect(()=> {
-  //   const el = ref.current;
-  //   if(el){
-  //     const onWheel = e => {
-  //       console.log('whel')
-  //       e.preventDefault();
-  //       el.scrollTo({
-  //         left: el.scrollLeft + e.deltaY * 4,
-  //         behavior: 'smooth'
-  //       })
-  //     }
-  //     el.addEventListener('wheel', onWheel)
-  //
-  //     return ()=> el.removeEventListener('wheel', onWheel)
-  //   }
-  // }, [])
+  useEffect(() => {
+    const getCases = async () => {
+      await axios.get(`${api.getApi()}case/`)
+        .then(res => {
+          console.log(res.data[0])
+          setCases(res.data);
+        }).catch(error => console.error(error));
+    }
+
+    getCases().catch(error => console.error(error))
+  }, [])
 
   return (
     <>
       <div
-        ref={ref}
-       style={{display: 'flex'}}
+        style={{display: 'flex'}}
         className={'projects-container'}
-        >
+      >
         <div className="projects-wrapper">
           {
-            test.map((item, key)=> {
-              return(
+            cases.map((item, key) => {
+              return (
                 <div
-                className={'project-slide'}>
+                  className={'project-slide'}>
                   <NavLink to="/case">
-                    <img src={item.img} alt="image"/>
+                    <img src={item.banner} alt="image"/>
                     <div className="info">
-                      <div className="name">{item.name}</div>
-                      <div className="desc d-flex align-items-center">{item.city}/{item.date}
-                      </div>
+                      <div className="name">{item.title}</div>
+                      <div className="desc d-flex align-items-center">{item.year}</div>
                     </div>
                   </NavLink>
                 </div>
