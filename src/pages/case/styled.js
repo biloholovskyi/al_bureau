@@ -108,7 +108,7 @@ const MainScreenWrap = styled.div`
     width: 100%;
     height: 100%;
     z-index: 1;
-  }
+  } 
 `
 
 const QuoteBlockWrap = styled.div`
@@ -196,6 +196,16 @@ const QuoteBlockWrap = styled.div`
   .quote_list {
     display: flex;
     flex-direction: column;
+    
+    a {
+      text-decoration: none;
+
+      &:visited,
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+    }
 
     &--item {
       display: flex;

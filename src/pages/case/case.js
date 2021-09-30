@@ -32,7 +32,6 @@ const Case = ({id}) => {
     const getData = async () => {
       await axios.get(`${api.getApi()}case/${id}/`)
         .then(res => {
-          console.log(res.data)
           setCaseData(res.data);
         }).catch(error => console.error(error));
     }
@@ -41,7 +40,6 @@ const Case = ({id}) => {
   }, [id])
 
   const blocks = caseData?.section.map(block => {
-    console.log(block)
 
     switch (block.type) {
       case 'section':

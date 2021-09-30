@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import * as Style from '../styled';
 import ApiService from "../../../services/api";
@@ -6,6 +6,14 @@ import ApiService from "../../../services/api";
 const api = new ApiService();
 
 const QuoteBlock = ({data}) => {
+  const [sections, setSections] = useState([])
+
+  useEffect(() => {
+    const needSections = data?.section.filter(section => section.type === 'section');
+    setSections(needSections)
+  }, [data])
+
+
   return (
     <Style.QuoteBlockWrap id={'down'}>
       <div className="bg" />
@@ -29,22 +37,19 @@ const QuoteBlock = ({data}) => {
           </div>
           <div className="col-4">
             <div className="quote_list">
-              <div className="quote_list--item d-flex align-items-center">
-                <div className="number">01</div>
-                <div className="text">Phasellus gravida orci</div>
-              </div>
-              <div className="quote_list--item d-flex align-items-center">
-                <div className="number">02</div>
-                <div className="text">Nulla accumsan ligula pulvinar</div>
-              </div>
-              <div className="quote_list--item d-flex align-items-center">
-                <div className="number">03</div>
-                <div className="text">Nam eget erat turpis</div>
-              </div>
-              <div className="quote_list--item d-flex align-items-center">
-                <div className="number">04</div>
-                <div className="text">Fusce eu consequat mi</div>
-              </div>
+
+              {
+                sections?.map((section, key) => {
+                  const number = '0' + (key + 1);
+
+                  return (
+                    <a href={'#section_' + section.id} key={key} className="quote_list--item d-flex align-items-center">
+                      <div className="number">{number}</div>
+                      <div className="text">{section.name_section}</div>
+                    </a>
+                  )
+                })
+              }
             </div>
           </div>
         </div>
