@@ -13,7 +13,7 @@ const Projects = () => {
             <div className="col-12"><h1>Наши проекты</h1></div>
           </div>
           <div className="row">
-            <div className="col-12"><p>Скрольте для навигации</p></div>
+            <div className="col-12"><p className={'to-scroll'}>Скрольте для навигации</p></div>
           </div>
           <div className="row">
             <div className="col-12">

@@ -9,11 +9,12 @@ const ProjectsWrap = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  //background-image: url(${bg});
+    //background-image: url(${bg});
   background-size: cover;
   padding-top: 60px;
   background-repeat: no-repeat;
   overflow: hidden;
+
   h1 {
     font-family: Pragmatica Extended, sans-serif;
     font-style: normal;
@@ -23,7 +24,14 @@ const ProjectsWrap = styled.div`
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 0 120px 30px;
+    
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+      margin: 0;
+    }
   }
+
   p {
     font-family: Pragmatica, sans-serif;
     font-style: normal;
@@ -32,8 +40,12 @@ const ProjectsWrap = styled.div`
     line-height: 26px;
     color: #FFFFFF;
     margin: 0 120px 50px;
+    
+    @media(max-width: 768px) {
+      display: none;
+    }
   }
-  
+
   .slider {
     position: relative;
     width: 80%;
