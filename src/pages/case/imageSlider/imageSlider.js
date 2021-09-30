@@ -10,6 +10,8 @@ import image2 from '../../../media/image/image333.png';
 import image3 from '../../../media/image/slide2.png';
 import image4 from '../../../media/image/slide3.png';
 
+import ApiService from "../../../services/api";
+
 
 import * as Style from '../styled';
 
@@ -17,7 +19,10 @@ import SwiperCore, {Mousewheel} from 'swiper';
 // install Swiper modules
 SwiperCore.use([Mousewheel]);
 
-const ImageSlider = () => {
+const api = new ApiService();
+
+const ImageSlider = ({data}) => {
+
   return (
     <Style.ImageSliderWrap>
      <div className="container-fluid">
@@ -31,42 +36,16 @@ const ImageSlider = () => {
              onSwiper={(swiper) => console.log(swiper)}
              centeredSlides={false}
            >
-             <SwiperSlide
-              className={'swipeSlide2'}
-             >
-               <img className={'image2'} src={image} alt="image"/>
-             </SwiperSlide>
-             <SwiperSlide
-              className={'swipeSlide2'}
-             >
-               <img className={'image2'} src={image2} alt="image"/>
-             </SwiperSlide>
-             <SwiperSlide
-              className={'swipeSlide2'}
-             >
-               <img className={'image2'} src={image3} alt="image"/>
-             </SwiperSlide>
-             <SwiperSlide
-              className={'swipeSlide2'}
-             >
-               <img className={'image2'} src={image} alt="image"/>
-             </SwiperSlide>
-             <SwiperSlide
-              className={'swipeSlide2'}
-             >
-               <img className={'image2'} src={image2} alt="image"/>
-             </SwiperSlide>
-             <SwiperSlide
-              className={'swipeSlide2'}
-             >
-               <img className={'image2'} src={image2} alt="image"/>
-             </SwiperSlide>
-             <SwiperSlide
-              className={'swipeSlide2'}
-             >
-               <img className={'image2'} src={image} alt="image"/>
-             </SwiperSlide>
-
+             {data && data.map(image => {
+               return (
+                 <SwiperSlide
+                   key={image.id}
+                   className={'swipeSlide2'}
+                 >
+                   <img className={'image2'} src={`${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${image?.image}`} alt="image"/>
+                 </SwiperSlide>
+               )
+             })}
            </Swiper>
          </div>
        </div>

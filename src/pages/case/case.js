@@ -40,26 +40,92 @@ const Case = ({id}) => {
     getData().catch(error => console.error(error))
   }, [id])
 
+  const blocks = caseData?.section.map(block => {
+    console.log(block)
+
+    switch (block.type) {
+      case 'section':
+        return <div id={block.type + '_' + block.id} key={block.id}/>
+
+      case 'description_object':
+        return <TextCenterBlock data={block} key={block.id}/>
+
+      case 'banner':
+        return <About data={block} key={block.id}/>
+
+      case 'banner_text':
+        return <About data={block} key={block.id}/>
+
+      case 'column_text_1':
+        return <About data={block} key={block.id}/>
+
+      case 'column_text_2':
+        return <About data={block} key={block.id}/>
+
+      case 'column_text_3':
+        return <About data={block} key={block.id}/>
+
+      case 'quotes':
+        return <SingleQuoteSlider data={block.quotes} key={block.id}/>
+
+      case 'image_text':
+        return <SimpleBlocksText data={block} key={block.id}/>
+
+      case 'text_image':
+        return <SimpleBlocksText data={block} key={block.id}/>
+
+      case 'text_image_2':
+        return <SimpleBlocksText data={block} key={block.id}/>
+
+      case 'image_2_text':
+        return <SimpleBlocksText data={block} key={block.id}/>
+
+      case 'text_image_3':
+        return <SimpleBlockWithFewPhoto data={block} key={block.id}/>
+
+      case 'image_4_text':
+        return <SimpleBlockWithFewPhoto data={block} key={block.id}/>
+
+      case 'image_slider':
+        return <ImageSlider data={block.images_slider} key={block.id}/>
+
+      case 'slider_desc_equipment':
+        return <SingleEquipmentSlider data={block.equipments} key={block.id}/>
+
+      case 'plate_equipment':
+        return <EquipmentCardsBlock data={block.equipments} key={block.id}/>
+
+      case 'slider_equipment':
+        return <EquipmentSlider data={block.equipments} key={block.id}/>
+
+      default: return <div/>
+    }
+  })
+
   return (
    <>
      <Style.CaseWrap>
        <MainScreen data={caseData}/>
        <QuoteBlock data={caseData}/>
-       <About/>
-       <SimpleBlocksText/>
-       <SimpleBlockWithFewPhoto/>
-       <BigBlock/>
-       <SingleTitleAndImage/>
-       <SimpleTextBlock/>
-       <TextCenterBlock/>
-       <GalleryTextBlock/>
-       <ImageSlider/>
-       <SingleEquipmentSlider/>
-       <EquipmentCardsBlock/>
-       <EquipmentSlider/>
-       <SingleQuoteSlider/>
-       <SingleQuote/>
-       <PrevNextCaseBlock/>
+
+       {blocks}
+
+
+
+       {/*5 image and text / text and 5 image*/}
+       {/*тут нужно подключать редактор текста что бы можно было выводить списки*/}
+       {/*<BigBlock/>*/}
+
+       {/*<SingleTitleAndImage/>*/}
+       {/*<SimpleTextBlock/>*/}
+
+       {/*<GalleryTextBlock/>*/}
+
+
+
+
+       {/*<SingleQuote/>*/}
+       {/*<PrevNextCaseBlock/>*/}
      </Style.CaseWrap>
      <Footer/>
    </>

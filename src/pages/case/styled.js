@@ -234,7 +234,7 @@ const AboutWrap = styled.div`
   display: flex;
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #000;
+  //background-color: #000;
 
   .block_image {
     width: 100%;
@@ -275,6 +275,10 @@ const AboutWrap = styled.div`
     line-height: 22px;
     color: rgba(255, 255, 255, 0.8);
     max-width: 348px;
+    
+    &--full {
+      max-width: 100%;
+    }
   }
 `
 
@@ -338,7 +342,7 @@ const SimpleBlockWrap = styled.div`
     max-width: 560px;
 
     .image_row {
-      max-width: 260px;
+      max-width: calc(50% - 20px);
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -892,6 +896,10 @@ const SingleQuoteSliderWrap = styled.div`
   display: flex;
   overflow: hidden;
   padding: 80px 0;
+  
+  .photo {
+    border-radius: 50%;
+  }
 `
 
 export {

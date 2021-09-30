@@ -1,9 +1,12 @@
 import React from "react";
 
 import *  as Style from '../styled';
-import image from "../../../media/image/sliderimg.png";
 
-const EquipmentCardsBlock = () => {
+import ApiService from "../../../services/api";
+
+const api = new ApiService()
+
+const EquipmentCardsBlock = ({data}) => {
   return (
     <Style.EquipmentCardsBlockWrap>
       <div className="container-fluid">
@@ -13,62 +16,19 @@ const EquipmentCardsBlock = () => {
           </div>
           <div className="col-12">
             <div className="cardsBlock">
-              <div className="card">
-                <img className={'image'} src={image} alt="image"/>
-                <div className="name2">Roof IP 65</div>
-                <div className="text2 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat,
-                  a consectetur lorem placerat ac
-                </div>
-              </div>
-              <div className="card">
-                <img className={'image'} src={image} alt="image"/>
-                <div className="name2">Roof IP 65</div>
-                <div className="text2 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat,
-                  a consectetur lorem placerat ac
-                </div>
-              </div>
-              <div className="card">
-                <img className={'image'} src={image} alt="image"/>
-                <div className="name2">Roof IP 65</div>
-                <div className="text2 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat,
-                  a consectetur lorem placerat ac
-                </div>
-              </div>
-              <div className="card">
-                <img className={'image'} src={image} alt="image"/>
-                <div className="name2">Roof IP 65</div>
-                <div className="text2 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat,
-                  a consectetur lorem placerat ac
-                </div>
-              </div>
-              <div className="card">
-                <img className={'image'} src={image} alt="image"/>
-                <div className="name2">Roof IP 65</div>
-                <div className="text2 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat,
-                  a consectetur lorem placerat ac
-                </div>
-              </div>
-              <div className="card">
-                <img className={'image'} src={image} alt="image"/>
-                <div className="name2">Roof IP 65</div>
-                <div className="text2 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat,
-                  a consectetur lorem placerat ac
-                </div>
-              </div>
-              <div className="card">
-                <img className={'image'} src={image} alt="image"/>
-                <div className="name2">Roof IP 65</div>
-                <div className="text2 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat,
-                  a consectetur lorem placerat ac
-                </div>
-              </div>
-              <div className="card">
-                <img className={'image'} src={image} alt="image"/>
-                <div className="name2">Roof IP 65</div>
-                <div className="text2 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue erat,
-                  a consectetur lorem placerat ac
-                </div>
-              </div>
+
+              {
+                data && data.map(item => {
+                  return (
+                    <div className="card" key={item.id}>
+                      <img className={'image'} src={`${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${item?.image}`} alt="image"/>
+                      <div className="name2">{item?.name}</div>
+                      <div className="text2 text-center">{item?.desc}</div>
+                    </div>
+                  )
+                })
+              }
+
             </div>
           </div>
         </div>
