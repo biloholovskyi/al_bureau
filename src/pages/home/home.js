@@ -73,7 +73,7 @@ const Home = () => {
       await axios.get(`${api.getApi()}cases/`)
         .then(res => {
           setAll(res.data.length);
-          setCases(res.data.reverse().filter(item => item.show_main === 'yeas'));
+          setCases(res.data.reverse().filter(item => item.show_main));
         }).catch(error => console.error(error));
     }
 
