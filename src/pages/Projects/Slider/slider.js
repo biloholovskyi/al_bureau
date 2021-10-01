@@ -30,7 +30,7 @@ const Slider = () => {
     const getCases = async () => {
       await axios.get(`${api.getApi()}cases/`)
         .then(res => {
-          setCases(res.data);
+          setCases(res.data.reverse());
         }).catch(error => console.error(error));
     }
 

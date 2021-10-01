@@ -30,6 +30,12 @@ const ProjectsWrap = styled.div`
       line-height: 36px;
       margin: 0;
     }
+    
+    @media (max-height: 735px) {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 20px;
+    }
   }
 
   p {
@@ -43,6 +49,10 @@ const ProjectsWrap = styled.div`
     
     @media(max-width: 768px) {
       display: none;
+    }
+
+    @media (max-height: 735px) {
+      margin-bottom: 0;
     }
   }
 
