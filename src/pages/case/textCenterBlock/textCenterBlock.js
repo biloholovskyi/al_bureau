@@ -8,7 +8,7 @@ const TextCenterBlock = ({data}) => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
-            <h2 className="text-center">{data?.description_title}</h2>
+            <h2 className="text-center animText anim_no_hide">{data?.description_title}</h2>
           </div>
           <div className="col-12">
             <p>{data?.description}</p>

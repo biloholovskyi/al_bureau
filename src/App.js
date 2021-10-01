@@ -7,6 +7,7 @@ import Projects from "./pages/Projects/Projects";
 import Case from "./pages/case/case";
 import Noise from "./components/noise/noise";
 import BgGradient from "./components/bgGradient/bgGradient";
+import About from "./pages/about/about";
 
 function App() {
   const [x, setX] = useState(20);
@@ -36,6 +37,7 @@ function App() {
           const {id} = match.params
           return <Case id={id}/>
         }}/>
+        <Route path={'/about'} exact component={About}/>
       </Switch>
       <BgGradient/>
       <Noise/>

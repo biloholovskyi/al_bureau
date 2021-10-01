@@ -14,7 +14,7 @@ const SimpleBlockWithFewPhoto = ({data}) => {
           data && data.type === 'text_image_3' && (
             <div className="row">
               <div className="col-6 d-flex flex-column justify-content-center">
-                <div className="title ms-0">{data?.image_text_title}</div>
+                <div className="title ms-0 animText anim_no_hide">{data?.image_text_title}</div>
                 <div className="text ms-0">{data?.image_text_text}</div>
               </div>
               <div className="col-6">
@@ -48,7 +48,7 @@ const SimpleBlockWithFewPhoto = ({data}) => {
                 </div>
               </div>
               <div className="col-6 d-flex flex-column align-items-center justify-content-center">
-                <div className="title">{data?.image_text_title}</div>
+                <div className="title animText anim_no_hide">{data?.image_text_title}</div>
                 <div className="text">{data?.image_text_text}</div>
               </div>
             </div>

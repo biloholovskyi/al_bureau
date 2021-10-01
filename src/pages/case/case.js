@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from "axios";
 import ApiService from "../../services/api";
 
+
 import * as Style from './styled';
 import MainScreen from "./mainScreen/mainScreen";
 import Footer from "../../components/footer/footer";
@@ -27,6 +28,47 @@ const api = new ApiService();
 
 const Case = ({id}) => {
   const [caseData, setCaseData] = useState(null);
+
+
+  const handleScroll = () => {
+    const animItems = document.querySelectorAll('.animText');
+    for (let index = 0; index < animItems.length; index++) {
+      const animItem = animItems[index];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = offset(animItem).bottom;
+      const animStart = 4;
+
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      if (animItemHeight > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStart
+      }
+
+      // eslint-disable-next-line no-restricted-globals
+      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+        animItem.classList.add('active');
+      } else {
+        if (!animItem.classList.contains('anim_no_hide')) {
+          animItem.classList.remove('active');
+        }
+      }
+    }
+  };
+
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {bottom: rect.bottom + scrollTop, left: rect.left + scrollLeft}
+  }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll);
+    };
+  }, [id]);
 
   useEffect(() => {
     const getData = async () => {
@@ -96,37 +138,35 @@ const Case = ({id}) => {
       case 'slider_equipment':
         return <EquipmentSlider data={block.equipments} key={block.id}/>
 
-      default: return <div/>
+      default:
+        return <div/>
     }
   })
 
   return (
-   <>
-     <Style.CaseWrap>
-       <MainScreen data={caseData}/>
-       <QuoteBlock data={caseData}/>
+    <>
+      <Style.CaseWrap>
+        <MainScreen data={caseData}/>
+        <QuoteBlock data={caseData}/>
 
-       {blocks}
-
-
-
-       {/*5 image and text / text and 5 image*/}
-       {/*тут нужно подключать редактор текста что бы можно было выводить списки*/}
-       {/*<BigBlock/>*/}
-
-       {/*<SingleTitleAndImage/>*/}
-       {/*<SimpleTextBlock/>*/}
-
-       {/*<GalleryTextBlock/>*/}
+        {blocks}
 
 
+        {/*5 image and text / text and 5 image*/}
+        {/*тут нужно подключать редактор текста что бы можно было выводить списки*/}
+        {/*<BigBlock/>*/}
+
+        {/*<SingleTitleAndImage/>*/}
+        {/*<SimpleTextBlock/>*/}
+
+        {/*<GalleryTextBlock/>*/}
 
 
-       {/*<SingleQuote/>*/}
-       {/*<PrevNextCaseBlock/>*/}
-     </Style.CaseWrap>
-     <Footer/>
-   </>
+        {/*<SingleQuote/>*/}
+        {/*<PrevNextCaseBlock/>*/}
+      </Style.CaseWrap>
+      <Footer/>
+    </>
   )
 }
 

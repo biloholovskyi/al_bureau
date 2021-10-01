@@ -1,16 +1,16 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react';
 
-import MainScreen from "./mainScreen/mainScreen";
-import DescBlock from "./descBlock/descBlock";
-import ThirdBlock from "./ThirdBlock/ThirdBlock";
-import ProcessCreateBlock from "./processCreateBlock/processCreateBlock";
+import MainScreen from "./MainScreen/MainScreen";
 import Footer from "../../components/footer/footer";
-import MainForm from "./MainForm/MainForm";
-import NewProjects from "./newProjects/newProjects";
 
 import * as Style from './styled';
+import DescBlock from "./descBlock/descBlock";
+import ThirdBlock from "./ThirdBlock/ThirdBlock";
+import MainForm from "./MainForm/MainForm";
+import QuoteBlock from "./QuoteBlock/QuoteBlock";
+import ProcessCreateBlock from "./processCreateBlock/processCreateBlock";
 
-const Home = () => {
+const About = () => {
   const animItems = document.querySelectorAll('.animText');
 
   if(animItems.length > 0) {
@@ -39,8 +39,8 @@ const Home = () => {
 
     function offset(el){
       const rect = el.getBoundingClientRect(),
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       return{bottom: rect.bottom + scrollTop, left: rect.left + scrollLeft}
     }
 
@@ -54,19 +54,20 @@ const Home = () => {
     }, []);
   }
 
+
   return (
     <>
-      <Style.HomeWrap>
+      <Style.AboutWrap>
         <MainScreen/>
         <DescBlock/>
-        <ThirdBlock/>
         <ProcessCreateBlock/>
-        <NewProjects/>
+        <ThirdBlock/>
+        <QuoteBlock/>
         <MainForm/>
-      </Style.HomeWrap>
+      </Style.AboutWrap>
       <Footer/>
     </>
   )
 }
 
-export default Home;
+export default About;
