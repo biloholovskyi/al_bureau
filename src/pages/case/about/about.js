@@ -41,7 +41,7 @@ const About = ({data}) => {
               <div className="row">
                 <div className="col-12">
                   <div className="title">{data?.column_title_1}</div>
-                  <div className="text text--full">{data?.column_text_1}</div>
+                  <div className="text text--full" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
                 </div>
               </div>
             </div>
@@ -56,12 +56,12 @@ const About = ({data}) => {
               <div className="row">
                 <div className="col-12 col-sm-6">
                   <div className="title">{data?.column_title_1}</div>
-                  <div className="text text--full">{data?.column_text_1}</div>
+                  <div className="text text--full" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
                 </div>
 
                 <div className="col-12 col-sm-6">
                   <div className="title">{data?.column_title_2}</div>
-                  <div className="text text--full">{data?.column_text_2}</div>
+                  <div className="text text--full" dangerouslySetInnerHTML={{__html: data?.column_text_2}} />
                 </div>
               </div>
             </div>
@@ -76,17 +76,17 @@ const About = ({data}) => {
               <div className="row">
                 <div className="col-12 col-sm-4">
                   <div className="title">{data?.column_title_1}</div>
-                  <div className="text">{data?.column_text_1}</div>
+                  <div className="text" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
                 </div>
 
                 <div className="col-12 col-sm-4">
                   <div className="title">{data?.column_title_2}</div>
-                  <div className="text">{data?.column_text_2}</div>
+                  <div className="text" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
                 </div>
 
                 <div className="col-12 col-sm-4">
                   <div className="title">{data?.column_title_3}</div>
-                  <div className="text">{data?.column_text_3}</div>
+                  <div className="text" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
                 </div>
               </div>
             </div>

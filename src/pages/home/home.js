@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import MainScreen from "./mainScreen/mainScreen";
 import DescBlock from "./descBlock/descBlock";
@@ -9,50 +9,78 @@ import MainForm from "./MainForm/MainForm";
 import NewProjects from "./newProjects/newProjects";
 
 import * as Style from './styled';
+import axios from "axios";
+
+import ApiService from "../../services/api";
+
+const api = new ApiService()
 
 const Home = () => {
-  const animItems = document.querySelectorAll('.animText');
+  const [cases, setCases] = useState(null);
+  const [all, setAll] = useState(0)
 
-  if(animItems.length > 0) {
-    const handleScroll = () => {
-      for(let index = 0; index < animItems.length;  index++){
-        const animItem = animItems[index];
-        const animItemHeight = animItem.offsetHeight;
-        const animItemOffset = offset(animItem).bottom;
-        const animStart = 4;
 
-        let animItemPoint = window.innerHeight - animItemHeight / animStart;
-        if(animItemHeight > window.innerHeight){
-          animItemPoint = window.innerHeight - window.innerHeight / animStart
-        }
 
-        // eslint-disable-next-line no-restricted-globals
-        if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-          animItem.classList.add('active');
-        } else {
-          if(!animItem.classList.contains('anim_no_hide')) {
-            animItem.classList.remove('active');
-          }
+
+  const handleScroll = (animItems) => {
+
+    for(let index = 0; index < animItems.length;  index++){
+      const animItem = animItems[index];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = offset(animItem).bottom;
+      const animStart = 4;
+
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      if(animItemHeight > window.innerHeight){
+        animItemPoint = window.innerHeight - window.innerHeight / animStart
+      }
+
+      // eslint-disable-next-line no-restricted-globals
+      if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+        animItem.classList.add('active');
+      } else {
+        if(!animItem.classList.contains('anim_no_hide')) {
+          animItem.classList.remove('active');
         }
       }
-    };
+    }
+  };
 
-    function offset(el){
-      const rect = el.getBoundingClientRect(),
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      return{bottom: rect.bottom + scrollTop, left: rect.left + scrollLeft}
+  function offset(el){
+    const rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return{bottom: rect.bottom + scrollTop, left: rect.left + scrollLeft}
+  }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    const animItems = document.querySelectorAll('.animText');
+
+    window.addEventListener("scroll", () => handleScroll(animItems));
+
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll(animItems));
+    };
+  }, []);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    const getData = async () => {
+      await axios.get(`${api.getApi()}cases/`)
+        .then(res => {
+          setAll(res.data.length);
+          setCases(res.data.reverse().filter(item => item.show_main === 'yeas'));
+        }).catch(error => console.error(error));
     }
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
+    getData().catch(error => console.error(error))
+  }, [])
 
-      return () => {
-        window.removeEventListener("scroll", () => handleScroll);
-      };
-    }, []);
-  }
+
 
   return (
     <>
@@ -61,7 +89,7 @@ const Home = () => {
         <DescBlock/>
         <ThirdBlock/>
         <ProcessCreateBlock/>
-        <NewProjects/>
+        <NewProjects cases={cases} all={all}/>
         <MainForm/>
       </Style.HomeWrap>
       <Footer/>
