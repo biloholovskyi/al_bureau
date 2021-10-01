@@ -12,7 +12,7 @@ const MainScreen = ({data}) => {
     <Style.MainScreenWrap bg={data && `${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.banner}`}>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12"><p className={'small_desc text-center'}>{data && data.year}</p></div>
+          <div className="col-12"><p className={'small_desc text-center year'}>{data && data.year}</p></div>
         </div>
         <div className="row">
           <div className="col-12">

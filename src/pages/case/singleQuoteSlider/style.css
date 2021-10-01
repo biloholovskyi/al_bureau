@@ -192,4 +192,31 @@
   cursor: pointer!important;
 }
 
+@media (max-width: 991px) {
+  .swiper-wrapper .swipeSlide5.swiper-slide-active {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-container5 {
+    padding-bottom: 32px;
+  }
+
+  .swiper-wrapper .swipeSlide5.swiper-slide-active .quoteText .title {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 auto 24px;
+  }
+
+  .swiper-wrapper .swipeSlide5.swiper-slide-active .quoteText .title:before {
+    width: 58.5px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: 9px;
+    top: -26px;
+  }
+}
 

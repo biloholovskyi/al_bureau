@@ -103,9 +103,43 @@
   transform:none;
 }
 
+@media (max-width: 767px) {
+  .swiper-wrapper .swipeSlide3 .title_block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .swiper-wrapper .swipeSlide3 .title_block img {
+    margin-bottom: 24px;
+  }
+
+  .swiper-wrapper .swipeSlide3 .textBlock {
+    flex-wrap: wrap;
+  }
+
+  .swiper-wrapper .swipeSlide3 .textBlock .block {
+    flex: auto;
+    max-width: none;
+    width: calc(50% - 10px);
+    padding-right: 20px;
+  }
+
+  .swiper-wrapper .swiper-slide .title_block .nameEquip {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 @media(max-height: 735px) {
   .swiper-wrapper .swiper-slide:nth-child(2n){
     transform: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .swiper-wrapper .swipeSlide3 .textBlock .block {
+    width: 100%;
+    padding-right: 0;
   }
 }
 

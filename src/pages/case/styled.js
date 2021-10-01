@@ -109,6 +109,28 @@ const MainScreenWrap = styled.div`
     height: 100%;
     z-index: 1;
   } 
+  
+  @media (max-width: 767px) {
+    justify-content: flex-start;
+    
+    .year,
+    .scrollIndicator {
+      display: none;  
+    }
+    
+    .title {
+      font-size: 28px;
+      line-height: 36px;
+      text-align: left !important;
+      margin-bottom: 24px;
+    }
+    
+    .small_desc {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left !important;;
+    }
+  }
 `
 
 const QuoteBlockWrap = styled.div`
@@ -149,6 +171,22 @@ const QuoteBlockWrap = styled.div`
       background-image: url(${icon});
       width: 117px;
       height: 90px;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 24px;
+      
+      &:before {
+        width: 58.5px;
+        height: 45px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        left: -11px;
+        top: -26px;
+      }
     }
   }
 
@@ -237,6 +275,16 @@ const QuoteBlockWrap = styled.div`
       border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
   }
+  
+  @media (max-width: 991px) {
+    padding: 40px 0 80px 0;
+  }
+  
+  @media (max-width: 767px) {
+    .quote_list {
+      margin-top: 40px;
+    }
+  }
 `
 
 const AboutWrap = styled.div`
@@ -289,6 +337,17 @@ const AboutWrap = styled.div`
     &--full {
       max-width: 100%;
     }
+  }
+  
+  .title {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+  
+  .text {
+    font-size: 12px;
+    line-height: 20px
   }
 `
 
@@ -369,6 +428,104 @@ const SimpleBlockWrap = styled.div`
     }
   }
 
+  @media (max-width: 767px) {
+    .simple_image {
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+    
+    .title {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 24px;
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    .text {
+      font-size: 12px;
+      line-height: 20px;
+      max-width: none;
+      margin-left: 0;
+      width: 100%;
+    }
+    
+    .text_image_2 {
+      max-width: none;
+      width: 100%;
+      
+      .image_row {
+        width: 100%;
+        max-width: none;
+        align-items: flex-start;
+        justify-content: space-between;
+        
+        img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 0;
+          max-width: none;
+        }
+        
+        &:first-child {
+          margin-top: 40px;
+          margin-right: 10px;
+        }
+        
+        &:last-child {
+          margin-top: 40px;
+          margin-left: 10px;
+        }
+      }
+    }
+    
+    .image_2_text {
+      margin-bottom: 24px;
+    }
+    
+    .image_4_text {
+      .image_row {
+        justify-content: flex-start;
+        
+        img {
+          &:first-child {
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+    
+    .text_image_3 {
+      margin: 40px 0 0 0;
+      width: 100%;
+      max-width: none;
+      flex-direction: column;
+      
+      .image_row {
+        max-width: 100%;
+        width: 100%;
+        
+        &:first-child {
+          margin: 0;
+          
+          img {
+            max-width: none;
+            object-fit: cover;
+          }
+        }
+        
+        &:last-child {
+          flex-direction: row;
+          justify-content: space-between;
+          
+          img {
+            max-width: calc(50% - 10px);
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 `
 
 const BigBlockWrap = styled.div`
@@ -531,6 +688,19 @@ const TextCenterBlockWrap = styled.div`
     margin: 0 auto 40px;
     max-width: 780px;
   }
+  
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 24px;
+    }
+    
+    p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
 `
 
 const ImageSliderWrap = styled.div`
@@ -539,6 +709,10 @@ const ImageSliderWrap = styled.div`
   padding: 160px 0;
   overflow: hidden !important;
   position: relative;
+  
+  @media (max-width: 767px) {
+    padding: 80px 0;
+  }
 `
 
 const EquipmentSliderWrap = styled.div`
@@ -558,6 +732,13 @@ const EquipmentSliderWrap = styled.div`
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #FFFFFF;
+  }
+  
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 `
 
@@ -624,6 +805,28 @@ const EquipmentCardsBlockWrap = styled.div`
         line-height: 24px;
         color: #FFFFFF;
         margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    
+    .cardsBlock {
+      .card {
+        max-width: none;
+        width: calc(50% - 10px);
+      }
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .cardsBlock {
+      .card {
+        width: 100%;
       }
     }
   }

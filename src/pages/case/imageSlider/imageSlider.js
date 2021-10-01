@@ -5,10 +5,6 @@ import {Swiper, SwiperSlide} from "swiper/react"
 
 import './swiper.min.css'
 import './style.css'
-import image from '../../../media/image/image222.png';
-import image2 from '../../../media/image/image333.png';
-import image3 from '../../../media/image/slide2.png';
-import image4 from '../../../media/image/slide3.png';
 
 import ApiService from "../../../services/api";
 
@@ -35,6 +31,9 @@ const ImageSlider = ({data}) => {
              onSlideChange={() => console.log('slide change')}
              onSwiper={(swiper) => console.log(swiper)}
              centeredSlides={false}
+             // pagination={{
+             //   type: 'fraction',
+             // }}
            >
              {data && data.map(image => {
                return (
