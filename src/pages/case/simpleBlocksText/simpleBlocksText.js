@@ -28,12 +28,12 @@ const SimpleBlocksText = ({data}) => {
         {
           data && data.type === 'text_image' && (
             <div className="row">
-              <div className="col-6 d-flex flex-column justify-content-center">
+              <div className="col-12 col-md-6 d-flex flex-column justify-content-center">
                 <div className="title ms-0 animText anim_no_hide">{data?.image_text_title}</div>
                 <div className="text ms-0" dangerouslySetInnerHTML={{__html: data?.image_text_text}} />
               </div>
-              <div className="col-6 d-flex flex-column align-items-center justify-content-center">
-                <img className={'simple_image ms-4'} src={`${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data?.image_1}`} alt="image"/>
+              <div className="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                <img className={'simple_image text_image ms-4'} src={`${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data?.image_1}`} alt="image"/>
               </div>
             </div>
           )

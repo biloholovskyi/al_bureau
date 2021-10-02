@@ -448,6 +448,11 @@ const SimpleBlockWrap = styled.div`
     .simple_image {
       max-width: 100%;
       margin-bottom: 24px;
+      margin-left: 0 !important;
+      
+      &.text_image {
+        margin-top: 24px;
+      }
     }
     
     .title {
