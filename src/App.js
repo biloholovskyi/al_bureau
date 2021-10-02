@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div onMouseMove={(e) => onMouseMove(e)}>
       <Header/>
 
       <Switch >
@@ -39,7 +39,7 @@ function App() {
         }}/>
         <Route path={'/about'} exact component={About}/>
       </Switch>
-      {/*<BgGradient/>*/}
+      <BgGradient/>
       <Noise/>
     </div>
   );

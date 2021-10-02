@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { Link } from "react-scroll";
 
 import * as Style from '../styled';
@@ -6,10 +6,15 @@ import * as Style from '../styled';
 import ApiService from "../../../services/api";
 const api = new ApiService();
 
-const MainScreen = ({data}) => {
+const MainScreen = ({data, opacity}) => {
+  const mainScreen = useRef(null)
 
   return (
-    <Style.MainScreenWrap bg={data && `${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.banner}`}>
+    <Style.MainScreenWrap
+      opacity={opacity}
+      ref={mainScreen}
+      bg={data && `${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.banner}`}
+    >
       <div className="container-fluid">
         <div className="row">
           <div className="col-12"><p className={'small_desc text-center year'}>{data && data.year}</p></div>

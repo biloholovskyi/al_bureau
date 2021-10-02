@@ -5,7 +5,7 @@ import ApiService from "../../../services/api";
 
 const api = new ApiService();
 
-const QuoteBlock = ({data}) => {
+const QuoteBlock = ({data, blockRef}) => {
   const [sections, setSections] = useState([])
 
   useEffect(() => {
@@ -15,8 +15,9 @@ const QuoteBlock = ({data}) => {
 
 
   return (
-    <Style.QuoteBlockWrap id={'down'}>
+    <Style.QuoteBlockWrap id={'down'} ref={blockRef}>
       <div className="bg" />
+      <div className="bg bg--bottom" />
       <div className="container-fluid" style={{zIndex: 10}}>
         <div className="row">
           <div className="col-12 col-md-8">

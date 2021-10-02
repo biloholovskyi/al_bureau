@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
-import bg from "../../media/image/caseBg.png";
 import icon from "../../media/icon/quote.svg";
 
 const CaseWrap = styled.div`
-
+  
 `
 
 const MainScreenWrap = styled.div`
@@ -14,9 +13,6 @@ const MainScreenWrap = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: ${props => props.bg ? 'url(' + props.bg + ')' : 'none'};
-  background-size: cover;
-  background-repeat: no-repeat;
 
   .title {
     font-family: 'Pragmatica Extended', sans-serif;
@@ -109,6 +105,20 @@ const MainScreenWrap = styled.div`
     height: 100%;
     z-index: 1;
   } 
+
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: ${props => props.bg ? 'url(' + props.bg + ')' : 'none'};
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: ${props => props.opacity};
+  }
   
   @media (max-width: 767px) {
     justify-content: flex-start;
@@ -137,6 +147,7 @@ const QuoteBlockWrap = styled.div`
   width: 100%;
   display: flex;
   padding: 40px 0 150px;
+  margin-bottom: 80px;
   position: relative;
   background: #000;
 
@@ -148,6 +159,11 @@ const QuoteBlockWrap = styled.div`
     left: 0;
     top: -185px;
     z-index: 8;
+    
+    &--bottom {
+      transform: rotate(180deg);
+      top: 185px;
+    }
   }
 
   h2 {

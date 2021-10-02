@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import axios from "axios";
 import ApiService from "../../services/api";
-
 
 import * as Style from './styled';
 import MainScreen from "./mainScreen/mainScreen";
@@ -28,7 +27,9 @@ const api = new ApiService();
 
 const Case = ({id}) => {
   const [caseData, setCaseData] = useState(null);
+  const [opacity, setOpacity] = useState(0)
 
+  const quoteBlock = useRef(null);
 
   const handleScroll = () => {
     const animItems = document.querySelectorAll('.animText');
@@ -143,15 +144,32 @@ const Case = ({id}) => {
     }
   })
 
+  const animationTop = (e) => {
+    const n1 = 1;
+    const n2 = window.outerHeight - 185;
+    const n = window.pageYOffset - n1;
+    const p = n / (n2 - n1) * 100;
+    const op1 = 1;
+    let op = op1 - (op1 * (p / 100));
+
+    if (op < 0.1) {
+      op = 0;
+    }
+
+    if (op > 0.9) {
+      op = 1
+    }
+
+    setOpacity(op);
+  }
+
   return (
     <>
-      <Style.CaseWrap>
-        <MainScreen data={caseData}/>
-        <QuoteBlock data={caseData}/>
+      <Style.CaseWrap onWheel={animationTop}>
+        <MainScreen data={caseData} opacity={opacity}/>
+        <QuoteBlock data={caseData} blockRef={quoteBlock}/>
 
         {blocks}
-
-
         {/*5 image and text / text and 5 image*/}
         {/*тут нужно подключать редактор текста что бы можно было выводить списки*/}
         {/*<BigBlock/>*/}
