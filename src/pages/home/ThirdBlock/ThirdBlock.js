@@ -7,10 +7,11 @@ const ThirdBlock = () => {
     {number: '01' , name: 'Идеи архитектора'},
     {number: '02' , name: 'История объекта'},
     {number: '03' , name: 'Архитектурный баланс'},
-    {number: '04' , name: 'Идеи архитектора'},
-    {number: '05' , name: 'История объекта'},
-    {number: '06' , name: 'Архитектурный баланс'},
+    {number: '04' , name: 'Окружающая среда'},
+    {number: '05' , name: 'Местоположение объекта'},
+    {number: '06' , name: 'Назначение объекта'},
   ])
+
   return (
     <Style.ThirdBlockWrap>
       <div className="container-fluid">
