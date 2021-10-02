@@ -2,29 +2,16 @@ import React, {useRef, useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import axios from "axios";
 
-import ApiService from "../../../services/api";
-
 import './style.css'
-import image from '../../../media/image/slide.png';
-import image2 from '../../../media/image/slide1.png';
-import image3 from '../../../media/image/slide2.png';
-import image4 from '../../../media/image/slide3.png';
 
+import ApiService from "../../../services/api";
 const api = new ApiService();
 
-const test = [
-  {name: 'МЕДИЦИНСКИЙ ЦЕНТР', city: 'г. Казань ул. Подлужная', date: 2020, img: image},
-  {name: 'Сургутнефтегаз', city: 'г. Казань ул. Подлужная', date: 2020, img: image2},
-  {name: 'Клубный Дом «Шаляпин»', city: 'г. Казань ул. Подлужная', date: 2020, img: image3},
-  {name: 'офисный комплекс «urban»', city: 'г. Казань ул. Подлужная', date: 2020, img: image4},
-  {name: 'МЕДИЦИНСКИЙ ЦЕНТР', city: 'г. Казань ул. Подлужная', date: 2020, img: image2},
-  {name: 'Сургутнефтегаз', city: 'г. Казань ул. Подлужная', date: 2020, img: image3},
-  {name: 'Клубный Дом «Шаляпин»', city: 'г. Казань ул. Подлужная', date: 2020, img: image},
-  {name: 'офисный комплекс «urban»', city: 'г. Казань ул. Подлужная', date: 2020, img: image2},
-]
 
 const Slider = () => {
   const [cases, setCases] = useState([]);
+  const [scrollX, setScrollX] = useState(0);
+  const wrapper = useRef(null);
 
   useEffect(() => {
     const getCases = async () => {
@@ -35,34 +22,66 @@ const Slider = () => {
     }
 
     getCases().catch(error => console.error(error))
+
+    // window.addEventListener('wheel', (e) => replaceHorizontalScrollByVertical(e) );
+    disableScroll();
   }, [])
 
+
+  function preventDefault(e) {
+    e = e || window.event;
+    if (e.preventDefault)
+      e.preventDefault();
+    e.returnValue = false;
+  }
+
+
+  function disableScroll() {
+    if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, { passive: false });
+    wrapper.current.onwheel = preventDefault; // modern standard
+    wrapper.current.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+    wrapper.current.ontouchmove  = preventDefault; // mobile
+  }
+
   return (
-    <>
+    <div
+      style={{display: 'flex'}}
+      className={'projects-container'}
+    >
       <div
-        style={{display: 'flex'}}
-        className={'projects-container'}
-      >
-        <div className="projects-wrapper">
-          {
-            cases.map((item, key) => {
-              return (
-                <div
-                  className={'project-slide'}>
-                  <NavLink to={"/projects/" + item.id}>
-                    <img src={item.banner} alt="image"/>
-                    <div className="info">
-                      <div className="name">{item.title}</div>
-                      <div className="desc d-flex align-items-center">{item.year}</div>
-                    </div>
-                  </NavLink>
-                </div>
-              )
-            })
+        className="projects-wrapper"
+        ref={wrapper}
+        onWheel={(e) => {
+          let x = scrollX + e.deltaY;
+          if(x < 0) {
+            x = 0;
           }
-        </div>
+          if(x > wrapper.current.scrollWidth - 300) {
+            x = wrapper.current.scrollWidth - 300;
+          }
+          setScrollX(x)
+          wrapper.current.scrollLeft = x;
+        }}
+      >
+        {
+          cases.map((item, key) => {
+            return (
+              <div
+                className={'project-slide'}>
+                <NavLink to={"/projects/" + item.id}>
+                  <img src={item.banner} alt="image"/>
+                  <div className="info">
+                    <div className="name">{item.title}</div>
+                    <div className="desc d-flex align-items-center">{item.year}</div>
+                  </div>
+                </NavLink>
+              </div>
+            )
+          })
+        }
       </div>
-    </>
+    </div>
   )
 }
 
