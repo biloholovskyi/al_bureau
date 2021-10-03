@@ -22,8 +22,6 @@ const Slider = () => {
     }
 
     getCases().catch(error => console.error(error))
-
-    // window.addEventListener('wheel', (e) => replaceHorizontalScrollByVertical(e) );
     disableScroll();
   }, [])
 

@@ -118,6 +118,7 @@ const MainScreenWrap = styled.div`
     background-repeat: no-repeat;
     z-index: 0;
     opacity: ${props => props.opacity};
+    transition: all .3s;
   }
   
   @media (max-width: 767px) {
@@ -937,6 +938,14 @@ const PrevNextCaseBlockWrap = styled.div`
     padding: 150px 0;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
+    
+    &:focus,
+    &:active,
+    &:hover,
+    &:visited {
+      text-decoration: none;
+    }
 
     img {
       position: absolute;

@@ -27,7 +27,7 @@ const api = new ApiService();
 
 const Case = ({id}) => {
   const [caseData, setCaseData] = useState(null);
-  const [opacity, setOpacity] = useState(0)
+  const [opacity, setOpacity] = useState(1)
 
   const quoteBlock = useRef(null);
 
@@ -61,6 +61,11 @@ const Case = ({id}) => {
       scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return {bottom: rect.bottom + scrollTop, left: rect.left + scrollLeft}
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    console.log(document.body.scrollTop)
+  }, [id])
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
@@ -181,7 +186,7 @@ const Case = ({id}) => {
 
 
         {/*<SingleQuote/>*/}
-        {/*<PrevNextCaseBlock/>*/}
+        <PrevNextCaseBlock data={caseData}/>
       </Style.CaseWrap>
       <Footer/>
     </>
