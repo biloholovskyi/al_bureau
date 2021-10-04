@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 
 import * as Style from './styled';
 import logo from '../../media/icon/logo.svg';
@@ -6,7 +7,25 @@ import vk from '../../media/icon/vk.svg';
 import fb from '../../media/icon/facebook.svg';
 import tw from '../../media/icon/twitter.svg';
 
+import ApiService from "../../services/api";
+
+const api = new ApiService();
+
 const Footer = () => {
+
+  const [socials, setSocials] = useState([])
+
+  useEffect(() => {
+    const getSocials = async () => {
+      await axios.get(`${api.getApi()}socials/`)
+        .then(res => {
+          setSocials(res.data.reverse());
+        }).catch(error => console.error(error));
+    }
+
+    getSocials().catch(error => console.error(error));
+  })
+
   return (
     <Style.FooterWrap>
       <div className="footer_item">
@@ -26,9 +45,11 @@ const Footer = () => {
       </div>
       <div className="footer_item">
         <div className="social_links">
-          <a href="#" className={'social_link'}><img src={vk} alt="icon"/></a>
-          <a href="#" className={'social_link'}><img src={fb} alt="icon"/></a>
-          <a href="#" className={'social_link'}><img src={tw} alt="icon"/></a>
+          {
+            socials?.map(social => {
+              return <a href={social.link} target={'_blank'} className={'social_link'} rel="noreferrer"><img src={social.icon} alt="icon"/></a>
+            })
+          }
         </div>
         <p className={'mobile_block'}>© 2018  SV-GROUP</p>
       </div>
