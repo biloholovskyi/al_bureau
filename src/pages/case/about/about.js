@@ -17,12 +17,15 @@ const About = ({data}) => {
 
       {
         data && data.type === 'banner_text' && (
-          <>
+          <Style.WrapperBannerTextBlock>
             <Style.AboutWrap>
               <div className="container-fluid">
                 <div className="row">
                   <div className="col-12">
-                    <div className="text text--full">{data?.banner_text}</div>
+                    <div className="wrapper-text">
+                      <h2 className="column-main-title">{data?.banner_title}</h2>
+                      <div className="text text--full">{data?.banner_text}</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -30,7 +33,7 @@ const About = ({data}) => {
 
             <Style.BlockImage className={'block_image'}
                               src={`${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.banner}`} alt="image"/>
-          </>
+          </Style.WrapperBannerTextBlock>
         )
       }
 

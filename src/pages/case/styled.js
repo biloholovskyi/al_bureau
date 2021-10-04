@@ -304,6 +304,35 @@ const QuoteBlockWrap = styled.div`
   }
 `
 
+const WrapperBannerTextBlock = styled.div`
+  position: relative;
+  
+  .wrapper-text {
+    position: absolute;
+    padding: 0 80px;
+    width: 100%;
+    height: calc(100% - 160px - 80px);
+    top: 160px;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    .wrapper-text {
+      padding: 0 15px;
+    }
+  }
+`;
+
+export {
+  WrapperBannerTextBlock
+}
+
 const AboutWrap = styled.div`
   width: 100%;
   display: flex;
