@@ -40,6 +40,7 @@ const About = ({data}) => {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">
+                  <h2 className="column-main-title">{data?.main_title}</h2>
                   <div className="title">{data?.column_title_1}</div>
                   <div className="text text--full" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
                 </div>
@@ -54,6 +55,9 @@ const About = ({data}) => {
           <Style.AboutWrap>
             <div className="container-fluid">
               <div className="row">
+                <div className="col-12">
+                  <h2 className="column-main-title">{data?.main_title}</h2>
+                </div>
                 <div className="col-12 col-sm-6">
                   <div className="title">{data?.column_title_1}</div>
                   <div className="text text--full" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
@@ -74,6 +78,9 @@ const About = ({data}) => {
           <Style.AboutWrap>
             <div className="container-fluid">
               <div className="row">
+                <div className="col-12">
+                  <h2 className="column-main-title">{data?.main_title}</h2>
+                </div>
                 <div className="col-12 col-sm-4">
                   <div className="title">{data?.column_title_1}</div>
                   <div className="text" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />

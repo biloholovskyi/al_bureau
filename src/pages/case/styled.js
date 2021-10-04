@@ -310,6 +310,18 @@ const AboutWrap = styled.div`
   padding-top: 80px;
   padding-bottom: 80px;
   //background-color: #000;
+  
+  .column-main-title {
+    font-family: Pragmatica Extended, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 80px;
+  }
 
   .block_image {
     width: 100%;
@@ -365,6 +377,14 @@ const AboutWrap = styled.div`
   .text {
     font-size: 12px;
     line-height: 20px
+  }
+  
+  @media (max-width: 767px) {
+    .column-main-title {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 24px;
+    }
   }
 `
 
