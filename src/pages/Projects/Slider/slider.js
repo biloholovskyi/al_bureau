@@ -5,6 +5,7 @@ import axios from "axios";
 import './style.css'
 
 import ApiService from "../../../services/api";
+
 const api = new ApiService();
 
 
@@ -36,10 +37,10 @@ const Slider = () => {
 
   function disableScroll() {
     if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, { passive: false });
+      window.addEventListener('DOMMouseScroll', preventDefault, {passive: false});
     wrapper.current.onwheel = preventDefault; // modern standard
     wrapper.current.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-    wrapper.current.ontouchmove  = preventDefault; // mobile
+    wrapper.current.ontouchmove = preventDefault; // mobile
   }
 
   return (
@@ -51,16 +52,19 @@ const Slider = () => {
         className="projects-wrapper"
         ref={wrapper}
         onWheel={(e) => {
-          let x = scrollX + e.deltaY;
-          if(x < 0) {
-            x = 0;
+          if (window.innerWidth > 767) {
+            let x = scrollX + e.deltaY;
+            if (x < 0) {
+              x = 0;
+            }
+            if (x > wrapper.current.scrollWidth - 300) {
+              x = wrapper.current.scrollWidth - 300;
+            }
+            setScrollX(x)
+            wrapper.current.scrollLeft = x;
           }
-          if(x > wrapper.current.scrollWidth - 300) {
-            x = wrapper.current.scrollWidth - 300;
-          }
-          setScrollX(x)
-          wrapper.current.scrollLeft = x;
-        }}
+        }
+        }
       >
         {
           cases.map((item, key) => {

@@ -16,9 +16,6 @@
   }
 }
 
-
-
-
 .projects-container .projects-wrapper::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 0;
@@ -35,7 +32,7 @@
   align-items: flex-start;
   justify-content: flex-end;
   cursor: pointer;
-  margin-left: 60px;
+  margin-left: 118px;
 }
 
 .projects-container .projects-wrapper .project-slide a,
@@ -119,6 +116,11 @@
 }
 
 @media(max-width: 768px) {
+
+  .projects-container .projects-wrapper .project-slide:nth-child(2n){
+    transform: translateY(0);
+  }
+
   .projects-container {
 
   }
