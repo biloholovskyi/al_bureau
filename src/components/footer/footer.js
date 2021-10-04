@@ -11,12 +11,12 @@ const Footer = () => {
     <Style.FooterWrap>
       <div className="footer_item">
         <img className={'logo'} src={logo} alt="logo"/>
-        <p>© 2018  SV-GROUP</p>
+        <p>© 2021 ООО «СВ СЕРВИС ЛОГИСТИКА»</p>
       </div>
       <div className="footer_item">
         <div className="top">
           <div className="title">Напишите нам</div>
-          <a href="mailto:contact@albreau.ru">contact@albreau.ru</a>
+          <a href="mailto:project@alburo.ru">project@alburo.ru</a>
         </div>
         <div className="bottom">
           <a href="tel:+7 (843) 279-32-04">+7 (843) 279-32-04</a>
