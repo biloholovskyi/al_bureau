@@ -81,12 +81,12 @@ const About = ({data}) => {
 
                 <div className="col-12 col-sm-4">
                   <div className="title">{data?.column_title_2}</div>
-                  <div className="text" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
+                  <div className="text" dangerouslySetInnerHTML={{__html: data?.column_text_2}} />
                 </div>
 
                 <div className="col-12 col-sm-4">
                   <div className="title">{data?.column_title_3}</div>
-                  <div className="text" dangerouslySetInnerHTML={{__html: data?.column_text_1}} />
+                  <div className="text" dangerouslySetInnerHTML={{__html: data?.column_text_3}} />
                 </div>
               </div>
             </div>

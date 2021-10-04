@@ -21,6 +21,7 @@ import SingleQuote from "./singleQuote/singleQuote";
 import PrevNextCaseBlock from "./prevNextCaseBlock/prevNextCaseBlock";
 import GalleryTextBlock from "./galleryTextBlock/galleryTextBlock";
 import SingleQuoteSlider from "./singleQuoteSlider/singleQuoteSlider";
+import BeforeAfter from "./beforeAfter/beforeAfter";
 
 const api = new ApiService();
 
@@ -144,6 +145,9 @@ const Case = ({id}) => {
       case 'slider_equipment':
         return <EquipmentSlider data={block.equipments} key={block.id}/>
 
+      case 'before_after':
+        return <BeforeAfter data={block} key={block.id}/>
+
       default:
         return <div/>
     }
@@ -186,6 +190,7 @@ const Case = ({id}) => {
 
 
         {/*<SingleQuote/>*/}
+
         <PrevNextCaseBlock data={caseData}/>
       </Style.CaseWrap>
       <Footer/>
