@@ -70,11 +70,11 @@ const Case = ({id}) => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", () => handleScroll);
-    };
+    // return () => {
+    //   window.removeEventListener("scroll", () => handleScroll);
+    // };
   }, [id]);
 
   useEffect(() => {

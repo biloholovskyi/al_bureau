@@ -113,23 +113,23 @@ body > * {
 
 //стили для анимации текста
 .animText {
-  font-family: Pragmatica Extended, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 48px;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 60px;
-  overflow: hidden;
-  background: linear-gradient(to right,#fff,rgba(255,255,255, 1) 50%,rgba(255,255,255, .2) 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 2.5s ease;
+//  font-family: Pragmatica Extended, sans-serif;
+//  font-style: normal;
+//  font-weight: bold;
+//  font-size: 36px;
+//  line-height: 48px;
+//  letter-spacing: -0.02em;
+//  text-transform: uppercase;
+//  color: #FFFFFF;
+//  margin-bottom: 60px;
+//  overflow: hidden;
+//  background: linear-gradient(to right,#fff,rgba(255,255,255, 1) 50%,rgba(255,255,255, .2) 50%);
+//  background-clip: text;
+//  -webkit-background-clip: text;
+//  -webkit-text-fill-color: transparent;
+//  background-size: 200% 100%;
+//  background-position: 100%;
+//  transition: background-position 2.5s ease;
 
   &.active {
     background-position: 0 100%;

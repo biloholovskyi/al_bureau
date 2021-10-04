@@ -57,11 +57,11 @@ const Home = () => {
   useEffect(() => {
     const animItems = document.querySelectorAll('.animText');
 
-    window.addEventListener("scroll", () => handleScroll(animItems));
+    // window.addEventListener("scroll", () => handleScroll(animItems));
 
-    return () => {
-      window.removeEventListener("scroll", () => handleScroll(animItems));
-    };
+    // return () => {
+    //   window.removeEventListener("scroll", () => handleScroll(animItems));
+    // };
   }, []);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
