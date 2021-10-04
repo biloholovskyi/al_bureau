@@ -22,6 +22,12 @@ const Wrapper = styled.div`
   @media (max-width: 767px) {
     margin-left: -20px;
     margin-right: -20px;
+    
+    .beforeAfter__title {
+      margin-bottom: 24px;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 `
 

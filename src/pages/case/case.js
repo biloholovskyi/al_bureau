@@ -134,7 +134,7 @@ const Case = ({id}) => {
         return <SimpleBlockWithFewPhoto data={block} key={block.id}/>
 
       case 'image_slider':
-        return <ImageSlider data={block.images_slider} key={block.id}/>
+        return <ImageSlider data={block.images_slider} title={block.image_slider_title} key={block.id}/>
 
       case 'slider_desc_equipment':
         return <SingleEquipmentSlider data={block.equipments} key={block.id}/>

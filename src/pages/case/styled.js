@@ -732,8 +732,26 @@ const ImageSliderWrap = styled.div`
   overflow: hidden !important;
   position: relative;
   
+  h2 {
+    font-family: Pragmatica Extended, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 80px;
+  }
+  
   @media (max-width: 767px) {
     padding: 80px 0;
+    
+    h2 {
+      margin-bottom: 24px;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 `
 

@@ -17,13 +17,14 @@ SwiperCore.use([Mousewheel]);
 
 const api = new ApiService();
 
-const ImageSlider = ({data}) => {
+const ImageSlider = ({data, title}) => {
 
   return (
     <Style.ImageSliderWrap>
      <div className="container-fluid">
        <div className="row">
          <div className="col-12">
+           <h2>{title}</h2>
            <Swiper
              slidesPerView={2}
              spaceBetween={40}

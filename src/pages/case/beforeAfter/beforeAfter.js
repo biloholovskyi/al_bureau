@@ -56,7 +56,7 @@ const BeforeAfter = ({data}) => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
-            {/*<h2 className="beforeAfter__title"></h2>*/}
+            <h2 className="beforeAfter__title">{data.image_slider_title}</h2>
             <Style.ImageWrapper full={fullWidth} current={currentWidth} ref={wrapperRef}>
               <div className="image-item">
                 <img src={`${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data?.before}`} alt="image"/>
