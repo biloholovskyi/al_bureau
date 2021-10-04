@@ -10,14 +10,6 @@ import ApiService from "../../../services/api";
 
 const api = new ApiService();
 
-const projects = [
-  {name: 'Набережная о. Кабан' , city: 'Казань' , date: 2020, hoverImage: image},
-  {name: 'Таиф' , city: 'Казань' , date: 2019, hoverImage: image2},
-  {name: 'НКЦ' , city: 'Казань' , date: 2019, hoverImage: image3},
-  {name: 'ПЕТРОПАВЛОВСКИЙ СОБОР' , city: 'Казань' , date: 2018, hoverImage: image2},
-  {name: 'мечеть «кул-шариф»' , city: 'г. Казань, Казанский кремль' , date: 2016, hoverImage: image},
-]
-
 const NewProjects = ({cases, all}) => {
   return (
     <Style.NewProjectsWrap>
@@ -29,13 +21,13 @@ const NewProjects = ({cases, all}) => {
               {
                 cases?.map((item, key) => {
                   return (
-                    <div key={key} className="projects_block--item">
+                    <NavLink to={`/projects/${item.id}`} key={key} className="projects_block--item">
                       <div className="name">{item.name}</div>
                       <div className="info d-flex align-items-center">
                         <div className="city">{item.year}</div>
                       </div>
                       <img className={'hover_image'} src={`${item?.banner}`} alt="image"/>
-                    </div>
+                    </NavLink>
                   )
                 })
               }

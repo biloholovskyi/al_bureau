@@ -609,6 +609,14 @@ const NewProjectsWrap = styled.div`
       border-bottom: 1px solid #fff;
       margin-bottom: 40px;
       cursor: pointer;
+      text-decoration: none;
+      
+      &:visited,
+      &:focus,
+      &:active,
+      &:hover {
+        text-decoration: none;
+      }
 
       .name {
         font-family: Pragmatica Extended, sans-serif;
