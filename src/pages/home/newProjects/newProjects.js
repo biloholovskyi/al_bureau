@@ -2,13 +2,6 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 import * as Style from '../styled';
-import image from '../../../media/image/slide.png';
-import image2 from '../../../media/image/slide2.png'
-import image3 from '../../../media/image/slide3.png'
-
-import ApiService from "../../../services/api";
-
-const api = new ApiService();
 
 const NewProjects = ({cases, all}) => {
   return (
@@ -21,7 +14,17 @@ const NewProjects = ({cases, all}) => {
               {
                 cases?.map((item, key) => {
                   return (
-                    <NavLink to={`/projects/${item.id}`} key={key} className="projects_block--item">
+                    <NavLink
+                      to={`/projects/${item.id}`}
+                      key={key}
+                      className="projects_block--item"
+                      onMouseEnter={() => {
+                        document.getElementById('circle-light').style.zIndex = '-10'
+                      }}
+                      onMouseLeave={() => {
+                        document.getElementById('circle-light').style.zIndex = '-1'
+                      }}
+                    >
                       <div className="name">{item.name}</div>
                       <div className="info d-flex align-items-center">
                         <div className="city">{item.year}</div>

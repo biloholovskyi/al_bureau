@@ -534,6 +534,7 @@ const MainFormWrap = styled.div`
       & .form-floating:first-child {
         margin-right: 80px;
       }
+
       @media (max-width: 575px) {
         flex-direction: column;
         & .form-floating:first-child {
@@ -544,11 +545,11 @@ const MainFormWrap = styled.div`
 
     .form-floating {
       margin-bottom: 32px;
-      @media(max-width: 575px){
+      @media (max-width: 575px) {
         margin-bottom: 28px;
         & label {
-            padding-right: 0!important;
-          }
+          padding-right: 0 !important;
+        }
       }
     }
 
@@ -565,25 +566,27 @@ const MainFormWrap = styled.div`
       color: rgba(255, 255, 255, 0.6);
       margin-top: 12px;
     }
-    
+
     .btn_section {
       @media (max-width: 575px) {
         flex-direction: column;
         label, button {
           width: 100%;
         }
+
         label {
           margin-bottom: 16px;
         }
+
         .btn {
           padding: 12px 24px;
         }
       }
     }
-    
-    @media(max-width: 575px){
+
+    @media (max-width: 575px) {
       .blockWithCount {
-        margin-bottom: 28px!important;
+        margin-bottom: 28px !important;
       }
     }
   }
@@ -610,7 +613,7 @@ const NewProjectsWrap = styled.div`
       margin-bottom: 40px;
       cursor: pointer;
       text-decoration: none;
-      
+
       &:visited,
       &:focus,
       &:active,
@@ -772,7 +775,7 @@ const Image = styled.label`
     object-position: center;
     border-radius: 10px;
     cursor: pointer;
-    @media(max-width: 575px){
+    @media (max-width: 575px) {
       width: 100%;
     }
   }
