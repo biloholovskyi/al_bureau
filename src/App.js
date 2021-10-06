@@ -44,10 +44,11 @@ function App() {
     const x = `${e.clientX / 2 + window.innerHeight}px`;
     const y = `${e.clientY /2 + window.innerHeight}px`;
 
+
     const circle = document.getElementById('circle-light');
-    circle.style.top = e.clientY - 240 + 'px';
-    circle.style.left = e.clientX - 240 + 'px';
-    circle.style.transform = `scale(${scaleItems[Math.floor(Math.random()*scaleItems.length)]}, ${scaleItems2[Math.floor(Math.random()*scaleItems2.length)]}) rotate(${Math.floor(Math.random() * (180 - 1 + 1) + 1)}deg)`;
+    circle.style.top = e.clientY - circle.clientWidth / 2 + 'px';
+    circle.style.left = e.clientX - circle.clientWidth / 2 + 'px';
+    circle.style.transform = `scale(${scaleItems[Math.floor(Math.random()*scaleItems.length)]}, ${scaleItems2[Math.floor(Math.random()*scaleItems2.length)]})`;
     circle.style.backgroundPositionX = x;
     circle.style.backgroundPositionY = y;
 

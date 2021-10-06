@@ -12,8 +12,10 @@ const BgGradient = ({data}) => {
 export default BgGradient;
 
 const Circle = styled.div`
-  width: 480px;
-  height: 480px;
+  width: 70vh;
+  height: 70vh;
+  min-width: 480px;
+  min-height: 480px;
   border-radius: 50%;
   //background: linear-gradient(63deg, rgba(153,76,18,.7) 0%, rgba(206,209,28,.7) 48%, rgba(89,147,203,.7) 94%);
   background: rgba(255,157,163,.7);
@@ -31,7 +33,7 @@ const Circle = styled.div`
   left: 0;
   top: 0;
   z-index: -1;
-  filter: blur(50px);
+  filter: blur(100px);
   overflow: hidden;
   }
 `
