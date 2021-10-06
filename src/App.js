@@ -38,13 +38,17 @@ function App() {
       return
     }
 
-    const scaleItems = [1.4635176356, 0.99999, 1.12317381, 1.238273872, 1.3097598743, 1.5049587439, 1.6437947, 1.7293847, 0.88394757, 0.7439875, 0.693485749]
-    const scaleItems2 = [0.99999, 1.4635176356, 1.12317381, 1.238273872, 1.3097598743, 1.5049587439, 1.6437947, 1.7293847, 0.88394757, 0.7439875, 0.693485749]
+    const scaleItems = [0.99999, 1.12317381, 1.238273872]
+    const scaleItems2 = [0.99999, 1.12317381, 1.238273872]
 
     const circle = document.getElementById('circle-light');
-    circle.style.top = e.clientY - 180 + 'px';
-    circle.style.left = e.clientX - 180 + 'px';
+    circle.style.top = e.clientY - 240 + 'px';
+    circle.style.left = e.clientX - 240 + 'px';
     circle.style.transform = `scale(${scaleItems[Math.floor(Math.random()*scaleItems.length)]}, ${scaleItems2[Math.floor(Math.random()*scaleItems2.length)]}) rotate(${Math.floor(Math.random() * (180 - 1 + 1) + 1)}deg)`;
+    circle.style.backgroundPositionX = `-${e.clientX / 2}px`;
+    circle.style.backgroundPositionY = `-${e.clientY / 2}px`;
+
+    // rotate(${Math.floor(Math.random() * (180 - 1 + 1) + 1)}deg)
     // setPositionCursor([e.clientX, e.clientY]);
 
     // console.log(positionCursor);
