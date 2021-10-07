@@ -11,7 +11,6 @@ import About from "./pages/about/about";
 
 function App() {
   const [mobileDevice, setMobileDevice] = useState(false)
-  const [positionCursor, setPositionCursor] = useState([0, 0]);
 
 
   function preventDefault(e) {
@@ -51,23 +50,6 @@ function App() {
     circle.style.transform = `scale(${scaleItems[Math.floor(Math.random()*scaleItems.length)]}, ${scaleItems2[Math.floor(Math.random()*scaleItems2.length)]})`;
     circle.style.backgroundPositionX = x;
     circle.style.backgroundPositionY = y;
-
-
-    // rotate(${Math.floor(Math.random() * (180 - 1 + 1) + 1)}deg)
-    // setPositionCursor([e.clientX, e.clientY]);
-
-    // console.log(positionCursor);
-
-    // const gradient = document.getElementById('mask')
-    // // setX(e.clientX);
-    // // setY(e.clientY);
-    // //
-    // const scaleItems = [1.4635176356, 0.99999]
-    // const scaleItems2 = [0.99999, 1.4635176356]
-    // //
-    // gradient.style.webkitMaskImage = `radial-gradient(380px 410px at ${e.clientX + 'px'} ${e.clientY + 'px'}, #000000 0%, rgba(0, 0, 0, 0) 100%)`;
-    // // gradient.style.maskSize = Math.floor(Math.random() * 101) + 1;
-    // gradient.style.transform = `scale(${scaleItems[Math.floor(Math.random()*scaleItems.length)]}, ${scaleItems2[Math.floor(Math.random()*scaleItems2.length)]})`;
   }
 
   return (
@@ -85,9 +67,8 @@ function App() {
           }}/>
           <Route path={'/about'} exact component={About}/>
         </Switch>
-
-        {!mobileDevice && <BgGradient data={positionCursor}/>}
-        {!mobileDevice && <Noise/>}
+        <BgGradient/>
+        <Noise/>
       </div>
     </>
   );

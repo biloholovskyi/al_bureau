@@ -1,39 +1,33 @@
 import React from 'react';
-import bg from "../../media/image/gradient2.svg";
+import bg from "./bg.jpg";
 import styled from 'styled-components'
 
-const BgGradient = ({data}) => {
+const BgGradient = () => {
 
   return (
-    <Circle x={data[0]} y={data[1]} id={'circle-light'}/>
+    <Circle id={'circle-light'}/>
   )
 }
 
 export default BgGradient;
 
 const Circle = styled.div`
-  width: 70vh;
-  height: 70vh;
+  width: 60vh;
+  height: 60vh;
   min-width: 480px;
   min-height: 480px;
   border-radius: 50%;
-  //background: linear-gradient(63deg, rgba(153,76,18,.7) 0%, rgba(206,209,28,.7) 48%, rgba(89,147,203,.7) 94%);
-  background: rgba(255,157,163,.7);
+  background: #01A1FF;
   background-image: url(${bg});
   background-size: 100vh 100vw;
-  //background-position: -240px -240px;
   background-position-x: 240px;
   background-position-y: 240px;
-  //background-repeat: repeat;
-  
   transition: transform .3s;
   position: fixed;
-  // left: ${props => props.x ? props.x + 'px' : 0};
-  // top: ${props => props.y ? props.y + 'px' : 0};
   left: 0;
   top: 0;
   z-index: -1;
-  filter: blur(100px);
+  filter: blur(320px);
   overflow: hidden;
   }
 `
