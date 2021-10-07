@@ -23,24 +23,30 @@ const Slider = () => {
     }
 
     getCases().catch(error => console.error(error))
-    disableScroll();
+    if(window.innerWidth > 767) {
+      disableScroll();
+    }
   }, [])
 
 
   function preventDefault(e) {
-    e = e || window.event;
-    if (e.preventDefault)
-      e.preventDefault();
-    e.returnValue = false;
+    if(window.innerWidth > 767) {
+      e = e || window.event;
+      if (e.preventDefault)
+        e.preventDefault();
+      e.returnValue = false;
+    }
   }
 
 
   function disableScroll() {
-    if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, {passive: false});
-    wrapper.current.onwheel = preventDefault; // modern standard
-    wrapper.current.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-    wrapper.current.ontouchmove = preventDefault; // mobile
+    if(window.innerWidth > 767) {
+      if (window.addEventListener) // older FF
+        window.removeEventListener('DOMMouseScroll', preventDefault, {passive: false});
+      wrapper.current.onwheel = preventDefault; // modern standard
+      wrapper.current.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+      wrapper.current.ontouchmove = preventDefault; // mobile
+    }
   }
 
   return (
