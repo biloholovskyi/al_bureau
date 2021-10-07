@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   @media (max-width: 767px) {
     margin-left: -20px;
     margin-right: -20px;
+    padding: 40px 0;
     
     .beforeAfter__title {
       margin-bottom: 24px;

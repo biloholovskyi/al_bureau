@@ -409,6 +409,9 @@ const AboutWrap = styled.div`
   }
   
   @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
     .column-main-title {
       font-size: 20px;
       line-height: 30px;
@@ -422,6 +425,10 @@ const BlockImage = styled.img`
   max-height: 675px;
   object-fit: cover;
   margin-bottom: 80px;
+  
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 `
 
 const SimpleBlockWrap = styled.div`
@@ -498,11 +505,12 @@ const SimpleBlockWrap = styled.div`
   .image_2_text {
     .title {
       width: 100%;
-      //margin-left: 0;
     }
   }
 
   @media (max-width: 767px) {
+    padding: 40px 0;
+    
     .simple_image {
       max-width: 100%;
       margin-bottom: 24px;
@@ -769,6 +777,8 @@ const TextCenterBlockWrap = styled.div`
   }
   
   @media (max-width: 767px) {
+    padding: 40px 0;
+    
     h2 {
       font-size: 20px;
       line-height: 30px;
@@ -802,7 +812,7 @@ const ImageSliderWrap = styled.div`
   }
   
   @media (max-width: 767px) {
-    padding: 80px 0;
+    padding: 40px 0;
     
     h2 {
       margin-bottom: 24px;
@@ -832,6 +842,8 @@ const EquipmentSliderWrap = styled.div`
   }
   
   @media (max-width: 767px) {
+    padding: 40px 0;
+    
     h2 {
       font-size: 20px;
       line-height: 30px;
@@ -845,6 +857,10 @@ const SingleEquipmentSliderWrap = styled.div`
   padding: 80px 0;
   align-items: center;
   justify-content: center;
+  
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
 `
 
 const EquipmentCardsBlockWrap = styled.div`
@@ -907,6 +923,8 @@ const EquipmentCardsBlockWrap = styled.div`
   }
 
   @media (max-width: 767px) {
+    padding: 40px 0;
+    
     h2 {
       font-size: 20px;
       line-height: 30px;
@@ -1217,6 +1235,10 @@ const SingleQuoteSliderWrap = styled.div`
   
   .photo {
     border-radius: 50%;
+  }
+  
+  @media (max-width: 767px) {
+    padding: 40px 0;
   }
 `
 
