@@ -1064,6 +1064,7 @@ const PrevNextCaseBlockWrap = styled.div`
         line-height: 26px;
         color: #FFFFFF;
         transition: .3s;
+        text-align: center;
       }
 
       .name {
@@ -1077,6 +1078,7 @@ const PrevNextCaseBlockWrap = styled.div`
         color: #FFFFFF;
         transition: all .4s;
         -webkit-text-stroke: 1px #fff;
+        text-align: center;
       }
     }
 
@@ -1101,6 +1103,29 @@ const PrevNextCaseBlockWrap = styled.div`
           color: transparent;
           -webkit-text-stroke: 1px #fff;
           transition: all .4s;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .caseItem {
+      &--prev {
+        display: none;
+      }
+      
+      padding: 69px 15px;
+      
+      .text {
+        .title {
+          font-size: 14px;
+          line-height: 22px;
+          margin-bottom: 12px;
+        }
+        
+        .name {
+          font-size: 20px;
+          line-height: 30px;
         }
       }
     }

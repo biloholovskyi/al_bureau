@@ -51,7 +51,7 @@ const PrevNextCaseBlock = ({data}) => {
           history.push(`/projects/${prevCase?.id}`)
 
         }}
-        className="caseItem"
+        className="caseItem caseItem--prev"
       >
         <div className="blur"/>
         <img src={`${prevCase?.banner}`} alt="image"/>
