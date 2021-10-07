@@ -493,6 +493,14 @@ const SimpleBlockWrap = styled.div`
       margin-top: 80px;
     }
   }
+  
+  .image_4_text,
+  .image_2_text {
+    .title {
+      width: 100%;
+      //margin-left: 0;
+    }
+  }
 
   @media (max-width: 767px) {
     .simple_image {

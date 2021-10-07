@@ -47,7 +47,7 @@ const SimpleBlockWithFewPhoto = ({data}) => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
+              <div className="col-12 col-md-6 d-flex flex-column image_4_text">
                 <div className="title animText anim_no_hide">{data?.image_text_title}</div>
                 <div className="text" dangerouslySetInnerHTML={{__html: data?.image_text_text}} />
               </div>
