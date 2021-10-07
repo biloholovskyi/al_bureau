@@ -29,6 +29,13 @@ const Circle = styled.div`
   z-index: -1;
   filter: blur(320px);
   overflow: hidden;
+  
+  @media (max-width: 767px) {
+    width: 30vh;
+    height: 30vh;
+    filter: blur(150px);
+    left: 30vw;
+    top: 100px;
   }
 `
 

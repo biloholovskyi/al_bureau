@@ -21,14 +21,16 @@ function App() {
   }
 
   useEffect(() => {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-      setMobileDevice(true)
-    } else {
-      if (window.addEventListener) // older FF
-        window.addEventListener('mousemove', preventDefault, {passive: false});
-      window.onmousemove = preventDefault; // modern standard
-      window.onmousemove = document.onmousewheel = preventDefault; // older browsers, IE
-    }
+    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    //   setMobileDevice(true)
+    // } else {
+    //
+    // }
+
+    if (window.addEventListener) // older FF
+      window.addEventListener('mousemove', preventDefault, {passive: false});
+    window.onmousemove = preventDefault; // modern standard
+    window.onmousemove = document.onmousewheel = preventDefault; // older browsers, IE
   }, [])
 
   const onMouseMove = (e) => {
