@@ -4,7 +4,7 @@ import * as Style from '../styled';
 
 const TextCenterBlock = ({data}) => {
   return (
-    <Style.TextCenterBlockWrap>
+    <Style.TextCenterBlockWrap className={'case-main-block'}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">

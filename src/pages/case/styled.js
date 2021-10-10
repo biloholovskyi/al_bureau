@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 
 import icon from "../../media/icon/quote.svg";
+import noise from '../../components/noise/noise.png'
 
 const CaseWrap = styled.div`
-  
+  .case-main-block {
+    position: relative;
+    z-index: 1;
+    //background-color: #000;
+  }
 `
 
 const MainScreenWrap = styled.div`
@@ -116,9 +121,13 @@ const MainScreenWrap = styled.div`
     background-image: ${props => props.bg ? 'url(' + props.bg + ')' : 'none'};
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 0;
+    z-index: ${props => props.z};
     opacity: ${props => props.opacity};
-    transition: all .3s;
+    background-color: #fff;
+    
+    @media (max-width: 767px) {
+      position: absolute;
+    }
   }
   
   @media (max-width: 767px) {

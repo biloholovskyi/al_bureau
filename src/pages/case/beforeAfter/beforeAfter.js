@@ -46,6 +46,7 @@ const BeforeAfter = ({data}) => {
 
   return (
     <Style.Wrapper
+      className={'case-main-block'}
       onMouseMove={(e) => move(e)}
       onTouchMove={(e) => move(e)}
       onClick={(e) => up(e)}

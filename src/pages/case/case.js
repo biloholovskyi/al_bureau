@@ -29,6 +29,7 @@ const api = new ApiService();
 const Case = ({id}) => {
   const [caseData, setCaseData] = useState(null);
   const [opacity, setOpacity] = useState(1)
+  const [zIndex, setZIndex] = useState(0)
 
   const quoteBlock = useRef(null);
 
@@ -67,15 +68,6 @@ const Case = ({id}) => {
     window.scrollTo(0, 0);
     console.log(document.body.scrollTop)
   }, [id])
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(() => {
-    // window.addEventListener("scroll", handleScroll);
-
-    // return () => {
-    //   window.removeEventListener("scroll", () => handleScroll);
-    // };
-  }, [id]);
 
   useEffect(() => {
     const getData = async () => {
@@ -155,14 +147,18 @@ const Case = ({id}) => {
 
   const animationTop = (e) => {
     const n1 = 1;
-    const n2 = window.outerHeight - 185;
+    const n2 = window.outerHeight - 100;
     const n = window.pageYOffset - n1;
     const p = n / (n2 - n1) * 100;
     const op1 = 1;
     let op = op1 - (op1 * (p / 100));
+    let z = 0;
 
     if (op < 0.1) {
       op = 0;
+      z = -10;
+    } else {
+      z = 0;
     }
 
     if (op > 0.9) {
@@ -170,15 +166,19 @@ const Case = ({id}) => {
     }
 
     setOpacity(op);
+    setZIndex(z);
   }
 
   return (
     <>
       <Style.CaseWrap onWheel={animationTop}>
-        <MainScreen data={caseData} opacity={opacity}/>
-        <QuoteBlock data={caseData} blockRef={quoteBlock}/>
+        <MainScreen data={caseData} opacity={opacity} z={zIndex}/>
+        <QuoteBlock data={caseData} blockRef={quoteBlock} className={'case-main-block'}/>
 
         {blocks}
+
+        <PrevNextCaseBlock data={caseData} className={'case-main-block'}/>
+
         {/*5 image and text / text and 5 image*/}
         {/*тут нужно подключать редактор текста что бы можно было выводить списки*/}
         {/*<BigBlock/>*/}
@@ -190,8 +190,6 @@ const Case = ({id}) => {
 
 
         {/*<SingleQuote/>*/}
-
-        <PrevNextCaseBlock data={caseData}/>
       </Style.CaseWrap>
       <Footer/>
     </>

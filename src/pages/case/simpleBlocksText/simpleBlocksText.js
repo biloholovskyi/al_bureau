@@ -8,7 +8,7 @@ const api = new ApiService();
 
 const SimpleBlocksText = ({data}) => {
   return (
-    <Style.SimpleBlockWrap>
+    <Style.SimpleBlockWrap className={'case-main-block'}>
       <div className="container-fluid">
 
         {

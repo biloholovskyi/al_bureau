@@ -22,7 +22,7 @@ const api = new ApiService()
 const SingleEquipmentSlider = ({data}) => {
 
   return (
-    <Style.SingleEquipmentSliderWrap>
+    <Style.SingleEquipmentSliderWrap className={'case-main-block'}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">

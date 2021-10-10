@@ -19,7 +19,7 @@ SwiperCore.use([Navigation]);
 
 const EquipmentSlider = ({data}) => {
   return (
-    <Style.EquipmentSliderWrap>
+    <Style.EquipmentSliderWrap className={'case-main-block'}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12"><h2>test slider title</h2></div>

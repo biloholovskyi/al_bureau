@@ -8,7 +8,7 @@ const api = new ApiService();
 
 const SimpleBlockWithFewPhoto = ({data}) => {
   return (
-    <Style.SimpleBlockWrap>
+    <Style.SimpleBlockWrap className={'case-main-block'}>
       <div className="container-fluid">
         {
           data && data.type === 'text_image_3' && (

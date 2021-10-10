@@ -10,7 +10,7 @@ const About = ({data}) => {
     <>
       {
         data && data.type === 'banner' && (
-          <Style.WrapperBannerTextBlock>
+          <Style.WrapperBannerTextBlock className={'case-main-block'}>
             <Style.AboutWrap className={'banner'}>
               <div className="container-fluid">
                 <div className="row">
@@ -29,7 +29,7 @@ const About = ({data}) => {
 
       {
         data && data.type === 'banner_text' && (
-          <Style.WrapperBannerTextBlock>
+          <Style.WrapperBannerTextBlock className={'case-main-block'}>
             <Style.AboutWrap>
               <div className="container-fluid">
                 <div className="row">
@@ -51,7 +51,7 @@ const About = ({data}) => {
 
       {
         data && data.type === 'column_text_1' && (
-          <Style.AboutWrap>
+          <Style.AboutWrap className={'case-main-block'}>
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">
@@ -67,7 +67,7 @@ const About = ({data}) => {
 
       {
         data && data.type === 'column_text_2' && (
-          <Style.AboutWrap>
+          <Style.AboutWrap className={'case-main-block'}>
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">
@@ -90,7 +90,7 @@ const About = ({data}) => {
 
       {
         data && data.type === 'column_text_3' && (
-          <Style.AboutWrap>
+          <Style.AboutWrap className={'case-main-block'}>
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">

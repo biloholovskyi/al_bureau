@@ -6,11 +6,12 @@ import * as Style from '../styled';
 import ApiService from "../../../services/api";
 const api = new ApiService();
 
-const MainScreen = ({data, opacity}) => {
+const MainScreen = ({data, opacity, z}) => {
   const mainScreen = useRef(null)
 
   return (
     <Style.MainScreenWrap
+      z={z}
       opacity={opacity}
       ref={mainScreen}
       bg={data && `${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.banner}`}

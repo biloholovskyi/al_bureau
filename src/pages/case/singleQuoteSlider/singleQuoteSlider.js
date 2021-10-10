@@ -20,7 +20,7 @@ SwiperCore.use([Navigation, Pagination]);
 const SingleQuoteSlider = ({data}) => {
   const slides = data.map(quote => {
     return (
-      <SwiperSlide className={'swipeSlide5'}>
+      <SwiperSlide className={'swipeSlide5 case-main-block'}>
         <div className="quoteText">
           <div className="title">{quote?.text}</div>
           <div className="author">

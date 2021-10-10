@@ -20,7 +20,7 @@ const api = new ApiService();
 const ImageSlider = ({data, title}) => {
 
   return (
-    <Style.ImageSliderWrap>
+    <Style.ImageSliderWrap className={'case-main-block'}>
      <div className="container-fluid">
        <div className="row">
          <div className="col-12">

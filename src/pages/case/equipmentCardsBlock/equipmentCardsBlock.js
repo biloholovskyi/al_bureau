@@ -8,7 +8,7 @@ const api = new ApiService()
 
 const EquipmentCardsBlock = ({data}) => {
   return (
-    <Style.EquipmentCardsBlockWrap>
+    <Style.EquipmentCardsBlockWrap className={'case-main-block'}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
