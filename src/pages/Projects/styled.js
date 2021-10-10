@@ -81,6 +81,10 @@ const ProjectsWrap = styled.div`
   .slider-img-next {
     transform: translateX(100%);
   }
+  
+  @media (max-width: 767px) {
+    padding-top: 164px;
+  }
 `
 
 export {
