@@ -123,7 +123,6 @@ const MainScreenWrap = styled.div`
     background-repeat: no-repeat;
     z-index: ${props => props.z};
     opacity: ${props => props.opacity};
-    background-color: #fff;
     
     @media (max-width: 767px) {
       position: absolute;
@@ -334,6 +333,8 @@ const WrapperBannerTextBlock = styled.div`
   @media (max-width: 767px) {
     .wrapper-text {
       padding: 0 15px;
+      height: calc(100% - 200px);
+      top: 80px;
     }
   }
 `;
