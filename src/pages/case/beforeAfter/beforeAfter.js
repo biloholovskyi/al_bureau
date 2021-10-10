@@ -54,7 +54,7 @@ const BeforeAfter = ({data}) => {
       onMouseDown={(e) => e.preventDefault()}
       onTouchStart={(e) => e.preventDefault()}
     >
-      <div className="container-fluid">
+      <div className="container-fluid" onTouchStart={(e) => down(e)}>
         <div className="row">
           <div className="col-12">
             <h2 className="beforeAfter__title">{data.image_slider_title}</h2>

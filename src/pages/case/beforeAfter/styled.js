@@ -63,18 +63,20 @@ const ImageWrapper = styled.div`
       background-color: #0c4128;
       position: relative;
       width: ${props => props.current + 'px'};
-      
-      .delimiter {
-        height: 100%;
-        width: 2px;
-        background-color: #fff;
-        box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
-        cursor: e-resize;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
     }
+  }
+
+  .delimiter {
+    height: 674px;
+    width: 2px;
+    background-color: #fff;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+    cursor: e-resize;
+    //position: relative;
+    //z-index: 20;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   
   @media (max-width: 767px) {
