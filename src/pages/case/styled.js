@@ -408,6 +408,14 @@ const AboutWrap = styled.div`
     line-height: 20px
   }
   
+  &.banner {
+    padding: 80px 0 0 0;
+    
+    .column-main-title {
+      text-align: center;
+    }
+  }
+  
   @media (max-width: 767px) {
     padding-top: 40px;
     padding-bottom: 40px;

@@ -10,8 +10,20 @@ const About = ({data}) => {
     <>
       {
         data && data.type === 'banner' && (
-          <Style.BlockImage className={'block_image'}
-                            src={`${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.banner}`} alt="image"/>
+          <Style.WrapperBannerTextBlock>
+            <Style.AboutWrap className={'banner'}>
+              <div className="container-fluid">
+                <div className="row">
+                  <div className="col-12">
+                    <h2 className="column-main-title">{data?.banner_title}</h2>
+                  </div>
+                </div>
+              </div>
+            </Style.AboutWrap>
+
+            <Style.BlockImage className={'block_image'}
+                              src={`${api.getApi().split('api/v_0.1/')[0].slice(0, -1)}${data.banner}`} alt="image"/>
+          </Style.WrapperBannerTextBlock>
         )
       }
 
