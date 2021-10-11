@@ -8,6 +8,7 @@ import Case from "./pages/case/case";
 import Noise from "./components/noise/noise";
 import BgGradient from "./components/bgGradient/bgGradient";
 import About from "./pages/about/about";
+import Contacts from "./pages/contacts/contacts";
 
 function App() {
   const [mobileDevice, setMobileDevice] = useState(false)
@@ -68,6 +69,7 @@ function App() {
             return <Case id={id}/>
           }}/>
           <Route path={'/about'} exact component={About}/>
+          <Route path={'/contacts'} exact component={Contacts}/>
         </Switch>
         <BgGradient/>
         <Noise/>
