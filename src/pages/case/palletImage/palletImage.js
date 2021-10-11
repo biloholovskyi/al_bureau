@@ -46,7 +46,7 @@ const PalletImage = ({data, title}) => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
-            <h1 className="pallet-title">Lorem title</h1>
+            <h1 className="pallet-title">{title}</h1>
 
             <Style.Pallet>
               {

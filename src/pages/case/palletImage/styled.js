@@ -34,7 +34,7 @@ const Pallet = styled.div`
   width: 100%;
   
   .pallet-col {
-    width: calc(100% / 4);
+    width: 100%;
     margin-right: 20px;
     
     &:last-child {
