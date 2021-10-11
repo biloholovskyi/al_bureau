@@ -45,6 +45,8 @@
   "devDependencies": {
     "axios": "^0.21.4",
     "jquery": "^3.6.0",
+    "react-image-lightbox": "^5.1.4",
+    "react-magnific-popup": "^1.0.1",
     "react-router-dom": "^5.2.0",
     "react-scroll-wheel-handler": "^2.1.0"
   }

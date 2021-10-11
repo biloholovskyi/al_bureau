@@ -22,6 +22,7 @@ import PrevNextCaseBlock from "./prevNextCaseBlock/prevNextCaseBlock";
 import GalleryTextBlock from "./galleryTextBlock/galleryTextBlock";
 import SingleQuoteSlider from "./singleQuoteSlider/singleQuoteSlider";
 import BeforeAfter from "./beforeAfter/beforeAfter";
+import PalletImage from "./palletImage/palletImage";
 
 const api = new ApiService();
 
@@ -176,6 +177,8 @@ const Case = ({id}) => {
         <QuoteBlock data={caseData} blockRef={quoteBlock} className={'case-main-block'}/>
 
         {blocks}
+
+        <PalletImage/>
 
         <PrevNextCaseBlock data={caseData} className={'case-main-block'}/>
 
