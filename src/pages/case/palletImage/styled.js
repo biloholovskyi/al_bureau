@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const PalletWrapper = styled.div`
-  padding: 80px 0;
+  padding: 80px 0 60px;
   display: flex;
   width: 100%;
   
@@ -44,10 +44,7 @@ const Pallet = styled.div`
     img {
       width: 100%;
       display: block;
-      
-      &:first-child {
-        margin-bottom: 20px;
-      }
+      margin-bottom: 20px;
     }
   }
   

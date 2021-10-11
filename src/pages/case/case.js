@@ -141,6 +141,9 @@ const Case = ({id}) => {
       case 'before_after':
         return <BeforeAfter data={block} key={block.id}/>
 
+      case 'pallet_image':
+        return <PalletImage data={block.images_slider} title={block.image_slider_title} key={block.id}/>
+
       default:
         return <div/>
     }
@@ -177,8 +180,6 @@ const Case = ({id}) => {
         <QuoteBlock data={caseData} blockRef={quoteBlock} className={'case-main-block'}/>
 
         {blocks}
-
-        <PalletImage/>
 
         <PrevNextCaseBlock data={caseData} className={'case-main-block'}/>
 
