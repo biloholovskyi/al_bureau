@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   padding-top: 206px;
   padding-bottom: 150px;
+  display: flex;
   
   h1 {
     font-family: Pragmatica Extended, sans-serif;

@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Footer from "../../components/footer/footer";
 import ContactItem from "./contactItem/contactItem";
+import ContactForm from "./contactForm/contactForm";
 
 import * as Style from './styled'
 
@@ -88,7 +89,7 @@ const Contacts = () => {
 
             <div className="col-6">
               <div className="content-block content-block--left">
-
+                <ContactForm/>
               </div>
             </div>
           </div>
