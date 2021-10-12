@@ -25,6 +25,7 @@ const MainScreenWrap = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+
   .desc {
     font-family: Pragmatica, sans-serif;
     font-style: normal;
@@ -32,9 +33,15 @@ const MainScreenWrap = styled.div`
     font-size: 18px;
     line-height: 26px;
     color: #FFFFFF;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
+
   .title_section {
     position: relative;
+
     .title {
       font-family: Pragmatica Extended, sans-serif;
       font-style: normal;
@@ -45,6 +52,22 @@ const MainScreenWrap = styled.div`
       text-transform: uppercase;
       color: #FFFFFF;
       margin-bottom: 40px;
+
+      @media (max-width: 1199px) {
+        font-size: 54px;
+        line-height: 64px;
+      }
+
+      @media (max-width: 991px) {
+        font-size: 34px;
+        line-height: 44px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
     }
 
     .title-blur {
@@ -63,10 +86,15 @@ const DeskBlockWrap = styled.div`
   width: 100%;
   display: flex;
   padding: 160px 0 80px;
-  
+
   .name_block {
     position: relative;
     margin-bottom: 60px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 24px;
+    }
+
     p {
       font-family: Pragmatica Extended, sans-serif;
       font-style: normal;
@@ -78,17 +106,25 @@ const DeskBlockWrap = styled.div`
       color: #FFFFFF;
       margin-bottom: 60px;
       overflow: hidden;
-      background: linear-gradient(to right,#fff,rgba(255,255,255, 1) 50%,rgba(255,255,255, .2) 50%);
+      background: linear-gradient(to right, #fff, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, .2) 50%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-size: 200% 100%;
       background-position: 100%;
       transition: background-position 2s ease;
+
+      @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 24px;
+      }
+
       &.active {
         background-position: 0 100%;
       }
     }
+
     .blur {
       position: absolute;
       opacity: 0.2;
@@ -98,16 +134,18 @@ const DeskBlockWrap = styled.div`
       transform: translateY(-50%);
     }
   }
-  
+
   .list {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &_item {
       display: flex;
       padding: 16px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
+
       .number {
         font-family: Pragmatica, sans-serif;
         font-style: normal;
@@ -116,7 +154,14 @@ const DeskBlockWrap = styled.div`
         line-height: 32px;
         color: rgba(255, 255, 255, 0.2);
         margin-right: 23px;
+
+        @media (max-width: 767px) {
+          margin-right: 20px;
+          font-size: 20px;
+          line-height: 28px;
+        }
       }
+
       .text {
         font-family: Pragmatica, sans-serif;
         font-style: normal;
@@ -127,6 +172,7 @@ const DeskBlockWrap = styled.div`
         color: #FFFFFF;
       }
     }
+
     & .list_item:first-child {
       border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
@@ -179,27 +225,29 @@ const ThirdBlockWrap = styled.div`
         width: 250px;
         height: 250px;
       }
+      
       @media (max-width: 600px) {
-        width: 150px;
-        height: 150px;
-        padding: 16px;
+        width: 160px;
+        height: 160px;
+        padding: 10px;
         margin-right: 0;
         margin-bottom: 20px;
+        
         .number {
           font-size: 18px;
           line-height: 24px;
         }
 
         .name {
-          font-size: 16px;
+          font-size: 12px;
           line-height: 22px;
         }
       }
+      
+      @media (max-width: 378px) {
+        width: 100%;
+      }
     }
-
-    //& .item:nth-child(3n) {
-    //  margin-right: 0;
-    //}
   }
 
   @media (max-width: 767px) {
@@ -233,12 +281,15 @@ const MainFormWrap = styled.div`
       width: 100%;
       display: flex;
       align-items: flex-start;
+
       .form-floating {
         margin-right: 40px;
       }
+
       & .form-floating:last-child {
         margin-right: 0px;
       }
+
       @media (max-width: 575px) {
         flex-direction: column;
         & .form-floating:first-child {
@@ -249,11 +300,11 @@ const MainFormWrap = styled.div`
 
     .form-floating {
       margin-bottom: 32px;
-      @media(max-width: 575px){
+      @media (max-width: 575px) {
         margin-bottom: 28px;
         & label {
-            padding-right: 0!important;
-          }
+          padding-right: 0 !important;
+        }
       }
     }
 
@@ -270,25 +321,27 @@ const MainFormWrap = styled.div`
       color: rgba(255, 255, 255, 0.6);
       margin-top: 12px;
     }
-    
+
     .btn_section {
       @media (max-width: 575px) {
         flex-direction: column;
         label, button {
           width: 100%;
         }
+
         label {
           margin-bottom: 16px;
         }
+
         .btn {
           padding: 12px 24px;
         }
       }
     }
-    
-    @media(max-width: 575px){
+
+    @media (max-width: 575px) {
       .blockWithCount {
-        margin-bottom: 28px!important;
+        margin-bottom: 28px !important;
       }
     }
   }
@@ -302,15 +355,27 @@ const QuoteBlockWrap = styled.div`
   width: 100%;
   display: flex;
   padding: 80px 0;
+
   .quoteBlock {
     position: relative;
     display: flex;
+    
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
     .photo {
       width: 410px;
       height: 545px;
       object-fit: cover;
       object-position: center;
+      
+      @media (max-width: 767px) {
+        width: 100%;
+        height: auto;
+      }
     }
+
     .text {
       font-family: Pragmatica, sans-serif;
       font-style: normal;
@@ -321,7 +386,7 @@ const QuoteBlockWrap = styled.div`
       padding-top: 80px;
       transform: translateX(-80px);
       position: relative;
-      
+
       &:after {
         content: '';
         background-image: url(${icon});
@@ -332,6 +397,21 @@ const QuoteBlockWrap = styled.div`
         top: 50px;
         width: 93.53px;
         height: 72px;
+      }
+
+      @media (max-width: 991px) {
+        padding-top: 24px;
+        font-size: 20px;
+        line-height: 30px;
+        transform: translateX(-120px);
+        
+        &:after {
+          top: 5px;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        transform: translateX(0);
       }
     }
   }
@@ -358,6 +438,7 @@ const ProcessCreateBlockWrap = styled.div`
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 12.99%, #FFFFFF 56.25%, #FFFFFF 82.04%, rgba(255, 255, 255, 0) 100%);
       width: 1px;
       height: 100%;
+
       @media (max-width: 767px) {
         left: 0;
         transform: none;
@@ -411,6 +492,7 @@ const ProcessCreateBlockWrap = styled.div`
         line-height: 26px;
         text-align: left;
         color: #FFFFFF;
+
         @media (max-width: 767px) {
           position: absolute;
           left: 20px;

@@ -503,6 +503,10 @@ const ProcessCreateBlockWrap = styled.div`
       padding: 0;
     }
   }
+  
+  .about-page {
+    
+  }
 `
 
 const MainFormWrap = styled.div`

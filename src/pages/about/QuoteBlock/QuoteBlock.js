@@ -8,9 +8,9 @@ const QuoteBlock = () => {
     <Style.QuoteBlockWrap>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>Заголовок Lorem ipsum<br/> dolor
+          <div className="col-lg-3 col-md-3 col-12"><h3 className={'small_title'}>Заголовок Lorem ipsum<br/> dolor
             sit amet</h3></div>
-          <div className={'col-lg-9 col-md-9 col-sm-12 col-12'}>
+          <div className={'col-lg-9 col-md-9 col-12'}>
             <div className="quoteBlock">
               <img src={photo} alt="image" className={'photo'}/>
               <div className="text">Мы хотим, чтобы каждый наш проект был уникальным. Мы щепетильны в работе и
