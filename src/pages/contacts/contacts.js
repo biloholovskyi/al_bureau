@@ -11,33 +11,19 @@ import ApiService from "../../services/api";
 
 const api = new ApiService();
 
-const contacts = [
-  {
-    id: 1,
-    name: 'Телефон',
-    contact: '+7 962 559 04 24',
-    type: 'phone'
-  },
-  {
-    id: 2,
-    name: 'Email',
-    contact: 'albertgaifullin@gmail.com',
-    type: 'email'
-  },
-  {
-    id: 3,
-    name: 'Адрес',
-    contact: 'ул. Пушкина, 30, Казань, Респ. Татарстан',
-    type: 'text'
-  },
-]
-
 const Contacts = () => {
   const [contactsList, setContactsList] = useState([])
   const [socials, setSocials] = useState([])
 
   useEffect(() => {
-    setContactsList(contacts)
+    const getContacts = async () => {
+      await axios.get(`${api.getApi()}contacts/`)
+        .then(res => {
+          setContactsList(res.data);
+        }).catch(error => console.error(error));
+    }
+
+    getContacts().catch(error => console.error(error));
   }, [])
 
   useEffect(() => {
