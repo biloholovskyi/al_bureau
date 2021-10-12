@@ -48,7 +48,7 @@ const Contacts = () => {
           </div>
 
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 col-md-6">
               <div className="content-block content-block--right">
 
                 {
@@ -73,7 +73,7 @@ const Contacts = () => {
               </div>
             </div>
 
-            <div className="col-6">
+            <div className="col-12 col-md-6">
               <div className="content-block content-block--left">
                 <ContactForm/>
               </div>

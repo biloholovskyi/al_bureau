@@ -5,6 +5,10 @@ const Wrapper = styled.div`
   padding-bottom: 150px;
   display: flex;
   
+  @media (max-width: 767px) {
+    padding: 120px 0;
+  }
+  
   h1 {
     font-family: Pragmatica Extended, sans-serif;
     font-style: normal;
@@ -16,6 +20,16 @@ const Wrapper = styled.div`
     font-feature-settings: 'ss04' on, 'ss05' on, 'ss06' on, 'ss08' on, 'liga' off, 'calt' off;
     color: #FFFFFF;
     margin-bottom: 50px;
+    
+    @media (max-width: 991px) {
+      font-size: 54px;
+      line-height: 64px;
+    }
+    
+    @media (max-width: 767px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
   
   .content-block {
@@ -23,10 +37,18 @@ const Wrapper = styled.div`
     
     &--left {
       padding-left: 50px;
+
+      @media (max-width: 1220px) {
+        padding-left: 0;
+      }
     }
     
     &--right {
       padding-right: 50px;
+
+      @media (max-width: 1220px) {
+        padding-left: 0;
+      }
     }
     
     .socials {

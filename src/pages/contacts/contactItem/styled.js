@@ -13,6 +13,12 @@ const Item = styled.div`
     line-height: 22px;;
     letter-spacing: -0.01em;
     color: rgba(255, 255, 255, 0.8);
+    
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   
   .contact {
@@ -29,6 +35,10 @@ const Item = styled.div`
     &:focus,
     &:active {
       text-decoration: none;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 22px;
     }
   }
 `
