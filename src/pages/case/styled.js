@@ -1,7 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+
+import LazyImage from "../../components/lazyImage/lazyImage";
 
 import icon from "../../media/icon/quote.svg";
-import noise from '../../components/noise/noise.png'
 
 const CaseWrap = styled.div`
   .case-main-block {
@@ -438,11 +439,21 @@ const AboutWrap = styled.div`
   }
 `
 
-const BlockImage = styled.img`
+const BlockImage = styled.div`
   width: 100%;
   max-height: 675px;
   object-fit: cover;
   margin-bottom: 80px;
+  
+  span {
+    width: 100%;
+  }
+  
+  img {
+    width: 100%;
+    max-height: 675px;
+    object-fit: cover;
+  }
   
   @media (max-width: 767px) {
     margin-bottom: 40px;
