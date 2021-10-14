@@ -46,14 +46,16 @@ const NoiseAnimation = keyframes`
 `;
 
 const CaseWrapNoise = styled.div`
+  position: relative;
+  
   &::before {
     content: '';
     background-color: #000;
     background-image: url(${noise});
     animation: 1s infinite ${NoiseAnimation};
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
@@ -227,7 +229,7 @@ const QuoteBlockWrap = styled.div`
     
     &--bottom {
       transform: rotate(180deg);
-      top: 185px;
+      top: 285px;
     }
   }
 
