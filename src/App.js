@@ -12,6 +12,7 @@ import Contacts from "./pages/contacts/contacts";
 
 function App() {
   const [mobileDevice, setMobileDevice] = useState(false)
+  const [casePage, setCasePage] = useState(false)
 
 
   function preventDefault(e) {
@@ -20,6 +21,14 @@ function App() {
       e.preventDefault();
     e.returnValue = false;
   }
+
+  useEffect(() => {
+    if (window.location.pathname.split('/')[2] && typeof parseInt(window.location.pathname.split('/')[2]) === 'number') {
+      setCasePage(true);
+    } else {
+      setCasePage(false)
+    }
+  }, []);
 
   useEffect(() => {
     // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
@@ -71,8 +80,11 @@ function App() {
           <Route path={'/about'} exact component={About}/>
           <Route path={'/contacts'} exact component={Contacts}/>
         </Switch>
-        <BgGradient/>
-        <Noise/>
+        <BgGradient casePage={casePage}/>
+
+        {
+          !casePage && <Noise/>
+        }
       </div>
     </>
   );

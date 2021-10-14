@@ -2,10 +2,10 @@ import React from 'react';
 import bg from "./bg.jpg";
 import styled from 'styled-components'
 
-const BgGradient = () => {
+const BgGradient = ({casePage}) => {
 
   return (
-    <Circle id={'circle-light'}/>
+    <Circle id={'circle-light'} casePage={casePage}/>
   )
 }
 
@@ -26,7 +26,7 @@ const Circle = styled.div`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: ${props => props.casePage ? '2' : '-1'};
   filter: blur(320px);
   overflow: hidden;
   

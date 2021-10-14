@@ -39,7 +39,7 @@ const PalletImage = ({data, title}) => {
   })
 
   return (
-    <Style.PalletWrapper>
+    <Style.PalletWrapper className={'case-main-block'}>
 
       {popup && <PopupImage image={popup} close={closePopup}/>}
 

@@ -1,14 +1,69 @@
-import styled from 'styled-components';
-
-import LazyImage from "../../components/lazyImage/lazyImage";
+import styled, {keyframes} from 'styled-components';
 
 import icon from "../../media/icon/quote.svg";
+import noise from '../../components/noise/noise.png'
+
+const NoiseAnimation = keyframes`
+  0%, 100% {
+        background-position: 0 0;
+    }
+
+    10% {
+        background-position: -5% -10%;
+    }
+
+    20% {
+        background-position: -15% 5%;
+    }
+
+    30% {
+        background-position: 7% -25%;
+    }
+
+    40% {
+        background-position: 20% 25%;
+    }
+
+    50% {
+        background-position: -25% 10%;
+    }
+
+    60% {
+        background-position: 15% 5%;
+    }
+
+    70% {
+        background-position: 0% 15%;
+    }
+
+    80% {
+        background-position: 25% 35%;
+    }
+
+    90% {
+        background-position: -10% 10%;
+    }
+`;
+
+const CaseWrapNoise = styled.div`
+  &::before {
+    content: '';
+    background-color: #000;
+    background-image: url(${noise});
+    animation: 1s infinite ${NoiseAnimation};
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+`
 
 const CaseWrap = styled.div`
   .case-main-block {
     position: relative;
-    z-index: 1;
-    //background-color: #000;
+    z-index: 55555;
   }
 `
 
@@ -439,21 +494,11 @@ const AboutWrap = styled.div`
   }
 `
 
-const BlockImage = styled.div`
+const BlockImage = styled.img`
   width: 100%;
   max-height: 675px;
   object-fit: cover;
   margin-bottom: 80px;
-  
-  span {
-    width: 100%;
-  }
-  
-  img {
-    width: 100%;
-    max-height: 675px;
-    object-fit: cover;
-  }
   
   @media (max-width: 767px) {
     margin-bottom: 40px;
@@ -1297,6 +1342,7 @@ const SingleQuoteSliderWrap = styled.div`
 `
 
 export {
+  CaseWrapNoise,
   CaseWrap,
   MainScreenWrap,
   QuoteBlockWrap,

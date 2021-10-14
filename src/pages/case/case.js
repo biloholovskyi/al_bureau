@@ -179,7 +179,9 @@ const Case = ({id}) => {
         <MainScreen data={caseData} opacity={opacity} z={zIndex}/>
         <QuoteBlock data={caseData} blockRef={quoteBlock} className={'case-main-block'}/>
 
-        {blocks}
+        <Style.CaseWrapNoise>
+          {blocks}
+        </Style.CaseWrapNoise>
 
         <PrevNextCaseBlock data={caseData} className={'case-main-block'}/>
 
