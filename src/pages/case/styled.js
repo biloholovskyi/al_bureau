@@ -46,26 +46,26 @@ const NoiseAnimation = keyframes`
 `;
 
 const CaseWrapNoise = styled.div`
-  position: relative;
-  
-  &::before {
-    content: '';
-    background-color: #000;
-    background-image: url(${noise});
-    animation: 1s infinite ${NoiseAnimation};
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
+  // position: relative;
+  //
+  // &::before {
+  //   content: '';
+  //   background-color: #000;
+  //   background-image: url(${noise});
+  //   animation: 1s infinite ${NoiseAnimation};
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 1;
+  // }
 `
 
 const CaseWrap = styled.div`
   .case-main-block {
-    position: relative;
-    z-index: 55555;
+    //position: relative;
+    //z-index: 55555;
   }
 `
 
@@ -171,7 +171,7 @@ const MainScreenWrap = styled.div`
 
   &:before {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -179,8 +179,6 @@ const MainScreenWrap = styled.div`
     background-image: ${props => props.bg ? 'url(' + props.bg + ')' : 'none'};
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: ${props => props.z};
-    opacity: ${props => props.opacity};
     
     @media (max-width: 767px) {
       position: absolute;

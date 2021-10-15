@@ -29,8 +29,8 @@ const api = new ApiService();
 
 const Case = ({id}) => {
   const [caseData, setCaseData] = useState(null);
-  const [opacity, setOpacity] = useState(1)
-  const [zIndex, setZIndex] = useState(0)
+  // const [opacity, setOpacity] = useState(1)
+  // const [zIndex, setZIndex] = useState(0)
 
   const quoteBlock = useRef(null);
 
@@ -149,39 +149,37 @@ const Case = ({id}) => {
     }
   })
 
-  const animationTop = (e) => {
-    const n1 = 1;
-    const n2 = window.outerHeight - 100;
-    const n = window.pageYOffset - n1;
-    const p = n / (n2 - n1) * 100;
-    const op1 = 1;
-    let op = op1 - (op1 * (p / 100));
-    let z = 0;
-
-    if (op < 0.1) {
-      op = 0;
-      z = -10;
-    } else {
-      z = 0;
-    }
-
-    if (op > 0.9) {
-      op = 1
-    }
-
-    setOpacity(op);
-    setZIndex(z);
-  }
+  // const animationTop = (e) => {
+  //   const n1 = 1;
+  //   const n2 = window.outerHeight - 100;
+  //   const n = window.pageYOffset - n1;
+  //   const p = n / (n2 - n1) * 100;
+  //   const op1 = 1;
+  //   let op = op1 - (op1 * (p / 100));
+  //   let z = 0;
+  //
+  //   if (op < 0.1) {
+  //     op = 0;
+  //     z = -10;
+  //   } else {
+  //     z = 0;
+  //   }
+  //
+  //   if (op > 0.9) {
+  //     op = 1
+  //   }
+  //
+  //   setOpacity(op);
+  //   setZIndex(z);
+  // }
 
   return (
     <>
-      <Style.CaseWrap onWheel={animationTop}>
-        <MainScreen data={caseData} opacity={opacity} z={zIndex}/>
+      <Style.CaseWrap>
+        <MainScreen data={caseData}/>
         <QuoteBlock data={caseData} blockRef={quoteBlock} className={'case-main-block'}/>
+        {blocks}
 
-        <Style.CaseWrapNoise>
-          {blocks}
-        </Style.CaseWrapNoise>
 
         <PrevNextCaseBlock data={caseData} className={'case-main-block'}/>
 
