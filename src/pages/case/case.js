@@ -66,8 +66,7 @@ const Case = ({id}) => {
   }
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    console.log(document.body.scrollTop)
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [id])
 
   useEffect(() => {

@@ -25,6 +25,13 @@ const MainScreenWrap = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  
+  @media (max-width: 767px) {
+    min-height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 164px;
+  }
 
   .desc {
     font-family: Pragmatica, sans-serif;
@@ -106,10 +113,10 @@ const DeskBlockWrap = styled.div`
       color: #FFFFFF;
       margin-bottom: 60px;
       overflow: hidden;
-      background: linear-gradient(to right, #fff, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, .2) 50%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      //background: linear-gradient(to right, #fff, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, .2) 50%);
+      //background-clip: text;
+      //-webkit-background-clip: text;
+      //-webkit-text-fill-color: transparent;
       background-size: 200% 100%;
       background-position: 100%;
       transition: background-position 2s ease;
@@ -227,9 +234,9 @@ const ThirdBlockWrap = styled.div`
       }
       
       @media (max-width: 600px) {
-        width: 160px;
-        height: 160px;
-        padding: 10px;
+        width: calc(50% - 10px);
+        height: 150px;
+        padding: 20px 16px;
         margin-right: 0;
         margin-bottom: 20px;
         
@@ -242,10 +249,6 @@ const ThirdBlockWrap = styled.div`
           font-size: 12px;
           line-height: 22px;
         }
-      }
-      
-      @media (max-width: 378px) {
-        width: 100%;
       }
     }
   }

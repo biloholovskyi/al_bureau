@@ -51,7 +51,7 @@ const Footer = () => {
             })
           }
         </div>
-        <p className={'mobile_block'}>© 2018  SV-GROUP</p>
+        <p className={'mobile_block'}>© 2021 ООО «СВ СЕРВИС ЛОГИСТИКА»</p>
       </div>
 
     </Style.FooterWrap>

@@ -212,7 +212,7 @@ const QuoteBlockWrap = styled.div`
   width: 100%;
   display: flex;
   padding: 40px 0 150px;
-  margin-bottom: 80px;
+  margin-bottom: 180px;
   position: relative;
   background: #000;
 
@@ -1164,21 +1164,23 @@ const PrevNextCaseBlockWrap = styled.div`
       height: 100%;
       transition: background .4s;
     }
-
-    &:hover {
-      .blur {
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(32px);
-        transition: background .4s;
-      }
-
-      .text {
-        .name {
-          color: transparent;
-          -webkit-text-stroke: 1px #fff;
-          transition: all .4s;
+    
+    @media(min-width: 766px) {
+      &:hover {
+        .blur {
+          background: rgba(0, 0, 0, 0.2);
+          backdrop-filter: blur(32px);
+          transition: background .4s;
         }
-      }
+
+        .text {
+          .name {
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+            transition: all .4s;
+          }
+        }
+      } 
     }
   }
   

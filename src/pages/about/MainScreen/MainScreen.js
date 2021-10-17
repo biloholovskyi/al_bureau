@@ -5,7 +5,7 @@ import * as Style from '../styled';
 const MainScreen = () => {
   return (
     <Style.MainScreenWrap>
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-12">
            <div className="title_section">

@@ -352,19 +352,21 @@ const ThirdBlockWrap = styled.div`
         width: 250px;
         height: 250px;
       }
+      
       @media (max-width: 600px) {
-        width: 150px;
+        width: calc(50% - 10px);
         height: 150px;
-        padding: 16px;
+        padding: 20px 16px;
         margin-right: 0;
         margin-bottom: 20px;
+
         .number {
           font-size: 18px;
           line-height: 24px;
         }
 
         .name {
-          font-size: 16px;
+          font-size: 12px;
           line-height: 22px;
         }
       }
@@ -503,9 +505,9 @@ const ProcessCreateBlockWrap = styled.div`
       padding: 0;
     }
   }
-  
+
   .about-page {
-    
+
   }
 `
 
@@ -755,13 +757,14 @@ const NewProjectsWrap = styled.div`
       }
 
       @media (max-width: 575px) {
-        margin-top: 28px;
+        margin-top: 68px;
       }
     }
   }
 
   @media (max-width: 575px) {
     padding: 40px 0;
+    
     & .small-col {
       padding: 0 !important;
     }

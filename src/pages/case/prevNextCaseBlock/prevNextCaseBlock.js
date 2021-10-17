@@ -49,7 +49,6 @@ const PrevNextCaseBlock = ({data}) => {
       <div
         onClick={() => {
           history.push(`/projects/${prevCase?.id}`)
-
         }}
         className="caseItem caseItem--prev"
       >
@@ -63,7 +62,6 @@ const PrevNextCaseBlock = ({data}) => {
       <div
         onClick={() => {
           history.push(`/projects/${nextCase?.id}`)
-
         }}
         className="caseItem"
       >
