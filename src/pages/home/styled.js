@@ -757,7 +757,7 @@ const NewProjectsWrap = styled.div`
       }
 
       @media (max-width: 575px) {
-        margin-top: 68px;
+        margin-top: 28px;
       }
     }
   }

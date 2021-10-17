@@ -25,7 +25,7 @@ const NewProjects = ({cases, all}) => {
                         document.getElementById('circle-light').style.zIndex = '-1'
                       }}
                     >
-                      <div className="name">{item.name}</div>
+                      <div className="name">{item.title}</div>
                       <div className="info d-flex align-items-center">
                         <div className="city">{item.year}</div>
                       </div>
