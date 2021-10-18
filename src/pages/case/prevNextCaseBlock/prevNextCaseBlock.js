@@ -68,7 +68,7 @@ const PrevNextCaseBlock = ({data}) => {
         <div className="blur"/>
         <img src={nextCase?.banner} alt="image"/>
         <div className="text">
-          <div className="title">Следуюющий кейс</div>
+          <div className="title">Следующий кейс</div>
           <div className="name">{nextCase?.title}</div>
         </div>
       </div>
