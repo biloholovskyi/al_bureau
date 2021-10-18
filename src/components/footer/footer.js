@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
         <div className="bottom">
           <a href="tel:+7 (843) 279-32-04">+7 (843) 279-32-04</a>
-          <div className="title">г.Казань, 420061,  ул. Николая Ершова, 1а,
+          <div className="title">г. Казань, 420061,  ул. Николая Ершова, 1а,
             БЦ "Корстон"  офис 838, 8 этаж</div>
         </div>
       </div>

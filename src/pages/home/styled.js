@@ -404,6 +404,7 @@ const ProcessCreateBlockWrap = styled.div`
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 12.99%, #FFFFFF 56.25%, #FFFFFF 82.04%, rgba(255, 255, 255, 0) 100%);
       width: 1px;
       height: 100%;
+      
       @media (max-width: 767px) {
         left: 0;
         transform: none;
@@ -457,6 +458,7 @@ const ProcessCreateBlockWrap = styled.div`
         line-height: 26px;
         text-align: right;
         color: #FFFFFF;
+        
         @media (max-width: 767px) {
           position: absolute;
           left: 20px;
@@ -475,12 +477,14 @@ const ProcessCreateBlockWrap = styled.div`
         font-size: 14px;
         line-height: 22px;
         color: #FFFFFF;
+        
         @media (max-width: 767px) {
           position: absolute;
           left: 20px;
-          bottom: 0;
+          bottom: auto;
           font-size: 12px;
           line-height: 20px;
+          top: 35px;
         }
       }
 
