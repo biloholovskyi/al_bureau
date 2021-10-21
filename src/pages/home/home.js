@@ -86,7 +86,7 @@ const Home = () => {
     <>
       <Style.HomeWrap>
         <MainScreen/>
-        <DescBlock/>
+        <DescBlock home={true}/>
         {/*<ThirdBlock/>*/}
         {/*<ProcessCreateBlock/>*/}
         <NewProjects cases={cases} all={all}/>

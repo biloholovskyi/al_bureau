@@ -3,7 +3,7 @@ import React from 'react'
 import * as Style from '../styled';
 
 
-const DescBlock = () => {
+const DescBlock2 = () => {
 
   return (
     <Style.DeskBlockWrap id={'down'}>
@@ -20,7 +20,7 @@ const DescBlock = () => {
             <div className="list">
               <div className="list_item">
                 <div className="number">01</div>
-                <div className="text">Закупка оборудования</div>
+                <div className="text">Разработка концепции освещения</div>
               </div>
               <div className="list_item">
                 <div className="number">02</div>
@@ -28,7 +28,7 @@ const DescBlock = () => {
               </div>
               <div className="list_item">
                 <div className="number">03</div>
-                <div className="text">Логистика</div>
+                <div className="text">Поставка светового оборудования</div>
               </div>
               <div className="list_item">
                 <div className="number">04</div>
@@ -36,7 +36,7 @@ const DescBlock = () => {
               </div>
               <div className="list_item">
                 <div className="number">05</div>
-                <div className="text">Строительно монтажные работы</div>
+                <div className="text">Логистика</div>
               </div>
             </div>
           </div>
@@ -46,4 +46,4 @@ const DescBlock = () => {
   )
 }
 
-export default DescBlock;
+export default DescBlock2;

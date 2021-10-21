@@ -4,11 +4,13 @@ import MainScreen from "./MainScreen/MainScreen";
 import Footer from "../../components/footer/footer";
 
 import * as Style from './styled';
-import DescBlock from "./descBlock/descBlock";
+import DescBlock2 from "./descBlock2/descBlock2";
+import DescBlock from "../home/descBlock/descBlock";
 import ThirdBlock from "./ThirdBlock/ThirdBlock";
 import MainForm from "./MainForm/MainForm";
 import QuoteBlock from "./QuoteBlock/QuoteBlock";
 import ProcessCreateBlock from "./processCreateBlock/processCreateBlock";
+import axios from "axios";
 
 const About = () => {
   const animItems = document.querySelectorAll('.animText');
@@ -55,13 +57,17 @@ const About = () => {
   }
 
 
+
+
   return (
     <>
       <Style.AboutWrap>
         <MainScreen/>
         <DescBlock/>
-        <ProcessCreateBlock/>
-        <ThirdBlock/>
+        <DescBlock2/>
+
+        {/*<ProcessCreateBlock/>*/}
+        {/*<ThirdBlock/>*/}
         <QuoteBlock/>
         <MainForm/>
       </Style.AboutWrap>

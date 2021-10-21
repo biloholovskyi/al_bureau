@@ -29,7 +29,7 @@ const MainScreenWrap = styled.div`
   @media (max-width: 767px) {
     align-items: flex-start;
     justify-content: flex-start;
-    padding-top: 164px;
+    padding-top: 204px;
   }
 
   .desc {
