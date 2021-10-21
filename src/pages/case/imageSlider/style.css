@@ -16,7 +16,7 @@
 
 .swiper-wrapper .swipeSlide2 {
   width: 100%!important;
-  max-width: 260px;
+  /*max-width: 360px;*/
   height: fit-content;
   position: relative;
   display: flex;

@@ -869,8 +869,8 @@ const TextCenterBlockWrap = styled.div`
 const ImageSliderWrap = styled.div`
   width: 100%;
   display: flex;
+  justify-content: center;
   padding: 160px 0;
-  overflow: hidden !important;
   position: relative;
   
   h2 {
@@ -883,6 +883,38 @@ const ImageSliderWrap = styled.div`
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 80px;
+  }
+
+  .slider-wrapper-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: scroll;
+    //padding-right: 240px;
+    padding: 0 120px;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 0;
+      height: 0;
+    }
+    
+    img {
+      margin-right: 40px;
+      max-width: 400px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    @media(max-width: 767px) {
+      padding: 0 15px;
+      
+      img {
+        max-width: 260px;
+      }
+    }
   }
   
   @media (max-width: 767px) {

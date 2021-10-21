@@ -11,9 +11,13 @@ const ProjectsWrap = styled.div`
   position: relative;
     //background-image: url(${bg});
   background-size: cover;
-  padding-top: 60px;
+  padding-top: 160px;
   background-repeat: no-repeat;
   overflow: hidden;
+  
+  @media(max-height: 900px) {
+    padding-top: 100px;
+  }
 
   h1 {
     font-family: Pragmatica Extended, sans-serif;
@@ -29,6 +33,12 @@ const ProjectsWrap = styled.div`
       font-size: 28px;
       line-height: 36px;
       margin: 0;
+    }
+
+    @media(max-height: 900px) {
+      font-size: 38px;
+      line-height: 36px;
+      margin-bottom: 20px;
     }
     
     @media (max-height: 735px) {
