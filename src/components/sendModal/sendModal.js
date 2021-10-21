@@ -51,7 +51,7 @@ const SendModal = ({close}) => {
 		<Wrapper>
       <div className="body">
         <div className="close" onClick={close}/>
-        <p>Спасибо, мы скоро свами свяжемся</p>
+        <p>Сообщение отправлено.</p>
       </div>
 		</Wrapper>
 	)
