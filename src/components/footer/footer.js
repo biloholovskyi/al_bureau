@@ -45,7 +45,6 @@ const Footer = () => {
         <div className="top">
           <div className="title">Напишите нам</div>
           <a href="mailto:project@alburo.ru">project@alburo.ru</a>
-          <a href={documents?.political} target={'_blank'} className={'political'}>Политика конфиденциальности</a>
         </div>
         <div className="bottom">
           <a href="tel:+7 (843) 279-32-04">+7 (843) 279-32-04</a>
@@ -53,7 +52,8 @@ const Footer = () => {
             БЦ "Корстон"  офис 838, 8 этаж</div>
         </div>
       </div>
-      <div className="footer_item">
+      <div className="footer_item footer_item--left">
+        <a href={documents?.political} target={'_blank'} className={'political'}>Политика конфиденциальности</a>
         <div className="social_links">
           {
             socials?.map(social => {

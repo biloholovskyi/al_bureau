@@ -14,11 +14,24 @@ const FooterWrap = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
     @media (max-width: 767px) {
       width: 100%;
       flex: 100%;
       min-height: unset;
       margin-bottom: 40px;
+    }
+
+    &--left {
+      
+    }
+
+    .political {
+      font-size: 16px;
+      text-decoration: underline;
+      margin-top: 12px;
+      color: #fff;
+      white-space: nowrap;
     }
 
     .logo {
@@ -76,12 +89,6 @@ const FooterWrap = styled.div`
       @media (max-width: 767px) {
         margin-bottom: 40px;
       }
-      
-      .political {
-        font-size: 16px;
-        text-decoration: underline;
-        margin-top: 12px;
-      }
     }
 
     .bottom {
@@ -97,13 +104,19 @@ const FooterWrap = styled.div`
 
   & .footer_item:last-child {
     flex: 1;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     .social_links {
       width: 100%;
       display: flex;
       align-items: center;
       position: relative;
+      justify-content: flex-end;
+      
+      @media (max-width: 767px) {
+        margin-top: 40px;
+        justify-content: flex-start;
+      }
 
       .social_link {
         border: 1px solid rgba(255, 255, 255, 0.2);
