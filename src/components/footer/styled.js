@@ -76,6 +76,12 @@ const FooterWrap = styled.div`
       @media (max-width: 767px) {
         margin-bottom: 40px;
       }
+      
+      .political {
+        font-size: 16px;
+        text-decoration: underline;
+        margin-top: 12px;
+      }
     }
 
     .bottom {
