@@ -6,17 +6,16 @@ const ProjectsWrap = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   position: relative;
     //background-image: url(${bg});
   background-size: cover;
-  padding-top: 160px;
+  padding-top: 186px;
   background-repeat: no-repeat;
   overflow: hidden;
   
-  @media(max-height: 900px) {
-    padding-top: 100px;
+  @media(max-height: 885px) {
+    padding-top: 130px;
   }
 
   h1 {
@@ -35,16 +34,16 @@ const ProjectsWrap = styled.div`
       margin: 0;
     }
 
-    @media(max-height: 900px) {
+    @media(max-height: 715px) {
       font-size: 38px;
       line-height: 36px;
       margin-bottom: 20px;
     }
     
     @media (max-height: 735px) {
-      font-size: 28px;
-      line-height: 36px;
-      margin-bottom: 20px;
+      //font-size: 28px;
+      //line-height: 36px;
+      //margin-bottom: 20px;
     }
   }
 
@@ -61,8 +60,9 @@ const ProjectsWrap = styled.div`
       display: none;
     }
 
-    @media (max-height: 735px) {
-      margin-bottom: 0;
+    @media (max-height: 715px) {
+      //margin-bottom: 0;
+      display: none;
     }
   }
 
