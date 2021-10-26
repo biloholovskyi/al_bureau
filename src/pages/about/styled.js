@@ -40,8 +40,18 @@ const MainScreenWrap = styled.div`
     line-height: 26px;
     color: #FFFFFF;
 
-    @media (max-width: 767px) {
+    @media (max-height: 1199px) {
       font-size: 16px;
+      line-height: 24px;
+    }
+    @media (max-height: 991px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    @media (max-width: 575px) {
+      font-size: 16px;
+      line-height: 28px;
+      margin-bottom: 28px;
     }
   }
 
@@ -59,17 +69,19 @@ const MainScreenWrap = styled.div`
       color: #FFFFFF;
       margin-bottom: 40px;
 
-      @media (max-width: 1199px) {
+      @media (max-height: 1350px) {
         font-size: 54px;
-        line-height: 64px;
+        line-height: 70px;
       }
-
+      @media (max-width: 1199px) {
+        font-size: 44px;
+        line-height: 60px;
+      }
       @media (max-width: 991px) {
-        font-size: 34px;
-        line-height: 44px;
+        font-size: 54px;
+        line-height: 70px;
       }
-
-      @media (max-width: 767px) {
+      @media (max-width: 575px) {
         font-size: 28px;
         line-height: 36px;
         margin-bottom: 24px;

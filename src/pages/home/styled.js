@@ -352,7 +352,7 @@ const ThirdBlockWrap = styled.div`
         width: 250px;
         height: 250px;
       }
-      
+
       @media (max-width: 600px) {
         width: calc(50% - 10px);
         height: 150px;
@@ -404,7 +404,7 @@ const ProcessCreateBlockWrap = styled.div`
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 12.99%, #FFFFFF 56.25%, #FFFFFF 82.04%, rgba(255, 255, 255, 0) 100%);
       width: 1px;
       height: 100%;
-      
+
       @media (max-width: 767px) {
         left: 0;
         transform: none;
@@ -458,7 +458,7 @@ const ProcessCreateBlockWrap = styled.div`
         line-height: 26px;
         text-align: right;
         color: #FFFFFF;
-        
+
         @media (max-width: 767px) {
           position: absolute;
           left: 20px;
@@ -477,7 +477,7 @@ const ProcessCreateBlockWrap = styled.div`
         font-size: 14px;
         line-height: 22px;
         color: #FFFFFF;
-        
+
         @media (max-width: 767px) {
           position: absolute;
           left: 20px;
@@ -768,7 +768,7 @@ const NewProjectsWrap = styled.div`
 
   @media (max-width: 575px) {
     padding: 40px 0;
-    
+
     & .small-col {
       padding: 0 !important;
     }

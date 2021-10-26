@@ -32,11 +32,11 @@ const DescBlock2 = () => {
               </div>
               <div className="list_item">
                 <div className="number">04</div>
-                <div className="text">Строительно монтажные работы</div>
+                <div className="text">Логистика</div>
               </div>
               <div className="list_item">
                 <div className="number">05</div>
-                <div className="text">Логистика</div>
+                <div className="text">Строительно монтажные работы</div>
               </div>
             </div>
           </div>
