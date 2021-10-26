@@ -8,7 +8,7 @@ const NewProjects = ({cases, all}) => {
     <Style.NewProjectsWrap>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>свежие проекты</h3></div>
+          <div className="col-lg-3 col-md-3 col-sm-12 col-12"><h3 className={'small_title'}>наши проекты</h3></div>
           <div className="col-lg-9 col-md-9 col-sm-12 col-12 small-col">
             <div className="projects_block">
               {
