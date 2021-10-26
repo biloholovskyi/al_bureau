@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import MainScreen from "./MainScreen/MainScreen";
 import Footer from "../../components/footer/footer";
@@ -12,63 +12,78 @@ import QuoteBlock from "./QuoteBlock/QuoteBlock";
 import ProcessCreateBlock from "./processCreateBlock/processCreateBlock";
 import axios from "axios";
 
+import ApiService from "../../services/api";
+const api = new ApiService()
+
 const About = () => {
-  const animItems = document.querySelectorAll('.animText');
+  const [data, setData] = useState(null)
 
-  if(animItems.length > 0) {
-    const handleScroll = () => {
-      for(let index = 0; index < animItems.length;  index++){
-        const animItem = animItems[index];
-        const animItemHeight = animItem.offsetHeight;
-        const animItemOffset = offset(animItem).bottom;
-        const animStart = 4;
+  // const animItems = document.querySelectorAll('.animText');
+  //
+  // if(animItems.length > 0) {
+  //   const handleScroll = () => {
+  //     for(let index = 0; index < animItems.length;  index++){
+  //       const animItem = animItems[index];
+  //       const animItemHeight = animItem.offsetHeight;
+  //       const animItemOffset = offset(animItem).bottom;
+  //       const animStart = 4;
+  //
+  //       let animItemPoint = window.innerHeight - animItemHeight / animStart;
+  //       if(animItemHeight > window.innerHeight){
+  //         animItemPoint = window.innerHeight - window.innerHeight / animStart
+  //       }
+  //
+  //       // eslint-disable-next-line no-restricted-globals
+  //       if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+  //         animItem.classList.add('active');
+  //       } else {
+  //         if(!animItem.classList.contains('anim_no_hide')) {
+  //           animItem.classList.remove('active');
+  //         }
+  //       }
+  //     }
+  //   };
+  //
+  //   function offset(el){
+  //     const rect = el.getBoundingClientRect(),
+  //           scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+  //           scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //     return{bottom: rect.bottom + scrollTop, left: rect.left + scrollLeft}
+  //   }
+  //
+  //   // eslint-disable-next-line react-hooks/rules-of-hooks
+  //   useEffect(() => {
+  //     // window.addEventListener("scroll", handleScroll);
+  //
+  //     // return () => {
+  //     //   window.removeEventListener("scroll", () => handleScroll);
+  //     // };
+  //   }, []);
+  // }
 
-        let animItemPoint = window.innerHeight - animItemHeight / animStart;
-        if(animItemHeight > window.innerHeight){
-          animItemPoint = window.innerHeight - window.innerHeight / animStart
-        }
-
-        // eslint-disable-next-line no-restricted-globals
-        if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-          animItem.classList.add('active');
-        } else {
-          if(!animItem.classList.contains('anim_no_hide')) {
-            animItem.classList.remove('active');
-          }
-        }
-      }
-    };
-
-    function offset(el){
-      const rect = el.getBoundingClientRect(),
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      return{bottom: rect.bottom + scrollTop, left: rect.left + scrollLeft}
+  useEffect(() => {
+    const getContacts = async () => {
+      await axios.get(`${api.getApi()}about/`)
+        .then(res => {
+          console.log(res)
+          setData(res.data[0]);
+        }).catch(error => console.error(error));
     }
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useEffect(() => {
-      // window.addEventListener("scroll", handleScroll);
-
-      // return () => {
-      //   window.removeEventListener("scroll", () => handleScroll);
-      // };
-    }, []);
-  }
-
-
+    getContacts().catch(error => console.error(error));
+  }, [])
 
 
   return (
     <>
       <Style.AboutWrap>
-        <MainScreen/>
-        <DescBlock/>
-        <DescBlock2/>
+        <MainScreen data={data}/>
+        <DescBlock data={data}/>
+        <DescBlock2 data={data}/>
 
         {/*<ProcessCreateBlock/>*/}
         {/*<ThirdBlock/>*/}
-        <QuoteBlock/>
+        <QuoteBlock data={data}/>
         <MainForm/>
       </Style.AboutWrap>
       <Footer/>
