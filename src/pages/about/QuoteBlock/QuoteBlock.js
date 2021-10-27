@@ -8,7 +8,7 @@ const QuoteBlock = ({data}) => {
     <Style.QuoteBlockWrap>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-3 col-md-3 col-12"><h3 className={'small_title'}>Дмитрий Тужилин<br/>директор A&L
+          <div className="col-lg-3 col-md-3 col-12"><h3 className={'small_title'}>{data?.name_person}<br/>{data?.place}
           </h3></div>
           <div className={'col-lg-9 col-md-9 col-12'}>
             <div className="quoteBlock">
