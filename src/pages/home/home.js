@@ -18,9 +18,7 @@ const api = new ApiService()
 const Home = () => {
   const [cases, setCases] = useState(null);
   const [all, setAll] = useState(0)
-
-
-
+  const [data, setData] = useState(null)
 
   const handleScroll = (animItems) => {
 
@@ -80,13 +78,23 @@ const Home = () => {
     getData().catch(error => console.error(error))
   }, [])
 
+  useEffect(() => {
+    const getContacts = async () => {
+      await axios.get(`${api.getApi()}about/`)
+        .then(res => {
+          console.log(res)
+          setData(res.data[0]);
+        }).catch(error => console.error(error));
+    }
 
+    getContacts().catch(error => console.error(error));
+  }, [])
 
   return (
     <>
       <Style.HomeWrap>
         <MainScreen/>
-        <DescBlock home={true}/>
+        <DescBlock home={true} data={data}/>
         {/*<ThirdBlock/>*/}
         {/*<ProcessCreateBlock/>*/}
         <NewProjects cases={cases} all={all}/>

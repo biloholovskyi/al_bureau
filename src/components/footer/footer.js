@@ -33,7 +33,7 @@ const Footer = () => {
 
     getDocuments().catch(error => console.error(error))
     getSocials().catch(error => console.error(error));
-  })
+  }, [])
 
   return (
     <Style.FooterWrap>

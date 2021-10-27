@@ -26,6 +26,11 @@ const MainScreenWrap = styled.div`
   justify-content: center;
   position: relative;
   
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
   @media (max-width: 767px) {
     align-items: flex-start;
     justify-content: flex-start;
@@ -160,6 +165,7 @@ const DeskBlockWrap = styled.div`
 
     &_item {
       display: flex;
+      align-items: center;
       padding: 16px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
