@@ -7,13 +7,12 @@ const MainScreen = ({data}) => {
     <Style.MainScreenWrap>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-6 col-md-12 col-sm-12">
+          <div className="col-12">
            <div className="title_section">
              <div className="title" dangerouslySetInnerHTML={{__html: data?.main_title}}/>
              <div className="title title-blur" dangerouslySetInnerHTML={{__html: data?.main_title}}/>
            </div>
           </div>
-          <div className="col-lg-6 d-none d-lg-block"/>
         </div>
 
         <div className="row">
