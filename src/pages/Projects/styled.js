@@ -18,6 +18,10 @@ const ProjectsWrap = styled.div`
   @media(max-height: 885px) {
     padding-top: 130px;
   }
+  
+  @media (max-width: 767px) {
+    max-height: 100%;
+  }
 
   h1 {
     font-family: Pragmatica Extended, sans-serif;

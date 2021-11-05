@@ -16,6 +16,12 @@ $input-focus-bg: none;
 $input-focus-border-color: none;
 $input-border-radius: 8px;
 
+* {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

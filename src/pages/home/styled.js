@@ -297,6 +297,8 @@ const DeskBlockWrap = styled.div`
       img {
         max-width: unset;
         width: 48%;
+        height: 100%;
+        object-fit: contain;
       }
     }
   }
