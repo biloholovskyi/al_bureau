@@ -24,6 +24,14 @@ const Header = () => {
   }, [])
 
   const showMenu = () => {
+    if(!menu && !header) {
+      setHeader(true);
+    }
+
+    if(menu && window.scrollY < 1) {
+      setHeader(false)
+    }
+
     setMenu(!menu)
     const body = document.getElementById('body');
     body.classList.toggle('fixed')
