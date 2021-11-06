@@ -713,11 +713,15 @@ const NewProjectsWrap = styled.div`
       }
 
       @media (max-width: 575px) {
-        margin-bottom: 0;
+        margin-bottom: 24px;
         padding: 28px 20px;
         border-bottom: none;
         position: relative;
         max-height: 120px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 

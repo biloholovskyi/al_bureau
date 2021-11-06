@@ -10,6 +10,12 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  
+  .preloader-logo {
+    display: block;
+    margin-bottom: 24px;
+  }
 `
 
 export {

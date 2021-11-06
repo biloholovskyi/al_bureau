@@ -35,12 +35,14 @@ const FooterWrap = styled.div`
     }
 
     .logo {
-      width: 166px;
-      height: 32px;
+      width: 124px;
+      height: 88px;
       object-fit: contain;
+      object-position: left center;
+      
       @media (max-width: 767px) {
-        width: 115px;
-        height: 24px;
+        width: 60px;
+        height: auto;
       }
     }
 
